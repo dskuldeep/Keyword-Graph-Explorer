@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: seo-graph
+Version: 0.1.0
+Summary: Crawl internal links, build graphs, cluster content, and visualize.
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+
+SEO Graph
+=========
+
+Crawl a domain, build an internal link graph with anchor texts, compute semantic clusters, and visualize.

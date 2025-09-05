@@ -1,0 +1,93 @@
+### End‑to‑end flow (what happens, in order)
+
+1) Crawl and extract content
+- Fetch HTML for each URL (seed + sitemap; only same registered domain).
+- Parse links and anchor text with BeautifulSoup; resolve to absolute URLs; keep internal links.
+- Extract clean main text with Trafilatura; read <title>.
+- Save per‑page record: url, title, text, list of outgoing links with anchors, depth.
+
+2) Build the internal link graph
+- Create a directed graph: node = page URL; edge source→target if source links to target.
+- Edge attributes:
+  - weight = number of link occurrences (aggregated across repeated anchors)
+  - anchors = up to 50 anchor texts concatenated
+- Node attributes: title, depth, flag `is_article` (URL contains `/articles`).
+
+3) Compute graph metrics (article‑only subgraph)
+- In‑degree: number of distinct article pages linking to a page.
+- Out‑degree: number of distinct article pages a page links to.
+- PageRank: networkx.pagerank with α = 0.85; edge weights influence transition probabilities.
+- Betweenness: proportion of shortest paths that pass through a node.
+- Closeness: inverse of average shortest path distance to all reachable nodes.
+- Why they matter: they indicate hubs/authority, bridges, and how “central” a page is to the article network.
+
+4) Create document vectors (two views of meaning)
+- SBERT embeddings
+  - Model: `all‑MiniLM‑L6‑v2`.
+  - Produces a 384‑dim vector per page that captures semantic similarity of sentences.
+  - We L2‑normalize; cosine similarity ~ semantic relatedness.
+- TF‑IDF + SVD
+  - Terms: 1–2‑grams, English stopwords removed, min_df=2, vocabulary capped.
+  - TF‑IDF emphasizes page‑specific keywords; TruncatedSVD (≈64 dims) compresses to dense components.
+  - L2‑normalize the result.
+
+5) Hybrid representation (semantics + keywords)
+- Concatenate SBERT and TF‑IDF‑SVD after scaling (α = 0.5 blend so both contribute).
+- This hybrid vector lets clustering respect both topical vocabulary and semantic context.
+
+6) Topic clustering
+- KMeans on the hybrid vectors.
+- K (clusters) is set in the CLI (`--clusters`, default 5) and can be adjusted dynamically in the dashboard (UMAP layout).
+- Each article node gets a `cluster` label.
+
+7) Per‑page keywords
+- TF‑IDF top‑K terms per page (configurable `--doc-keywords-topk`, default 20) become the page’s keyword list.
+
+8) Cluster‑level keywords (labels)
+- Aggregate TF‑IDF scores across all pages in a cluster and rank terms; take top‑K per cluster (configurable `--cluster-keywords-topk`, default 15).
+- These are shown in the dashboard and attached to nodes as `cluster_keywords`.
+
+9) Pillar topic similarity (optional)
+- Encode the pillar text with SBERT; cosine similarity vs each page’s SBERT embedding → `pillar_sim`.
+- Helps spot pages closest/farthest from the pillar topic.
+
+10) Link‑based recommendations
+- Compute cosine similarity between article embeddings.
+- For each page, recommend top N similar pages not already linked (and above a min similarity); export `recommendations.csv`.
+
+11) Visualization
+- Force‑directed graph: positions computed by physics; arrows show edge direction; node size = PageRank; color = cluster.
+- UMAP layout: 2D projection of hybrid vectors for a spatial topic map; we also draw cluster centroids/labels in this layout.
+- Controls: filter to articles only, hide cross‑cluster edges, set minimum edge weight, choose cluster count (UMAP mode).
+
+12) Exports (for audit/SEO work)
+- `nodes.csv`, `edges.csv`: graph with attributes and anchors.
+- `nodes_articles.csv`, `edges_articles.csv`: article‑only graph.
+- `centrality.csv`: PageRank, betweenness, closeness, in/out‑degree.
+- `keywords.csv`: per‑page keywords.
+- `cluster_keywords.csv`: top terms per cluster.
+- `recommendations.csv`: internal link suggestions.
+- `umap.csv`: 2D coordinates and cluster for each article.
+- `crawl.json`: raw crawl data.
+
+### How links contribute (and what they don’t)
+- They DO influence:
+  - PageRank, betweenness, closeness, in/out‑degree.
+  - Edge weights (repeated anchors) strengthen transitions and PageRank impact.
+  - Recommendation gaps (we avoid suggesting links that already exist).
+- They DO NOT change topic clusters directly:
+  - Clustering uses page content (hybrid SBERT + TF‑IDF). Links aren’t currently a feature in clustering.
+  - If you want links to influence clustering, we can add graph embeddings (e.g., Node2Vec) to the hybrid vector.
+
+### What SBERT vs TF‑IDF each adds
+- SBERT: captures sentence‑level semantics; “meaning” even with different wording.
+- TF‑IDF(+SVD): captures shared keywords/phrases; sharpens topical boundaries and gives human‑readable terms for labels.
+- Hybrid: balances both so clusters are semantically coherent and keyword‑interpretable.
+
+### The exact processing chain (short)
+- Crawl → parse anchors → extract text → build directed graph → compute centralities
+- Make SBERT and TF‑IDF‑SVD vectors → concatenate (hybrid) → KMeans clusters
+- Per‑page TF‑IDF keywords → aggregate to cluster keywords
+- Pillar similarity (SBERT only)
+- Similarity‑based interlink recommendations
+- Export CSVs + interactive dashboard (force‑directed and UMAP)

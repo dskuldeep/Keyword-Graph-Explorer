@@ -1,0 +1,13 @@
+# System packages for Streamlit Cloud deployment
+# These are installed via apt-get
+
+# Required for lxml and some Python packages
+libxml2-dev
+libxslt1-dev
+zlib1g-dev
+
+# For better text processing
+libc6-dev
+
+# SSL support
+ca-certificates
