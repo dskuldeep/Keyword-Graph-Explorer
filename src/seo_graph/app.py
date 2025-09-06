@@ -198,7 +198,7 @@ if not nodes.empty:
     col1, col2 = st.columns([2, 1])
     with col1:
         st.subheader("📊 Cluster Distribution")
-        st.dataframe(cluster_counts.sort_values("count", ascending=False), width="stretch")
+        st.dataframe(cluster_counts.sort_values("count", ascending=False))
     
     with col2:
         with st.expander("🔍 How to Use This Data", expanded=False):
@@ -255,7 +255,7 @@ if not centrality.empty and not nodes.empty:
     col1, col2 = st.columns([3, 1])
     with col1:
         st.subheader("📈 Top Authority Pages (by PageRank)")
-        st.dataframe(top_central, width="stretch")
+        st.dataframe(top_central)
     
     with col2:
         with st.expander("📊 Metrics Explained", expanded=False):
@@ -313,7 +313,7 @@ if keywords_file.exists():
     col1, col2 = st.columns([3, 1])
     with col1:
         st.subheader("🎯 Site-Wide Keyword Analysis")
-        st.dataframe(kws.head(50), width="stretch")
+        st.dataframe(kws.head(50))
     
     with col2:
         with st.expander("📊 TF-IDF Scoring", expanded=False):
@@ -343,7 +343,7 @@ if pillars_file.exists():
     col1, col2 = st.columns([3, 1])
     with col1:
         st.subheader("🏆 Auto-Identified Pillar Content")
-        st.dataframe(pillars, width="stretch")
+        st.dataframe(pillars)
     
     with col2:
         with st.expander("🎯 Pillar Strategy", expanded=False):
@@ -366,7 +366,7 @@ if article_kws_file.exists():
     col1, col2 = st.columns([3, 1])
     with col1:
         st.subheader("🔍 Per-Article Keywords (Top Ranking)")
-        st.dataframe(ak, width="stretch")
+        st.dataframe(ak)
     
     with col2:
         with st.expander("💡 Content Optimization", expanded=False):
@@ -398,7 +398,7 @@ if recs_file.exists():
     col1, col2 = st.columns([3, 1])
     with col1:
         st.subheader("🎯 Smart Link Recommendations")
-        st.dataframe(recs.head(100), width="stretch")
+        st.dataframe(recs.head(100))
     
     with col2:
         with st.expander("🚀 Implementation Guide", expanded=False):
@@ -436,10 +436,10 @@ if not edges.empty:
         q = st.text_input("Search anchor text contains", "", help="Find specific anchor text patterns across your site")
         if q:
             filt = edges[edges["anchors"].fillna("").str.contains(q, case=False)]
-            st.dataframe(filt.head(200), width="stretch")
+            st.dataframe(filt.head(200))
             st.info(f"Found {len(filt)} links containing '{q}'")
         else:
-            st.dataframe(edges.head(200), width="stretch")
+            st.dataframe(edges.head(200))
     
     with col2:
         with st.expander("📊 Anchor Text Strategy", expanded=False):
