@@ -22,11 +22,14 @@ wheels/
 *.egg
 
 # Output files
-output/
 *.html
-*.csv
 *.json
 *.npy
+
+# Allow essential data files for Streamlit Cloud deployment
+!output/getmaxim/
+output/getmaxim/*.html
+output/getmaxim/*.npy
 
 # IDE
 .vscode/
