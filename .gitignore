@@ -21,16 +21,6 @@ wheels/
 .installed.cfg
 *.egg
 
-# Output files
-*.html
-*.json
-*.npy
-
-# Allow essential data files for Streamlit Cloud deployment
-!output/getmaxim/
-output/getmaxim/*.html
-output/getmaxim/*.npy
-
 # IDE
 .vscode/
 .idea/
