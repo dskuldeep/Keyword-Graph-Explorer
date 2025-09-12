@@ -8,20 +8,17 @@ import networkx as nx
 from .crawler import Page
 
 
-def is_article_url(url: str) -> bool:
+def is_article_url(url: str, config: dict = None) -> bool:
     """
     Determine if a URL represents an actual article content page.
     Excludes author pages, tag pages, category pages, etc.
     """
-    # Must contain /articles path
-    if "/articles" not in url:
-        return False
+    # Load config if not provided
+    if config is None:
+        config = load_article_detection_config()
     
-    # Convert to lowercase for case-insensitive matching
-    url_lower = url.lower()
-    
-    # Exclude non-article pages
-    exclude_patterns = [
+    url_patterns = config.get("url_patterns", ["/articles/", "/blog/"])
+    exclude_patterns = config.get("exclude_patterns", [
         "/author/", "/authors/",
         "/tag/", "/tags/", 
         "/category/", "/categories/",
@@ -29,18 +26,55 @@ def is_article_url(url: str) -> bool:
         "/archive",
         "/guides/",  # Guide listings
         "/about/", "/contact/", "/privacy/", "/terms/"
-    ]
+    ])
     
+    # Convert to lowercase for case-insensitive matching
+    url_lower = url.lower()
+    
+    # Check if URL matches any of the article patterns
+    matches_article_pattern = any(pattern in url_lower for pattern in url_patterns)
+    if not matches_article_pattern:
+        return False
+    
+    # Exclude non-article pages
     for pattern in exclude_patterns:
         if pattern in url_lower:
             return False
     
-    # Exclude root articles listing page
-    if url_lower.rstrip('/').endswith('/articles'):
-        return False
+    # Exclude root listing pages (e.g., /articles, /blog)
+    for pattern in url_patterns:
+        if url_lower.rstrip('/').endswith(pattern.rstrip('/')):
+            return False
     
-    # If it passes all filters and contains /articles, it's likely an article
+    # If it passes all filters and matches article patterns, it's likely an article
     return True
+
+
+def load_article_detection_config() -> dict:
+    """Load article detection configuration from blog_config.json"""
+    try:
+        from pathlib import Path
+        import json
+        
+        config_path = Path("blog_config.json")
+        if config_path.exists():
+            with config_path.open() as f:
+                config = json.load(f)
+            return config.get("article_detection", {})
+    except Exception:
+        pass
+    
+    # Return default config
+    return {
+        "url_patterns": ["/articles/", "/blog/", "/posts/", "/news/", "/insights/", "/updates/"],
+        "exclude_patterns": [
+            "/author/", "/authors/", "/tag/", "/tags/", "/category/", "/categories/",
+            "/page/", "/archive", "/guides/", "/about/", "/contact/", "/privacy/", "/terms/",
+            "/search", "/feed", "/rss", "/sitemap"
+        ],
+        "title_exclude_patterns": ["blog", "author", "tag", "category", "search", "page"],
+        "min_title_length": 10
+    }
 
 
 def build_link_graph(pages: Dict[str, Page]) -> nx.DiGraph:

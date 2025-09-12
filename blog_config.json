@@ -1,0 +1,82 @@
+{
+  "blog_paths": [
+    {
+      "name": "getmaxim.ai/articles",
+      "url": "https://getmaxim.ai/articles",
+      "domain": "getmaxim.ai",
+      "output_dir": "getmaxim",
+      "description": "Main articles section"
+    },
+    {
+      "name": "getmaxim.ai/blog",
+      "url": "https://getmaxim.ai/blog",
+      "domain": "getmaxim.ai", 
+      "output_dir": "getmaxim_blog",
+      "description": "Blog posts and updates"
+    },
+    {
+      "name": "galileo.ai/blog",
+      "url": "https://galileo.ai/blog",
+      "domain": "galileo.ai",
+      "output_dir": "galileo_blog",
+      "description": "AI observability and ML data intelligence blog"
+    },
+    {
+      "name": "langfuse.com/blog",
+      "url": "https://langfuse.com/blog",
+      "domain": "langfuse.com",
+      "output_dir": "langfuse_blog",
+      "description": "LLM observability and monitoring blog"
+    },
+    {
+      "name": "arize.com/blog",
+      "url": "https://arize.com/blog/",
+      "domain": "arize.com",
+      "output_dir": "arize_blog",
+      "description": "ML observability and model monitoring blog"
+    },
+    {
+      "name": "braintrust.dev/blog",
+      "url": "https://www.braintrust.dev/blog",
+      "domain": "braintrust.dev",
+      "output_dir": "braintrust_blog",
+      "description": "AI evaluation and testing platform blog"
+    }
+  ],
+  "article_detection": {
+    "url_patterns": [
+      "/blog/",
+      "/articles/",
+      "/posts/",
+      "/news/",
+      "/insights/",
+      "/updates/"
+    ],
+    "exclude_patterns": [
+      "/author/",
+      "/tag/",
+      "/category/",
+      "/page/",
+      "/search",
+      "/feed",
+      "/rss",
+      "/sitemap"
+    ],
+    "title_exclude_patterns": [
+      "blog",
+      "author",
+      "tag",
+      "category",
+      "search",
+      "page"
+    ],
+    "min_title_length": 10,
+    "max_depth": 3
+  },
+  "crawl_settings": {
+    "max_pages": 200,
+    "max_depth": 4,
+    "timeout": 30,
+    "delay": 0.5
+  }
+}

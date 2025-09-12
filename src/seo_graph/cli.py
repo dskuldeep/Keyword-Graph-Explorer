@@ -253,6 +253,51 @@ def run_all(seed: str, domain: str, out_dir: str, max_pages: int, max_depth: int
     visualize_pyvis(G, str(out / "graph.html"))
 
 
+def run_all_blogs(config_path: str = "blog_config.json") -> None:
+    """Run analysis for all blog paths defined in the config file."""
+    config_file = Path(config_path)
+    if not config_file.exists():
+        print(f"Config file {config_path} not found!")
+        return
+    
+    with config_file.open() as f:
+        config = json.load(f)
+    
+    blog_paths = config.get("blog_paths", [])
+    article_detection = config.get("article_detection", {})
+    crawl_settings = config.get("crawl_settings", {})
+    
+    print(f"Found {len(blog_paths)} blog paths to process:")
+    for blog in blog_paths:
+        print(f"  - {blog['name']} -> {blog['output_dir']}")
+    
+    for blog in blog_paths:
+        print(f"\n🔄 Processing: {blog['name']}")
+        print(f"   URL: {blog['url']}")
+        print(f"   Output: output/{blog['output_dir']}")
+        
+        try:
+            run_all(
+                seed=blog['url'],
+                domain=blog['domain'],
+                out_dir=f"output/{blog['output_dir']}",
+                max_pages=crawl_settings.get('max_pages', 100),
+                max_depth=crawl_settings.get('max_depth', 3),
+                pillar=None,
+                sitemap=None,
+                focus_prefix=None,  # Allow broader crawling to find all blog content
+                clusters=None,
+                doc_keywords_topk=20,
+                cluster_keywords_topk=15,
+            )
+            print(f"✅ Completed: {blog['name']}")
+        except Exception as e:
+            print(f"❌ Error processing {blog['name']}: {e}")
+            continue
+    
+    print(f"\n🎉 All blog paths processed!")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="SEO Graph: crawl and visualize internal linking with clustering")
     sub = parser.add_subparsers(dest="cmd", required=True)
@@ -270,6 +315,10 @@ def main() -> None:
     p_all.add_argument("--doc-keywords-topk", type=int, default=20, help="Top N keywords per article")
     p_all.add_argument("--cluster-keywords-topk", type=int, default=15, help="Top N keywords per cluster")
 
+    # All blogs command
+    p_all_blogs = sub.add_parser("all-blogs", help="Run analysis for all blog paths in config")
+    p_all_blogs.add_argument("--config", default="blog_config.json", help="Path to blog config file")
+
     args = parser.parse_args()
 
     if args.cmd == "all":
@@ -286,6 +335,8 @@ def main() -> None:
             args.doc_keywords_topk,
             args.cluster_keywords_topk,
         )
+    elif args.cmd == "all-blogs":
+        run_all_blogs(config_path=args.config)
 
 
 if __name__ == "__main__":

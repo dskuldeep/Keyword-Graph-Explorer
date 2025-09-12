@@ -1,0 +1,29 @@
+cluster,url,title,pagerank,semantic_sim,tfidf_sim,total_sim,cluster_keywords,excerpt
+0,https://www.getmaxim.ai/blog/mcptoolbench-raising-the-bar-for-realistic-ai-agent-tool-use-benchmarks/,Raising the Bar for Realistic AI Agent Tool-Use Benchmarks,0.055197446762453015,0.7836,0.6291,0.7218,"tool, models, model, sql, misalignment, mcp, ai, tools, bias, reasoning, claude, task, prompt engineering, accuracy, prompt","MCPToolBench++: Raising the Bar for Realistic AI Agent Tool-Use Benchmarks
+Introduction
+At the heart of reliable AI agents lies one critical skill: effective tool calling. We can see this in action with systems like the new Kimi K2, which connects seamlessly to dozens of tools, including web search, map navigation, financial analysis, and automated workflows. This results in impressive versatility and great tool call accuracy. In today’s era of the MCP, the ability for models to select and opera"
+1,https://www.getmaxim.ai/blog/observing-tool-calls-and-json-mode-responses-from-fireworks-ai-with-maxim-integration/,Observing Tool Calls & JSON Mode Responses from Fireworks AI,0.01880570196513482,0.8166,0.6399,0.7459,"print, suggestions, fireworks, function, resume, analysis, tool, review_data, stock, str, sentiment, self, population, maxim, product_name","👀 Observing Tool Calls 🔨 and JSON Mode Responses from Fireworks AI
+Modern AI applications require robust monitoring and observability to track model performance, understand usage patterns, and debug complex interactions. When working with advanced features like tool calls and structured JSON responses, having comprehensive logging becomes even more critical. In this guide, we'll explore how to integrate Maxim's observability platform with Fireworks AI to monitor and analyze these AI interactions"
+2,https://www.getmaxim.ai/blog/when-your-ai-transcription-turns-quarterly-revenue-into-quarterly-rabbit-2/,When AI Transcription Turns Tasty Burger Into Nasty Murder,0.014563999143554007,0.8244,0.7321,0.7875,"audio, snr, emotion, transcription, voice, audio quality, page, wer, order, sentiment analysis, recognition, data, sentiment, synthetic, privacy","When Your AI Transcription Turns ""Tasty Burger"" Into ""Nasty Murder""
+Introducing Maxim AI's first Voice Evaluators: SNR and WER
+We've all been there. You're relying on AI transcription for that crucial customer call analysis, and suddenly ""increase our market share"" becomes ""increase our marker chair."" While these mix-ups might seem amusing, they represent a serious challenge that's plaguing the entire Voice AI industry.
+Why Audio Quality is a Big Challenge Voice AI
+The industry is waking up to t"
+3,https://www.getmaxim.ai/blog/maxim-ai-june-2025-updates/,"Bifrost, Voice agent support, CrewAI integration- June updates",0.02941667259699899,0.892,0.7899,0.8511,"bifrost, schemas, atomicwork, vlms, agent, observability, maxim, calls, baseaccount, ai, integration, charts, account, docker, http","✨ Bifrost, Voice agent support, CrewAI integration, and more
+Feature spotlight
+⚡️ Introducing Bifrost: The fastest LLM gateway
+We're excited to announce the public release of Bifrost, the fastest, most scalable LLM gateway out there. We've engineered Bifrost specifically for high-throughput, production-grade AI systems and optimized performance at every level. Here's how Bifrost improves your AI infrastructure:
+- Unmatched speed and efficiency: Up to 9.5x faster with ~54x lower P99 latency compa"
+4,https://www.getmaxim.ai/blog/maxim-ai-july-2025-updates/,"Prompt simulations, File attachments, Claude 4 and more from July",0.027793291334394316,0.84,0.755,0.806,"maxim, bifrost, evals, size, logs, clinc, scheduled, a2a, scheduled runs, workspace, ai, duplicated, google cloud, view, log size","✨ Prompt simulations, File attachments, Claude 4, and more
+🎙️ Feature spotlight
+🤖 AI-powered simulations in Prompt Playground
+We’ve extended simulation capabilities in the Prompt Playground, allowing you to simulate multi-turn interactions/user follow-ups and evaluate your prompts' performance across real-world scenarios and custom user personas. Key highlights:
+- Seamlessly connect MCP tools or attach context sources to simulate tool-calling behaviors and RAG pipeline flows.
+- Run automated tes"
+5,https://www.getmaxim.ai/blog/ai-agent-quality-evaluation/,Understanding AI Agents and Evaluating their Quality,0.011988029432076663,0.8128,0.6038,0.7292,"agent, agents, ai, legal, vertex, evaluation, metrics, policy, vertex ai, workflow, clinical, ethical, claim, auditors, task","Agent Evaluation: Understanding Agentic Systems and their Quality
+This is Part 1 of our Agent Evaluations series. Here are Part 2 and Part 3 in this series
+In today’s rapidly advancing world of artificial intelligence (AI), agentic systems are becoming an integral part of numerous industries, powering everything from customer support to robotics. But what exactly are these systems, and why is measuring their quality so critical for businesses and users alike? In this blog post, we will explore t"
+6,https://www.getmaxim.ai/blog/building-a-gemini-powered-conversational-weather-agent-with-maxim-logging/,🌤️ Building a Gemini-Powered Conversational Weather Agent with Maxim Logging,0.003368632700967881,0.7963,0.6398,0.7337,"maxim, agent, weather, financial, import, livekit, trace, dashboards, room, os, interviewer, interview, traces maxim, jd, logger","🌤️ Building a Gemini-Powered Conversational Weather Agent with Maxim Logging
+“How’s the weather today in Delhi?”
+Simple question - but what if we wanted a conversational AI that could answer it, explain the temperature trend, and log every detail of its interaction for analysis?
+Agentic systems are booming. But building a reliable production-ready AI agent involves more than just connecting an LLM. You need tool usage, observability, error handling, and real-time responses. In this guide, we’ll "

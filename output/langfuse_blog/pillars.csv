@@ -1,0 +1,34 @@
+cluster,url,title,pagerank,semantic_sim,tfidf_sim,total_sim,cluster_keywords,excerpt
+0,https://langfuse.com/blog/2025-07-31-langfuse-july-update,Langfuse July Update - Langfuse Blog,0.019975707602281966,0.8909,0.6422,0.7914,"langfuse, prompt, new, prompts, alerts, webhooks, april, slack, types, observation, blob, environments, demo, agent, java","Langfuse July Update
+Langfuse July Update: Playground Side-by-Side Comparison, real-time alerts (Webhooks & Slack) for prompt changes, usage alerts on Langfuse Cloud, and one-click remote experiments for non-technical teammates.
+With Q3 in full swing, we’ve shipped product updates to speed up your development: Side‑by‑side Playground testing, real‑time alerts (Webhooks & Slack) for prompt changes, usage alerts on Langfuse Cloud, and one‑click remote experiments for non‑technical teammates.
+Q3 Ro"
+1,https://langfuse.com/blog/2024-07-ai-agent-observability-with-langfuse,AI Agent Observability with Langfuse - Langfuse Blog,0.026332990671700696,0.8769,0.6904,0.8023,"agent, research, agents, ai, voice, deep research, deep, cursor, testing, conversation, voice ai, langgraph, ai agents, tasks, report","AI Agent Observability with Langfuse
+Easily monitor, trace and debug your AI agents. Explore tools like LangGraph, Llama Agents, Dify, Flowise, and Langflow, and see how Langfuse helps to monitor and optimize your application.
+What are AI Agents?
+An AI agent is a system that autonomously performs tasks by planning its task execution and utilizing available tools. AI Agents leverage large language models (LLMs) to understand and respond to user inputs step-by-step and decide when to call external"
+2,https://langfuse.com/blog/2024-04-python-decorator,Trace complex LLM applications with the Langfuse decorator (Python) - Langfuse Blog,0.04521581707999084,0.8669,0.5369,0.7349,"langfuse, security, haystack, proxy, import, llamaindex, decorator, llm, hugging, hugging face, os, failure, face, dataset, environ","Trace complex LLM applications with the Langfuse decorator (Python)
+When building RAG or agents, lots of LLM calls and non-LLM inputs feeds into the final output. The Langfuse decorator allows you to trace and evaluate holistically.
+Note: This blog post references our Python SDK v2. We have a new, improved SDK available based on OpenTelemetry. Please check out the SDK v3 for a more powerful and simpler to use SDK.
+When we initially built complex agents for web scraping and code generation while "
+3,https://langfuse.com/blog/2025-05-19-launch-week-3,Langfuse Launch Week #3 - Langfuse Blog,0.021757112977574756,0.8927,0.6739,0.8052,"langfuse, dashboards, day, week, launch week, launch, custom dashboards, prompt, custom, changelog, june, query, friday, dashboard, evaluator","Langfuse Launch Week #3
+A week dedicated to deeper insights and seamless integrations
+We are excited to announce Langfuse Launch Week #3!
+Starting on Monday, May 19 – Saturday, May 24, 2025, we’ll drop a fresh feature every single day. Expect to get deeper insights from your application data, more guidance on how to get started, improve and evaluate your LLM applications, and more ways to integrate with your favorite tools and frameworks.
+We’ll celebrate with a mid-week Virtual Community Hour an"
+4,https://langfuse.com/blog/update-2023-07,Langfuse Update — July 2023 - Langfuse Blog,0.02068829575102671,0.9223,0.7136,0.8388,"langfuse, langchain, chatbot, docs, trace, sdk, langfuse_handler, langchain integration, frontend, docker, js ts, streaming, chat, api, improved","Langfuse Update — July 2023
+Building out the core platform and preparing infrastructure for advanced analytics: Async SDKs, automated token counts, nested Trace UI, langchain integration, public GET API
+Hi all, a lot has happened since our launch two weeks ago and I’m excited to share our July update:
+- Faster integration
+- Langchain integration: Integrate with Langfuse in minutes when using Langchain
+- SDKs for Python and JS/TS: Now fully async, typed, and with improved DX for nested traces
+- N"
+5,https://langfuse.com/blog/announcing-our-seed-round,Langfuse raises $4M - Langfuse Blog,0.016634737703625575,0.8463,0.6583,0.7711,"langfuse, dify, llm, langflow, users, clickhouse, community, product, open source, open, self, data, script, user, applications","Langfuse raises $4M
+We're thrilled to announce that Langfuse has raised a $4m seed round from Lightspeed Venture Partners, La Famiglia and Y Combinator.
+With Langfuse, we are building open source observability and product analytics for LLM-based applications. Our goal is to enable product and engineering teams to harness the power of Generative AI with the most useful and open suite of devtools focused on visibility and insights.
+When we first joined Y Combinator for the winter batch in early 20"
+6,https://langfuse.com/blog/2024-10-opentelemetry-for-llm-observability,OpenTelemetry (OTel) for LLM Observability - Langfuse Blog,0.019152457151764626,0.9149,0.7227,0.838,"otel, opentelemetry, observability, llm, llmops, applications, stack, systems, genai, instrumentation, libraries, feedback, february, llmops stack, developers","OpenTelemetry (OTel) for LLM Observability
+Explore the challenges of LLM observability and the current state of using OpenTelemetry (OTel) for standardized instrumentation.
+Update: We have released the Langfuse OTel Endpoint to increase compatibility with emerging OTel-based instrumentation libraries.
+Introduction to
+OpenTelemetry is an open-source observability framework designed to handle the instrumentation of applications for collecting traces, metrics, and logs. It helps developers monitor "

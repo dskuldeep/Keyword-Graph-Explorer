@@ -12,6 +12,28 @@ import numpy as np
 
 st.set_page_config(page_title="SEO Graph Explorer", layout="wide", initial_sidebar_state="expanded")
 
+# Multi-path configuration (defined early for use in header)
+def load_blog_config():
+    """Load blog paths from config file."""
+    config_path = Path("blog_config.json")
+    if config_path.exists():
+        try:
+            with config_path.open() as f:
+                config = json.load(f)
+            blog_paths = config.get("blog_paths", [])
+            return {blog["name"]: blog["output_dir"] for blog in blog_paths}
+        except Exception as e:
+            st.error(f"Error loading blog config: {e}")
+    
+    # Fallback to default paths
+    return {
+        "getmaxim.ai/articles": "getmaxim",
+        "getmaxim.ai/blog": "getmaxim_blog"
+    }
+
+available_paths = load_blog_config()
+selected_site = list(available_paths.keys())[0] if available_paths else "getmaxim.ai/articles"  # Default value, will be updated by sidebar
+
 # Custom CSS for better styling
 st.markdown("""
 <style>
@@ -59,7 +81,36 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-st.markdown('<div class="main-header"><h1>🔍 SEO Graph Explorer</h1><p>Advanced Content Clustering & Link Analysis for SEO & GEO Optimization</p></div>', unsafe_allow_html=True)
+# Dynamic header with current site context
+st.markdown(f'''
+<div class="main-header">
+    <h1>🔍 SEO Graph Explorer</h1>
+    <p>Advanced Content Clustering & Link Analysis for SEO & GEO Optimization</p>
+    <p style="font-size: 1.1em; margin-top: 1rem; opacity: 0.9;">
+        📍 Currently analyzing: <strong>{selected_site}</strong>
+    </p>
+</div>
+''', unsafe_allow_html=True)
+
+# Multi-path information
+with st.expander("🌐 Multi-Path Analysis", expanded=False):
+    st.markdown(f"""
+    ### **Current Analysis: {selected_site}**
+    
+    **📊 Data Status:**
+    - **Data Directory:** `output/{available_paths[selected_site]}`
+    - **Analysis Type:** Independent content analysis
+    - **Data Isolation:** Each path maintains separate analysis data
+    
+    **🔄 Available Paths:**
+    {chr(10).join([f"    - **{name}** → `output/{output_dir}/`" for name, output_dir in available_paths.items()])}
+    
+    **💡 How It Works:**
+    - Each path is analyzed independently with its own clustering and metrics
+    - Switch between paths using the sidebar dropdown
+    - All analysis data (clusters, keywords, recommendations) is path-specific
+    - Perfect for comparing different sections of your site or multiple sites
+    """)
 
 # Workflow Overview
 with st.expander("🚀 How This System Works - Complete Workflow", expanded=False):
@@ -118,7 +169,21 @@ st.sidebar.markdown("Use this panel to navigate through different analysis secti
 
 # Data Loading Section
 st.sidebar.subheader("📁 Data Configuration")
-out_dir = st.sidebar.text_input("Output directory", value=str(Path.cwd() / "output/getmaxim"))
+
+# Multi-path support with dropdown selector
+selected_site = st.sidebar.selectbox(
+    "🌐 Select Site/Path", 
+    options=list(available_paths.keys()),
+    index=0,
+    help="Choose which site's data to analyze. Each path maintains separate analysis data."
+)
+
+# Display current path context
+st.sidebar.markdown(f"**📍 Current Path:** `{selected_site}`")
+st.sidebar.markdown(f"**📂 Data Directory:** `output/{available_paths[selected_site]}`")
+
+# Set the output directory based on selected path
+out_dir = str(Path.cwd() / "output" / available_paths[selected_site])
 base = Path(out_dir)
 
 nodes_file = base / "nodes.csv"
@@ -134,7 +199,7 @@ pillars_file = base / "pillars.csv"
 article_kws_file = base / "article_keywords.csv"
 
 # Key Metrics Dashboard
-st.markdown("## 📊 **Site Analysis Overview**")
+st.markdown(f"## 📊 **Site Analysis Overview - {selected_site}**")
 
 cols = st.columns(4)
 with cols[0]:
@@ -145,7 +210,8 @@ with cols[0]:
         st.markdown("*All discovered pages*")
         st.markdown('</div>', unsafe_allow_html=True)
     else:
-        st.warning("nodes.csv not found")
+        st.warning(f"nodes.csv not found for {selected_site}")
+        st.info(f"💡 **To analyze {selected_site}:** Run the CLI tool with this path as the seed URL")
         nodes = pd.DataFrame()
 
 with cols[1]:
@@ -156,28 +222,35 @@ with cols[1]:
         st.markdown("*Link connections found*")
         st.markdown('</div>', unsafe_allow_html=True)
     else:
-        st.warning("edges.csv not found")
+        st.warning(f"edges.csv not found for {selected_site}")
         edges = pd.DataFrame()
 
 with cols[2]:
-    if centrality_file.exists():
-        centrality = pd.read_csv(centrality_file)
-        st.markdown('<div class="metric-card">', unsafe_allow_html=True)
-        st.metric("📝 Article Pages", len(centrality))
-        st.markdown("*Content for analysis*")
-        st.markdown('</div>', unsafe_allow_html=True)
+    if centrality_file.exists() and centrality_file.stat().st_size > 1:
+        try:
+            centrality = pd.read_csv(centrality_file)
+            st.markdown('<div class="metric-card">', unsafe_allow_html=True)
+            st.metric("📝 Article Pages", len(centrality))
+            st.markdown("*Content for analysis*")
+            st.markdown('</div>', unsafe_allow_html=True)
+        except (pd.errors.EmptyDataError, pd.errors.ParserError):
+            st.warning(f"centrality.csv is empty for {selected_site}")
+            centrality = pd.DataFrame()
     else:
+        st.warning(f"centrality.csv not found or empty for {selected_site}")
         centrality = pd.DataFrame()
 
 with cols[3]:
     if not nodes.empty:
-        clusters = len(nodes[nodes["is_article"] == True]["cluster"].dropna().unique()) if "cluster" in nodes.columns else 0
+        clusters = 0
+        if "cluster" in nodes.columns and not nodes[nodes["is_article"] == True]["cluster"].dropna().empty:
+            clusters = len(nodes[nodes["is_article"] == True]["cluster"].dropna().unique())
         st.markdown('<div class="metric-card">', unsafe_allow_html=True)
         st.metric("🎯 Topic Clusters", clusters)
         st.markdown("*AI-identified themes*")
         st.markdown('</div>', unsafe_allow_html=True)
 
-st.markdown("## 🎯 **Topic Clusters Analysis**")
+st.markdown(f"## 🎯 **Topic Clusters Analysis - {selected_site}**")
 
 st.markdown("""
 <div class="info-box">
@@ -190,10 +263,15 @@ if not nodes.empty:
     df = nodes[nodes["is_article"] == True].copy()
     if "cluster_keywords" not in df.columns and "cluster_label" in df.columns:
         df["cluster_keywords"] = df["cluster_label"]
-    cluster_counts = df.groupby("cluster").agg(
-        count=("url", "size"),
-        keywords=("cluster_keywords", lambda x: x.dropna().iloc[0] if not x.dropna().empty else "")
-    ).reset_index()
+    
+    # Check if cluster column exists and has data
+    if "cluster" in df.columns and not df["cluster"].dropna().empty:
+        cluster_counts = df.groupby("cluster").agg(
+            count=("url", "size"),
+            keywords=("cluster_keywords", lambda x: x.dropna().iloc[0] if not x.dropna().empty else "")
+        ).reset_index()
+    else:
+        cluster_counts = pd.DataFrame(columns=["cluster", "count", "keywords"])
     
     col1, col2 = st.columns([2, 1])
     with col1:
@@ -236,7 +314,7 @@ if not nodes.empty:
 else:
     st.warning("No cluster data available. Run the analysis first.")
 
-st.markdown("## 🏆 **Authority & Influence Analysis**")
+st.markdown(f"## 🏆 **Authority & Influence Analysis - {selected_site}**")
 
 st.markdown("""
 <div class="info-box">
@@ -300,7 +378,7 @@ if not centrality.empty and not nodes.empty:
 else:
     st.warning("No centrality data available. Run the analysis first.")
 
-st.markdown("## 🔑 **Keyword Intelligence**")
+st.markdown(f"## 🔑 **Keyword Intelligence - {selected_site}**")
 
 st.markdown("""
 <div class="info-box">
@@ -308,82 +386,91 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-if keywords_file.exists():
-    kws = pd.read_csv(keywords_file)
-    col1, col2 = st.columns([3, 1])
-    with col1:
-        st.subheader("🎯 Site-Wide Keyword Analysis")
-        st.dataframe(kws.head(50))
-    
-    with col2:
-        with st.expander("📊 TF-IDF Scoring", expanded=False):
-            st.markdown("""
-            **What is TF-IDF?**
-            - **TF**: Term frequency in document
-            - **IDF**: Inverse document frequency across site
-            - **Combined**: Identifies uniquely important terms
-            
-            **SEO Applications:**
-            - High scores = distinctive content themes
-            - Use for meta descriptions and titles
-            - Identify content differentiation opportunities
-            """)
+if keywords_file.exists() and keywords_file.stat().st_size > 1:
+    try:
+        kws = pd.read_csv(keywords_file)
+        col1, col2 = st.columns([3, 1])
+        with col1:
+            st.subheader("🎯 Site-Wide Keyword Analysis")
+            st.dataframe(kws.head(50))
+        
+        with col2:
+            with st.expander("📊 TF-IDF Scoring", expanded=False):
+                st.markdown("""
+                **What is TF-IDF?**
+                - **TF**: Term frequency in document
+                - **IDF**: Inverse document frequency across site
+                - **Combined**: Identifies uniquely important terms
+                
+                **SEO Applications:**
+                - High scores = distinctive content themes
+                - Use for meta descriptions and titles
+                - Identify content differentiation opportunities
+                """)
+    except (pd.errors.EmptyDataError, pd.errors.ParserError):
+        st.info(f"keywords.csv is empty for {selected_site}")
 else:
-    st.info("keywords.csv not found")
+    st.info(f"keywords.csv not found or empty for {selected_site}")
 
-if pillars_file.exists():
-    st.markdown("## 🏛️ **Pillar Content Strategy**")
-    st.markdown("""
-    <div class="success-box">
-    <strong>🎯 SEO Strategy:</strong> Pillar pages are your topic authority anchors. These should be your most comprehensive, well-linked content pieces.
-    </div>
-    """, unsafe_allow_html=True)
-    
-    pillars = pd.read_csv(pillars_file)
-    col1, col2 = st.columns([3, 1])
-    with col1:
-        st.subheader("🏆 Auto-Identified Pillar Content")
-        st.dataframe(pillars)
-    
-    with col2:
-        with st.expander("🎯 Pillar Strategy", expanded=False):
-            st.markdown("""
-            **What Makes a Pillar?**
-            - Highest semantic relevance to cluster topic
-            - Strong internal link authority (PageRank)
-            - Comprehensive content coverage
-            
-            **SEO Action Items:**
-            - Update pillars with comprehensive content
-            - Link all cluster content to pillars
-            - Target pillars for external backlinks
-            - Use pillars for topic cluster navigation
-            """)
+if pillars_file.exists() and pillars_file.stat().st_size > 1:
+    try:
+        st.markdown("## 🏛️ **Pillar Content Strategy**")
+        st.markdown("""
+        <div class="success-box">
+        <strong>🎯 SEO Strategy:</strong> Pillar pages are your topic authority anchors. These should be your most comprehensive, well-linked content pieces.
+        </div>
+        """, unsafe_allow_html=True)
+        
+        pillars = pd.read_csv(pillars_file)
+        col1, col2 = st.columns([3, 1])
+        with col1:
+            st.subheader("🏆 Auto-Identified Pillar Content")
+            st.dataframe(pillars)
+        
+        with col2:
+            with st.expander("🎯 Pillar Strategy", expanded=False):
+                st.markdown("""
+                **What Makes a Pillar?**
+                - Highest semantic relevance to cluster topic
+                - Strong internal link authority (PageRank)
+                - Comprehensive content coverage
+                
+                **SEO Action Items:**
+                - Update pillars with comprehensive content
+                - Link all cluster content to pillars
+                - Target pillars for external backlinks
+                - Use pillars for topic cluster navigation
+                """)
+    except (pd.errors.EmptyDataError, pd.errors.ParserError):
+        st.info(f"pillars.csv is empty for {selected_site}")
 
-if article_kws_file.exists():
-    st.markdown("## 📝 **Article-Level Keyword Analysis**")
-    ak = pd.read_csv(article_kws_file)
-    col1, col2 = st.columns([3, 1])
-    with col1:
-        st.subheader("🔍 Per-Article Keywords (Top Ranking)")
-        st.dataframe(ak)
-    
-    with col2:
-        with st.expander("💡 Content Optimization", expanded=False):
-            st.markdown("""
-            **Use This Data To:**
-            - Optimize title tags and headers
-            - Identify content expansion opportunities
-            - Find internal linking anchor text
-            - Discover related topic opportunities
-            
-            **GEO Benefits:**
-            - AI systems understand your content themes
-            - Better context for generative AI responses
-            - Enhanced semantic search visibility
-            """)
+if article_kws_file.exists() and article_kws_file.stat().st_size > 1:
+    try:
+        st.markdown("## 📝 **Article-Level Keyword Analysis**")
+        ak = pd.read_csv(article_kws_file)
+        col1, col2 = st.columns([3, 1])
+        with col1:
+            st.subheader("🔍 Per-Article Keywords (Top Ranking)")
+            st.dataframe(ak)
+        
+        with col2:
+            with st.expander("💡 Content Optimization", expanded=False):
+                st.markdown("""
+                **Use This Data To:**
+                - Optimize title tags and headers
+                - Identify content expansion opportunities
+                - Find internal linking anchor text
+                - Discover related topic opportunities
+                
+                **GEO Benefits:**
+                - AI systems understand your content themes
+                - Better context for generative AI responses
+                - Enhanced semantic search visibility
+                """)
+    except (pd.errors.EmptyDataError, pd.errors.ParserError):
+        st.info(f"article_keywords.csv is empty for {selected_site}")
 else:
-    st.info("article_keywords.csv not found")
+    st.info(f"article_keywords.csv not found or empty for {selected_site}")
 
 st.markdown("## 🔗 **Internal Linking Opportunities**")
 
@@ -393,33 +480,36 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-if recs_file.exists():
-    recs = pd.read_csv(recs_file)
-    col1, col2 = st.columns([3, 1])
-    with col1:
-        st.subheader("🎯 Smart Link Recommendations")
-        st.dataframe(recs.head(100))
-    
-    with col2:
-        with st.expander("🚀 Implementation Guide", expanded=False):
-            st.markdown("""
-            **How Recommendations Work:**
-            - Based on semantic content similarity
-            - Identifies missing high-value connections
-            - Prioritizes by relevance score
-            
-            **Implementation Priority:**
-            1. **High similarity** (>0.7): Immediate action
-            2. **Medium similarity** (0.5-0.7): Review context
-            3. **Lower similarity** (<0.5): Consider topical relevance
-            
-            **SEO Impact:**
-            - Improves topic cluster connectivity
-            - Distributes PageRank more effectively
-            - Enhances user journey through content
-            """)
+if recs_file.exists() and recs_file.stat().st_size > 1:
+    try:
+        recs = pd.read_csv(recs_file)
+        col1, col2 = st.columns([3, 1])
+        with col1:
+            st.subheader("🎯 Smart Link Recommendations")
+            st.dataframe(recs.head(100))
+        
+        with col2:
+            with st.expander("🚀 Implementation Guide", expanded=False):
+                st.markdown("""
+                **How Recommendations Work:**
+                - Based on semantic content similarity
+                - Identifies missing high-value connections
+                - Prioritizes by relevance score
+                
+                **Implementation Priority:**
+                1. **High similarity** (>0.7): Immediate action
+                2. **Medium similarity** (0.5-0.7): Review context
+                3. **Lower similarity** (<0.5): Consider topical relevance
+                
+                **SEO Impact:**
+                - Improves topic cluster connectivity
+                - Distributes PageRank more effectively
+                - Enhances user journey through content
+                """)
+    except (pd.errors.EmptyDataError, pd.errors.ParserError):
+        st.info(f"recommendations.csv is empty for {selected_site}")
 else:
-    st.info("recommendations.csv not found")
+    st.info(f"recommendations.csv not found or empty for {selected_site}")
 
 st.markdown("## 🔍 **Anchor Text Intelligence**")
 
@@ -472,7 +562,9 @@ if not nodes.empty and not edges.empty:
     
     # Filters
     article_only = st.sidebar.checkbox("📝 Article-only view", value=True, help="Focus on blog content, hide product/navigation pages")
-    cluster_options = sorted([int(c) for c in nodes[nodes["is_article"] == True]["cluster"].dropna().unique()]) if "cluster" in nodes.columns else []
+    cluster_options = []
+    if "cluster" in nodes.columns and not nodes[nodes["is_article"] == True]["cluster"].dropna().empty:
+        cluster_options = sorted([int(c) for c in nodes[nodes["is_article"] == True]["cluster"].dropna().unique()])
     selected_clusters = st.sidebar.multiselect("🎯 Show clusters", options=cluster_options, default=cluster_options, help="Select specific topic clusters to display")
     
     # Layout and edge controls
@@ -709,7 +801,9 @@ if not nodes.empty and not edges.empty:
             px, py = umap_pos[row["url"]]
             add_kwargs.update({"x": float(px), "y": float(py), "physics": False, "fixed": True})
         # Make labels appropriately sized for readability
-        display_label = title[:35] + "…" if title and len(title) > 35 else (title or row["url"])
+        # Handle NaN values and ensure title is a string
+        title_str = str(title) if pd.notna(title) and title else ""
+        display_label = title_str[:35] + "…" if title_str and len(title_str) > 35 else (title_str or row["url"])
         
         net.add_node(
             row["url"],

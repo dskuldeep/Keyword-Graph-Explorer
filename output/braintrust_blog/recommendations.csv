@@ -1,0 +1,27 @@
+source_url,target_url,similarity,reason
+https://www.braintrust.dev/blog/agent-while-loop,https://www.braintrust.dev/blog/evaluating-agents,0.518,High semantic similarity; add contextual link
+https://www.braintrust.dev/blog/five-lessons-evals,https://www.braintrust.dev/blog/eval-feedback-loops,0.5101,High semantic similarity; add contextual link
+https://www.braintrust.dev/blog/brainstore,https://www.braintrust.dev/blog/brainstore-default,0.5495,High semantic similarity; add contextual link
+https://www.braintrust.dev/blog/evaluating-agents,https://www.braintrust.dev/blog/agent-while-loop,0.518,High semantic similarity; add contextual link
+https://www.braintrust.dev/blog/realtime-api,https://www.braintrust.dev/blog/ai-proxy,0.5066,High semantic similarity; add contextual link
+https://www.braintrust.dev/blog/custom-scorers,https://www.braintrust.dev/blog/functions,0.5,High semantic similarity; add contextual link
+https://www.braintrust.dev/blog/improve-evals,https://www.braintrust.dev/blog/after-evals,0.6109,High semantic similarity; add contextual link
+https://www.braintrust.dev/blog/getting-started-evals,https://www.braintrust.dev/blog/improve-evals,0.504,High semantic similarity; add contextual link
+https://www.braintrust.dev/blog/eval-feedback-loops,https://www.braintrust.dev/blog/improve-evals,0.5108,High semantic similarity; add contextual link
+https://www.braintrust.dev/blog/eval-feedback-loops,https://www.braintrust.dev/blog/five-lessons-evals,0.5101,High semantic similarity; add contextual link
+https://www.braintrust.dev/blog/seed-round,https://www.braintrust.dev/blog/reliable-ai,0.5097,High semantic similarity; add contextual link
+https://www.braintrust.dev/blog/ai-proxy,https://www.braintrust.dev/blog/open-sourcing-proxy,0.5914,High semantic similarity; add contextual link
+https://www.braintrust.dev/blog/ai-proxy,https://www.braintrust.dev/blog/realtime-api,0.5066,High semantic similarity; add contextual link
+https://www.braintrust.dev/blog/update-6,https://www.braintrust.dev/blog/update-5,0.7184,High semantic similarity; add contextual link
+https://www.braintrust.dev/blog/update-6,https://www.braintrust.dev/blog/update-4,0.5387,High semantic similarity; add contextual link
+https://www.braintrust.dev/blog/update-6,https://www.braintrust.dev/blog/update-3,0.5146,High semantic similarity; add contextual link
+https://www.braintrust.dev/blog/update-5,https://www.braintrust.dev/blog/update-6,0.7184,High semantic similarity; add contextual link
+https://www.braintrust.dev/blog/update-5,https://www.braintrust.dev/blog/update-4,0.664,High semantic similarity; add contextual link
+https://www.braintrust.dev/blog/update-4,https://www.braintrust.dev/blog/update-5,0.664,High semantic similarity; add contextual link
+https://www.braintrust.dev/blog/update-4,https://www.braintrust.dev/blog/update-6,0.5387,High semantic similarity; add contextual link
+https://www.braintrust.dev/blog/update-3,https://www.braintrust.dev/blog/update-2,0.5372,High semantic similarity; add contextual link
+https://www.braintrust.dev/blog/update-3,https://www.braintrust.dev/blog/update-6,0.5146,High semantic similarity; add contextual link
+https://www.braintrust.dev/blog/update-2,https://www.braintrust.dev/blog/update-3,0.5372,High semantic similarity; add contextual link
+https://www.braintrust.dev/blog/update-2,https://www.braintrust.dev/blog/update-1,0.5246,High semantic similarity; add contextual link
+https://www.braintrust.dev/blog/update-1,https://www.braintrust.dev/blog/update-2,0.5246,High semantic similarity; add contextual link
+https://www.braintrust.dev/blog/reliable-ai,https://www.braintrust.dev/blog/seed-round,0.5097,High semantic similarity; add contextual link

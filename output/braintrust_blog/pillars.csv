@@ -1,0 +1,30 @@
+cluster,url,title,pagerank,semantic_sim,tfidf_sim,total_sim,cluster_keywords,excerpt
+0,https://www.braintrust.dev/blog/improve-evals,How to improve your evaluations - Blog - Braintrust,0.01311646698094585,0.8427,0.5924,0.7425,"evals, eval, test, ai, data, scoring, playgrounds, model, examples, infrastructure, run, loop, scorers, app, custom scorers","How to improve your evaluations
+This post will cover what evaluations are, what you should work towards, and some actionable approaches to improving your evals.
+What are evaluations?
+To effectively build production-grade AI products, you need great evaluations. Evals measure the performance of your AI application and help establish an effective feedback loop for you and your team. Evals consist of 3 parts:
+- Data: a test set of examples
+- Task: the AI function you want to test
+- Scores: a set of"
+1,https://www.braintrust.dev/blog/update-6,Weekly update 11/13/23 - Blog - Braintrust,0.018814675446848537,0.853,0.6403,0.7679,"braintrust, blog, added, year, week, playground, compliance, prompt playground, page, dashboard, prompt, functions, review, 2023, experiment","Latest news
+Braintrust Weekly Update
+13 November 2023David Song
+It’s been another busy week at Braintrust. We’ve shipped some user experience improvements and fixes this week to make it easier for you to build reliable AI apps:
+We added function calling to our playground
+Many developers have been asking us to support OpenAI’s function calling in our prompt playground. We added it this week. Just click “Add tools” in your prompt to get started experimenting with OpenAI functions.
+Release notes:
+-"
+2,https://www.braintrust.dev/blog/gemini,Evaluating Gemini models for vision - Blog - Braintrust,0.018814675446848537,0.7705,0.6776,0.7333,"gemini, gpt, image, models, reasoning, claude, score, client, description, content, 4o, gpt 4o, import, effort, opus","Evaluating Gemini models for vision
+With the AI proxy, evaluating the performance of leading image models like Gemini Pro 1.5 and Flash 1.5 is as simple as a one-line model change. Gemini can be used for any multimodal use cases, like document extraction and image captioning. To see how these models stack up, we put them to the test— read on to find out which vision model came out on top.
+Gemini for document extraction
+To understand Gemini's capabilities, we compared them to other state-of-the-a"
+3,https://www.braintrust.dev/blog/brainstore,Brainstore: the database designed for the AI engineering era - Blog - Braintrust,0.034300851740516565,0.7998,0.6454,0.738,"brainstore, data, monitor page, attachments, braintrust, hosted, monitor, control, attachment, metadata, fields, self, metrics, default, audio","Brainstore: the purpose-built database for the AI engineering era
+AI engineering has completely changed how we build software. Organizations are processing more tokens than ever, running agent-based systems with thousands of intermediate steps, and collecting massive amounts of structured and unstructured data. But traditional observability tools just aren’t keeping up.
+That’s why we built Brainstore, a database built from the ground up for high-scale AI workloads. It’s 80x faster on real-world "
+4,https://www.braintrust.dev/blog/seed-round,Braintrust's seed round: $5m to build infrastructure for AI products - Blog - Braintrust,0.018814675446848537,0.8501,0.5858,0.7444,"ai, notion, zapier, tech, companies, braintrust, evaluations, team, product, ceo, building, enterprise, 30, products, airtable","Braintrust's seed round: $5m to build infrastructure for AI products
+I'm excited to announce that Saam Motamedi from Greylock is leading our $5.1m seed round, bringing our total capital raised to $8.3m! Braintrust has become critical infrastructure that powers AI at leading technology companies like Zapier, Coda, Airtable, and Instacart. Since we announced our last round just 6 weeks ago, we've doubled both our team and customer base. This round builds on our momentum and allows us to accelerate"
+5,https://www.braintrust.dev/blog/ai-proxy,AI proxy: fostering a more open ecosystem - Blog - Braintrust,0.0231244424686975,0.8226,0.7086,0.777,"proxy, api, api key, openai, providers, python, realtime, realtime api, dependencies, braintrust, tools, cloudflare, models, support, key","AI proxy: fostering a more open ecosystem
+Like most of us, I spent last weekend thinking about the past, present, and future of AI. It's hard to imagine the industry without OpenAI — an institution we all look to, respect, and rely on — at its forefront. I for one am rooting for the company and brilliant folks who work there to continue leading the way. However, I also realized that the AI ecosystem benefits from being interoperable and default open and that we at Braintrust have an important ro"
+6,https://www.braintrust.dev/blog/evaluating-agents,Evaluating agents - Blog - Braintrust,0.015754068056875986,0.7867,0.6053,0.7142,"agent, tool, evaluation, programming, comments, async, final, prompt, scorers, checks, quality, video, output, code review, ai","Evaluating agents
+This blog post is a companion guide to Anthropic's research on building effective agents. It requires prior knowledge of agentic systems.
+Building an agentic system, whether it’s a simple augmented large language model (LLM) or a fully autonomous agent, involves many moving parts. Your design might make sense on paper, but without measurement and iterative improvement, unexpected issues can pop up in production. Inspired by Anthropic’s guide to building effective agents, in thi"

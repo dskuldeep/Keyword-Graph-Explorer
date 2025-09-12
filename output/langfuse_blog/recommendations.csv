@@ -1,0 +1,11 @@
+source_url,target_url,similarity,reason
+https://langfuse.com/blog/2025-07-31-langfuse-july-update,https://langfuse.com/blog/2025-04-30-langfuse-april-update,0.5111,High semantic similarity; add contextual link
+https://langfuse.com/blog/2025-05-19-launch-week-3,https://langfuse.com/blog/2025-05-31-langfuse-may-update,0.621,High semantic similarity; add contextual link
+https://langfuse.com/blog/2025-04-30-langfuse-april-update,https://langfuse.com/blog/2025-07-31-langfuse-july-update,0.5111,High semantic similarity; add contextual link
+https://langfuse.com/blog/2025-03-19-ai-agent-comparison,https://langfuse.com/blog/2024-07-ai-agent-observability-with-langfuse,0.8104,High semantic similarity; add contextual link
+https://langfuse.com/blog/2024-11-17-launch-week-2,https://langfuse.com/blog/2025-05-19-launch-week-3,0.5381,High semantic similarity; add contextual link
+https://langfuse.com/blog/launch-week-1,https://langfuse.com/blog/2024-11-17-launch-week-2,0.5463,High semantic similarity; add contextual link
+https://langfuse.com/blog/announcing-our-seed-round,https://langfuse.com/blog/product-analytics-for-LLM-apps,0.5553,High semantic similarity; add contextual link
+https://langfuse.com/blog/update-2023-07,https://langfuse.com/blog/langchain-integration,0.6241,High semantic similarity; add contextual link
+https://langfuse.com/blog/langchain-integration,https://langfuse.com/blog/update-2023-07,0.6241,High semantic similarity; add contextual link
+https://langfuse.com/blog/product-analytics-for-LLM-apps,https://langfuse.com/blog/announcing-our-seed-round,0.5553,High semantic similarity; add contextual link

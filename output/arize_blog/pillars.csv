@@ -1,0 +1,30 @@
+cluster,url,title,pagerank,semantic_sim,tfidf_sim,total_sim,cluster_keywords,excerpt
+0,https://arize.com/blog/how-handshake-deployed-and-scaled-15-llm-use-cases-in-under-six-months-with-evals-from-day-one/,How Handshake Deployed and Scaled 15+ LLM Use Cases In Under Six Months — With Evals From Day One - Arize AI,0.023431000315926265,1.0,1.0,1.0,"handshake, launch, llm, ax, arize ax, product, production, engineering, arize, features, evals, use cases, iteration, cost, golden","Co-Authored by Aparna Dhinakaran, Co-founder & Chief Product Officer & Kyle Gallatin, Technical Lead Manager of ML Infrastructure @ Handshake.
+Handshake is the largest early-career network, specializing in connecting students and new grads with employers and career centers. It’s also an engineering powerhouse and innovator in applying AI to its product and features. Given constantly evolving model capabilities and user expectations, the product and engineering team at Handshake needed a way to s"
+1,https://arize.com/blog/orchestrator-worker-agents-a-practical-comparison-of-common-agent-frameworks/,Orchestrator-Worker Agents: A Practical Comparison of Common Agent Frameworks - Arize AI,0.022060625263694143,0.8539,0.7413,0.8089,"autogen, agent, langgraph, agents, memory, framework, state, worker, orchestrator, sql, multi agent, orchestrator worker, nodes, multi, node","Co-Authored by Sanjana Yeddula, AI Engineer & Dylan Couzon, Growth Engineer & Aparna Dhinakaran, Co-founder & Chief Product Officer & Sri Chavali, AI Engineer.
+—
+Technical deep dive inspired by Anthropic’s “Building Effective Agents”
+In this piece, we’ll take a close look at the orchestrator–worker agent workflow. We’ll unpack its challenges and nuances, then compare how leading frameworks – Agno, Autogen, CrewAI, OpenAI, LangGraph, and Mastra – approach and implement this pattern.
+Orchestrator-"
+2,https://arize.com/blog/prompt-optimization-few-shot-prompting/,Prompt Optimization Using Few-Shot Prompting: Proven Tactics,0.6011693271939607,0.8695,0.7694,0.8295,"reasoning, prompt, optimization, prompting, prompts, meta, explanations, techniques, explanation, label, evaluation, model, dspy, shot, step","LLMs are powerful tools, but their performance is heavily influenced by how prompts are structured. The difference between an effective and ineffective prompt can determine whether a model produces accurate responses or fails to generalize to new inputs.
+Prompt optimization is the process of refining prompts to improve model outputs. This can involve adjusting wording, structuring inputs differently, or using more advanced techniques such as meta prompting and gradient-based optimization. While "
+3,https://arize.com/blog/claude-code-observability-and-tracing-introducing-dev-agent-lens/,Open Source Claude Code Observability & Tracing,0.02971497180991059,0.8652,0.846,0.8575,"claude, claude code, code, tool, plan, repo, cost, calls, litellm, latency, cursor, proxy, lens, tool calls, dev agent","Co-Authored by Dylan Couzon, Growth Engineer & Adam Mischke, Founder, AM2 & Alex Owen, Founder, Stealth Startup.
+Claude Code is excellent for code generation and analysis. Once it lands in a real workflow, though, you immediately need visibility:
+- Which tools are being called, and how reliably?
+- How long do requests take end-to-end versus pure model latency?
+- Where are prompts ballooning token counts (and cost)?
+- How often do tool calls fail, and why?
+Conventional logs often fall short here "
+4,https://arize.com/blog/annotation-for-strong-ai-evaluation-pipelines/,Annotation for Strong AI Evaluation Pipelines - Arize AI,0.022060625263694143,0.8148,0.6044,0.7306,"phoenix, cypher, annotations, dataset, data, evaluator, question, dspy, traces, really, schema, recipe, retrieval, step, datasets","This post walks through how human annotations fit into your evaluation pipeline in Phoenix, why they matter, and how you can combine them with evaluations to build a strong experimentation loop.
+Our notebook provides an easy way to test out these evaluations for yourself.
+Why Annotations Matter In AI
+Annotations, specifically human annotations, provide high-quality feedback on how your agent or AI system is performing. Unlike automated methods, human annotations are precise. But, they’re also ti"
+5,https://arize.com/blog/?cat=phoenix,Arize Blog & News | AI Observability and Evaluation Platform,0.009934640524387958,0.828,0.6782,0.768,"paper, choices, green, papers, peter, belcak, peter belcak, research, agentic, signal, text, communication, stan, miasnikov, verizon","The Evaluator
+Your go-to blog for insights on AI observability and evaluation.
+Orchestrator-Worker Agents: A Practical Comparison of Common Agent Frameworks
+— Technical deep dive inspired by Anthropic’s “Building Effective Agents” In this piece, we’ll take a close look at the orchestrator–worker agent workflow. We’ll unpack its challenges and nuances, then…
+Building a Multilingual Cypher Query Evaluation Pipeline
+How to evaluate LLM performance across languages for complex cypher query generatio"
+6,https://arize.com/blog/memory-and-state-in-llm-applications/,Memory and State in LLM Applications - Arize AI,0.02069025021146203,1.0,1.0,1.0,"state, memory, state management, management, application, applications, context, information, session, llm, storage, term, systems, llm applications, long","Memory in LLM applications is a broad and often misunderstood concept. In this blog, I’ll break down what memory really means, how it relates to state management, and how different approaches—like session-based memory versus long-term persistence—affect performance, cost, and user experience.
+Defining “Memory”
+The term “memory” is often used in discussions about LLM applications, but it’s an abstraction that can mean different things to different people. Broadly, memory refers to any mechanism b"
