@@ -35,6 +35,8 @@ def run_all(seed: str, domain: str, out_dir: str, max_pages: int, max_depth: int
         max_depth=max_depth,
         sitemap_url=sitemap,
         focus_prefix=focus_prefix,
+        enable_js_discovery=True,
+        enable_pagination_discovery=True,
     )
 
     crawl_path = out / "crawl.json"

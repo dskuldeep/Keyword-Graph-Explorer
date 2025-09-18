@@ -2,13 +2,14 @@ from __future__ import annotations
 
 import re
 import time
+import json
 from collections import deque
 from dataclasses import dataclass
 from typing import Dict, List, Optional, Set, Tuple
 
 import requests
 from bs4 import BeautifulSoup
-from urllib.parse import urljoin, urlparse
+from urllib.parse import urljoin, urlparse, parse_qs
 import tldextract
 import trafilatura
 import xml.etree.ElementTree as ET
@@ -51,7 +52,16 @@ def clean_anchor(text: Optional[str]) -> str:
 
 
 def fetch_page(session: requests.Session, url: str, timeout: float = 15.0) -> Tuple[str, str, List[Link]]:
-    resp = session.get(url, timeout=timeout, headers={"User-Agent": "seo-graph/0.1"})
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.5",
+        "Accept-Encoding": "gzip, deflate",
+        "Connection": "keep-alive",
+        "Upgrade-Insecure-Requests": "1",
+    }
+    
+    resp = session.get(url, timeout=timeout, headers=headers)
     resp.raise_for_status()
     html = resp.text
     soup = BeautifulSoup(html, "html.parser")
@@ -70,6 +80,263 @@ def fetch_page(session: requests.Session, url: str, timeout: float = 15.0) -> Tu
     text = downloaded or ""
 
     return title, text, links
+
+
+def discover_pagination_urls(session: requests.Session, base_url: str, allowed_domain: str) -> List[str]:
+    """Discover pagination URLs by checking common patterns and API endpoints."""
+    discovered_urls = []
+    
+    try:
+        # Check for common pagination patterns
+        pagination_patterns = [
+            f"{base_url}?page={{}}",
+            f"{base_url}/page/{{}}",
+            f"{base_url}/{{}}",
+            f"{base_url}?p={{}}",
+            f"{base_url}?offset={{}}",
+        ]
+        
+        # Check first few pages
+        for pattern in pagination_patterns:
+            for page_num in range(1, 6):  # Check first 5 pages
+                test_url = pattern.format(page_num)
+                try:
+                    resp = session.head(test_url, timeout=5, allow_redirects=True)
+                    if resp.status_code == 200 and is_internal_url(test_url, allowed_domain):
+                        discovered_urls.append(test_url)
+                except:
+                    continue
+        
+        # Check for API endpoints that might return blog data
+        api_patterns = [
+            f"{base_url}/api/posts",
+            f"{base_url}/api/articles", 
+            f"{base_url}/api/blog",
+            f"{base_url}/wp-json/wp/v2/posts",
+            f"{base_url}/ghost/api/v3/content/posts",
+        ]
+        
+        for api_url in api_patterns:
+            try:
+                resp = session.get(api_url, timeout=5)
+                if resp.status_code == 200:
+                    # Try to extract URLs from JSON response
+                    try:
+                        data = resp.json()
+                        if isinstance(data, dict) and 'posts' in data:
+                            for post in data['posts']:
+                                if 'url' in post:
+                                    discovered_urls.append(post['url'])
+                        elif isinstance(data, list):
+                            for item in data:
+                                if isinstance(item, dict) and 'url' in item:
+                                    discovered_urls.append(item['url'])
+                    except:
+                        pass
+            except:
+                continue
+                
+    except Exception:
+        pass
+    
+    return list(set(discovered_urls))
+
+
+def extract_js_links(html: str, base_url: str) -> List[str]:
+    """Extract links from JavaScript code in HTML."""
+    links = []
+    
+    # Look for common patterns in JavaScript
+    patterns = [
+        r'["\']([^"\']*\/blog\/[^"\']*)["\']',  # Blog URLs in quotes
+        r'href\s*[:=]\s*["\']([^"\']+)["\']',   # href assignments
+        r'url\s*[:=]\s*["\']([^"\']+)["\']',    # url assignments
+        r'["\']([^"\']*\/page\/[^"\']*)["\']',  # Pagination URLs
+    ]
+    
+    for pattern in patterns:
+        matches = re.findall(pattern, html, re.IGNORECASE)
+        for match in matches:
+            if match.startswith('/'):
+                full_url = urljoin(base_url, match)
+                links.append(full_url)
+            elif match.startswith('http'):
+                links.append(match)
+    
+    return links
+
+
+def discover_dynamic_content(session: requests.Session, base_url: str, allowed_domain: str) -> List[str]:
+    """Discover content that might be loaded dynamically via JavaScript or AJAX."""
+    discovered_urls = []
+    
+    try:
+        # Get the main page
+        resp = session.get(base_url, timeout=10)
+        html = resp.text
+        soup = BeautifulSoup(html, "html.parser")
+        
+        # Extract links from JavaScript
+        js_links = extract_js_links(html, base_url)
+        for link in js_links:
+            if is_internal_url(link, allowed_domain):
+                discovered_urls.append(link)
+        
+        # Look for data attributes that might contain URLs
+        for element in soup.find_all(attrs={"data-url": True}):
+            url = element.get("data-url")
+            if url and is_internal_url(url, allowed_domain):
+                discovered_urls.append(url)
+        
+        # Look for JSON-LD structured data
+        for script in soup.find_all("script", type="application/ld+json"):
+            try:
+                data = json.loads(script.string)
+                if isinstance(data, dict) and "url" in data:
+                    discovered_urls.append(data["url"])
+                elif isinstance(data, list):
+                    for item in data:
+                        if isinstance(item, dict) and "url" in item:
+                            discovered_urls.append(item["url"])
+            except:
+                continue
+        
+        # Check for meta tags with URLs
+        for meta in soup.find_all("meta", property="og:url"):
+            content = meta.get("content")
+            if content and is_internal_url(content, allowed_domain):
+                discovered_urls.append(content)
+        
+        # Look for infinite scroll or lazy loading patterns
+        # Check for common patterns in the HTML that suggest dynamic loading
+        infinite_scroll_indicators = [
+            'data-infinite-scroll',
+            'data-lazy-load',
+            'data-load-more',
+            'infinite-scroll',
+            'lazy-load',
+            'load-more'
+        ]
+        
+        for indicator in infinite_scroll_indicators:
+            elements = soup.find_all(attrs={indicator: True})
+            for element in elements:
+                # Try to extract URLs from these elements
+                for attr in ['data-url', 'data-href', 'href']:
+                    url = element.get(attr)
+                    if url and is_internal_url(url, allowed_domain):
+                        discovered_urls.append(url)
+        
+        # Look for script tags that might contain blog post data
+        for script in soup.find_all("script"):
+            if script.string:
+                # Look for common patterns in JavaScript that indicate blog posts
+                patterns = [
+                    r'posts\s*[:=]\s*\[([^\]]+)\]',
+                    r'articles\s*[:=]\s*\[([^\]]+)\]',
+                    r'blogPosts\s*[:=]\s*\[([^\]]+)\]',
+                ]
+                
+                for pattern in patterns:
+                    matches = re.findall(pattern, script.string, re.IGNORECASE)
+                    for match in matches:
+                        # Try to extract URLs from the match
+                        url_matches = re.findall(r'["\']([^"\']*\/blog\/[^"\']*)["\']', match)
+                        for url_match in url_matches:
+                            if is_internal_url(url_match, allowed_domain):
+                                discovered_urls.append(url_match)
+                
+    except Exception:
+        pass
+    
+    return list(set(discovered_urls))
+
+
+def discover_with_selenium(base_url: str, allowed_domain: str, max_scrolls: int = 5) -> List[str]:
+    """
+    Use Selenium to discover dynamically loaded content (optional dependency).
+    This function will only work if selenium is installed.
+    """
+    discovered_urls = []
+    
+    try:
+        from selenium import webdriver
+        from selenium.webdriver.chrome.options import Options
+        from selenium.webdriver.common.by import By
+        from selenium.webdriver.support.ui import WebDriverWait
+        from selenium.webdriver.support import expected_conditions as EC
+        from selenium.common.exceptions import TimeoutException, WebDriverException
+        
+        # Set up Chrome options for headless browsing
+        chrome_options = Options()
+        chrome_options.add_argument("--headless")
+        chrome_options.add_argument("--no-sandbox")
+        chrome_options.add_argument("--disable-dev-shm-usage")
+        chrome_options.add_argument("--disable-gpu")
+        chrome_options.add_argument("--window-size=1920,1080")
+        chrome_options.add_argument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36")
+        
+        driver = webdriver.Chrome(options=chrome_options)
+        
+        try:
+            driver.get(base_url)
+            
+            # Wait for initial page load
+            WebDriverWait(driver, 10).until(
+                EC.presence_of_element_located((By.TAG_NAME, "body"))
+            )
+            
+            # Scroll to trigger lazy loading
+            for i in range(max_scrolls):
+                driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+                time.sleep(2)  # Wait for content to load
+                
+                # Extract all links after each scroll
+                links = driver.find_elements(By.TAG_NAME, "a")
+                for link in links:
+                    href = link.get_attribute("href")
+                    if href and is_internal_url(href, allowed_domain):
+                        discovered_urls.append(href)
+            
+            # Look for "Load More" or similar buttons and click them
+            load_more_selectors = [
+                "button[data-load-more]",
+                "a[data-load-more]",
+                ".load-more",
+                ".load-more-btn",
+                "[data-infinite-scroll]",
+                "button:contains('Load More')",
+                "a:contains('Load More')",
+                "button:contains('Show More')",
+                "a:contains('Show More')"
+            ]
+            
+            for selector in load_more_selectors:
+                try:
+                    elements = driver.find_elements(By.CSS_SELECTOR, selector)
+                    for element in elements:
+                        if element.is_displayed() and element.is_enabled():
+                            driver.execute_script("arguments[0].click();", element)
+                            time.sleep(3)  # Wait for content to load
+                            
+                            # Extract new links
+                            links = driver.find_elements(By.TAG_NAME, "a")
+                            for link in links:
+                                href = link.get_attribute("href")
+                                if href and is_internal_url(href, allowed_domain):
+                                    discovered_urls.append(href)
+                except:
+                    continue
+                    
+        finally:
+            driver.quit()
+            
+    except ImportError:
+        print("   ℹ️ Selenium not available - skipping dynamic content discovery")
+    except Exception as e:
+        print(f"   ⚠️ Selenium discovery failed: {e}")
+    
+    return list(set(discovered_urls))
 
 
 def normalize_url(base_url: str, link: str) -> str:
@@ -150,9 +417,13 @@ def crawl_site(
     delay_seconds: float = 0.3,
     sitemap_url: Optional[str] = None,
     focus_prefix: Optional[str] = None,
+    enable_js_discovery: bool = True,
+    enable_pagination_discovery: bool = True,
+    use_selenium: bool = False,
 ) -> Dict[str, Page]:
     """
-    BFS crawl limited to the same registered domain. Returns mapping URL -> Page.
+    Enhanced BFS crawl with JavaScript and pagination discovery.
+    Returns mapping URL -> Page.
     """
     if allowed_domain is None:
         ext = tldextract.extract(urlparse(seed_url).netloc)
@@ -165,9 +436,33 @@ def crawl_site(
 
     queue: deque[Tuple[str, int]] = deque()
     initial_urls: List[str] = [seed_url]
+    
+    # Add sitemap URLs if provided
     if sitemap_url:
         sm_urls = parse_sitemap_urls(session, sitemap_url, allowed_domain=allowed_domain, include_prefix=focus_prefix)
         initial_urls = sm_urls + initial_urls
+    
+    # Enhanced discovery for JavaScript-based content
+    if enable_js_discovery:
+        print(f"🔍 Discovering dynamic content for {seed_url}...")
+        dynamic_urls = discover_dynamic_content(session, seed_url, allowed_domain)
+        initial_urls.extend(dynamic_urls)
+        print(f"   Found {len(dynamic_urls)} dynamic URLs")
+        
+        # Use Selenium for JavaScript-heavy sites if requested
+        if use_selenium:
+            print(f"🤖 Using Selenium for advanced JavaScript discovery...")
+            selenium_urls = discover_with_selenium(seed_url, allowed_domain)
+            initial_urls.extend(selenium_urls)
+            print(f"   Found {len(selenium_urls)} additional URLs via Selenium")
+    
+    # Enhanced discovery for pagination
+    if enable_pagination_discovery:
+        print(f"📄 Discovering pagination for {seed_url}...")
+        pagination_urls = discover_pagination_urls(session, seed_url, allowed_domain)
+        initial_urls.extend(pagination_urls)
+        print(f"   Found {len(pagination_urls)} pagination URLs")
+    
     # Deduplicate initial URLs
     seen_init: Set[str] = set()
     for u in initial_urls:
@@ -175,6 +470,8 @@ def crawl_site(
             queue.append((u, 0))
             seen_init.add(u)
 
+    print(f"🚀 Starting crawl with {len(queue)} initial URLs...")
+    
     while queue and len(pages) < max_pages:
         url, depth = queue.popleft()
         if url in visited or depth > max_depth:
@@ -183,7 +480,8 @@ def crawl_site(
 
         try:
             title, text, raw_links = fetch_page(session, url)
-        except Exception:
+        except Exception as e:
+            print(f"   ⚠️ Failed to fetch {url}: {e}")
             continue
 
         abs_links: List[Link] = []
@@ -193,6 +491,9 @@ def crawl_site(
                 abs_links.append(Link(href=abs_url, anchor=l.anchor))
 
         pages[url] = Page(url=url, title=title, text=text, links=abs_links, depth=depth)
+        
+        if len(pages) % 10 == 0:
+            print(f"   📊 Crawled {len(pages)} pages so far...")
 
         for l in abs_links:
             if l.href not in visited and len(pages) + len(queue) < max_pages:
@@ -203,4 +504,5 @@ def crawl_site(
 
         time.sleep(delay_seconds)
 
+    print(f"✅ Crawl completed! Found {len(pages)} pages total.")
     return pages
