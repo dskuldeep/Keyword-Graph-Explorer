@@ -41,6 +41,13 @@
       "domain": "braintrust.dev",
       "output_dir": "braintrust_blog",
       "description": "AI evaluation and testing platform blog"
+    },
+    {
+      "name": "getmaxim.ai/docs",
+      "url": "https://getmaxim.ai/docs",
+      "domain": "getmaxim.ai",
+      "output_dir": "getmaxim_docs",
+      "description": "GetMaxim documentation and guides"
     }
   ],
   "article_detection": {
@@ -50,7 +57,10 @@
       "/posts/",
       "/news/",
       "/insights/",
-      "/updates/"
+      "/updates/",
+      "/docs/",
+      "/guides/",
+      "/tutorials/"
     ],
     "exclude_patterns": [
       "/author/",

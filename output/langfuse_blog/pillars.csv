@@ -1,34 +1,40 @@
 cluster,url,title,pagerank,semantic_sim,tfidf_sim,total_sim,cluster_keywords,excerpt
-0,https://langfuse.com/blog/2025-03-19-ai-agent-comparison,Comparing Open-Source AI Agent Frameworks - Langfuse Blog,0.030480726517719593,0.914,0.7989,0.868,"agent, agents, research, ai, deep research, deep, langgraph, ai agents, multi, report, queries, agents sdk, tasks, task, ai agent","Open-Source AI Agent Frameworks: Which One Is Right for You?
+0,https://langfuse.com/docs/sdk/typescript/guide,TypeScript SDK - Overview - Langfuse,0.07779548847413646,0.8674,0.7368,0.8152,"langfuse, otel, opentelemetry, span, sdk, api, packages, typescript sdk, spans, import, public, attributes, https, instrumentation, typescript","TypeScript SDK - Overview
+The modular Langfuse TypeScript SDK (v4) is built on OpenTelemetry for robust observability, better context management, and easy integration with third-party libraries.
+This documentation is for the TypeScript SDK v4. If you are looking for the documentation for the TypeScript SDK v3, please click here.
+If you are self-hosting Langfuse, the TypeScript SDK v4 requires Langfuse platform version ≥ 3.95.0 for all features to work correctly.
+Quickstart
+Get your first trace i"
+1,https://langfuse.com/blog/2025-05-19-launch-week-3,Langfuse Launch Week #3 - Langfuse Blog,0.005055794262760004,0.8873,0.526,0.7427,"langfuse, dashboards, day, week, launch, launch week, prompt, custom dashboards, prompts, features, april, custom, new, town, hall","Langfuse Launch Week #3
+A week dedicated to deeper insights and seamless integrations
+We are excited to announce Langfuse Launch Week #3!
+Starting on Monday, May 19 – Saturday, May 24, 2025, we’ll drop a fresh feature every single day. Expect to get deeper insights from your application data, more guidance on how to get started, improve and evaluate your LLM applications, and more ways to integrate with your favorite tools and frameworks.
+We’ll celebrate with a mid-week Virtual Community Hour an"
+2,https://langfuse.com/blog/2024-04-introducing-langfuse-2.0,Introducing Langfuse 2.0: the LLM Engineering Platform - Langfuse Blog,0.002838087119660117,0.8758,0.5051,0.7275,"langfuse, llm, dify, users, security, langflow, observability, proxy, data, applications, llamaindex, application, otel, decorator, hugging","Introducing Langfuse 2.0: The LLM Engineering Platform
+Extending Langfuse’s core tracing with evaluations, prompt management, LLM playground and datasets.
+We publicly launched Langfuse in late August of last year. Back then, the product was focused on production traces of LLM applications – because that was our main pain point when originally tinkering on code-generation and scraping agents.
+Our ambition was always to build open source tooling to help developers iterate on complex LLM workflows "
+3,https://langfuse.com/blog/2025-03-19-ai-agent-comparison,Comparing Open-Source AI Agent Frameworks - Langfuse Blog,0.005282039303747891,0.8942,0.7201,0.8245,"agent, agents, research, ai, deep research, deep, cursor, langgraph, ai agents, multi, report, agents sdk, queries, ai agent, tasks","Open-Source AI Agent Frameworks: Which One Is Right for You?
 Explore the leading open-source AI agent frameworks—LangGraph, OpenAI Agents SDK, Smolagents, CrewAI, AutoGen, Semantic Kernel, LlamaIndex agents, Strands Agents, and Pydantic AI agents. Compare features, learn when to use each, and see how to track agent behavior with Langfuse
 Building AI agents used to be a patchwork of scripts, prompt engineering, and trial-and-error. Today, there is a growing landscape of open-source frameworks des"
-1,https://langfuse.com/blog/announcing-our-seed-round,Langfuse raises $4M - Langfuse Blog,0.01590759616472952,0.87,0.6848,0.7959,"langfuse, clickhouse, product, llm, cursor, open, community, users, ai, open source, ingestion, good, llmops, production, use cases","Langfuse raises $4M
-We're thrilled to announce that Langfuse has raised a $4m seed round from Lightspeed Venture Partners, La Famiglia and Y Combinator.
-With Langfuse, we are building open source observability and product analytics for LLM-based applications. Our goal is to enable product and engineering teams to harness the power of Generative AI with the most useful and open suite of devtools focused on visibility and insights.
-When we first joined Y Combinator for the winter batch in early 20"
-2,https://langfuse.com/blog/showcase-llm-chatbot,LLM Chatbot Showcase - Langfuse Blog,0.018302718984892326,0.909,0.8211,0.8738,"langfuse, chatbot, frontend, streaming, chat, docs, langfuse docs, embedding, feedback, user feedback, id, search, vercel, model openai, embeddings","Showcase: LLM Chatbot
-Chat is the most common interface for LLM apps. This showcase is a reference implementation on how to integrate Langfuse with chatbots using the Langfuse Typescript SDK.
-Demo
-Frontend: chat.langfuse.com
-Chat application with conversations, user feedback, and streaming responses from the edge.
-Langfuse UI
-We have captured threads of users as single traces in langfuse. Threads include the user_id, overall token usage, and further metadata. User feedback which is collected in "
-3,https://langfuse.com/blog/update-2023-07,Langfuse Update — July 2023 - Langfuse Blog,0.020227703442620842,0.9074,0.5863,0.779,"langfuse, dashboards, day, week, launch week, launch, langchain, custom dashboards, prompt, openai, custom, python sdk, langfuse_handler, changelog, june","Langfuse Update — July 2023
+4,https://langfuse.com/blog/update-2023-07,Langfuse Update — July 2023 - Langfuse Blog,0.005843886112935771,0.9296,0.7059,0.8401,"langfuse, haystack, langchain, trace, sdk, langfuse_handler, import, frontend, langchain integration, docker, user_input, streaming, chat, js ts, improved","Langfuse Update — July 2023
 Building out the core platform and preparing infrastructure for advanced analytics: Async SDKs, automated token counts, nested Trace UI, langchain integration, public GET API
 Hi all, a lot has happened since our launch two weeks ago and I’m excited to share our July update:
 - Faster integration
 - Langchain integration: Integrate with Langfuse in minutes when using Langchain
 - SDKs for Python and JS/TS: Now fully async, typed, and with improved DX for nested traces
 - N"
-4,https://langfuse.com/blog/2025-09-05-automated-evaluations,Automated Evaluations of LLM Applications - Langfuse Blog,0.02114092568135975,0.8834,0.6278,0.7811,"failure, voice, testing, evaluation, langfuse, llm, script, traces, evals, template, modes, failure modes, automated, conversation, benchmarking","Automated Evaluations of LLM Applications
-A practical guide to setting up automated evaluations for LLM applications and AI agents using Langfuse.
-In AI development, iterating quickly is important. Whether you’re refining a prompt, swapping a model, or changing your application logic, you need to understand the impact of each change on performance. Manually annotating outputs after every modification is slow and expensive, especially when you want to integrate evaluations into a CI/CD pipeline.
-"
-5,https://langfuse.com/blog/2024-04-introducing-langfuse-2.0,Introducing Langfuse 2.0: the LLM Engineering Platform - Langfuse Blog,0.006016930158421864,0.8953,0.5075,0.7402,"langfuse, llm, dify, langflow, security, haystack, otel, proxy, import, llamaindex, decorator, hugging, hugging face, os, integration","Introducing Langfuse 2.0: The LLM Engineering Platform
-Extending Langfuse’s core tracing with evaluations, prompt management, LLM playground and datasets.
-We publicly launched Langfuse in late August of last year. Back then, the product was focused on production traces of LLM applications – because that was our main pain point when originally tinkering on code-generation and scraping agents.
-Our ambition was always to build open source tooling to help developers iterate on complex LLM workflows "
-6,https://langfuse.com/blog/2025-07-31-langfuse-july-update,Langfuse July Update - Langfuse Blog,0.019503497481144664,0.9208,0.7027,0.8336,"langfuse, prompt, alerts, webhooks, april, new, hipaa, slack, types, observation, demo, agent, august, session level, prompt changes","Langfuse July Update
-Langfuse July Update: Playground Side-by-Side Comparison, real-time alerts (Webhooks & Slack) for prompt changes, usage alerts on Langfuse Cloud, and one-click remote experiments for non-technical teammates.
-With Q3 in full swing, we’ve shipped product updates to speed up your development: Side‑by‑side Playground testing, real‑time alerts (Webhooks & Slack) for prompt changes, usage alerts on Langfuse Cloud, and one‑click remote experiments for non‑technical teammates.
-Q3 Ro"
+5,https://langfuse.com/docs/prompts/get-started,Get Started with Open Source Prompt Management - Langfuse,0.05983988569090384,0.8262,0.6992,0.7754,"prompt, dataset, playground, get_prompt, items, langfuse, prompt langfuse, optional, dataset_name, tool, create, generation, get_client, variables, save","Get Started with Prompt Management
+This quickstart helps you to create your first prompt and use it in your application.
+Get API keys
+- Create Langfuse account or self-host Langfuse.
+- Create new API credentials in the project settings.
+Create a prompt
+Use the Langfuse UI to create a new prompt or update an existing one.
+Use prompt
+At runtime, you can fetch the latest production version from Langfuse. Learn more about control (versions/labels) here.
+from langfuse import get_client
+# Initialize L"
+6,https://langfuse.com/blog/2025-03-04-llm-evaluation-101-best-practices-and-challenges,"LLM Evaluation 101: Best Practices, Challenges & Proven Techniques - Langfuse Blog",0.004985340607780267,0.8023,0.6525,0.7424,"evaluation, failure, annotation, queue, voice, user, traces, click, script, dataset, llm, metrics, modes, failure modes, template","LLM Evaluation 101: Best Practices, Challenges & Proven Techniques
+Explore proven strategies for LLM evaluation — from offline and online benchmarking – this post briefs you on the state of the art.
+Evaluating large language models can feel like trying to untangle a giant ball of yarn—there’s a lot going on, and it’s often not obvious which thread to pull first. From wrangling unpredictable user inputs to picking the right metrics, the process can be overwhelming. But don’t panic! In this post, "

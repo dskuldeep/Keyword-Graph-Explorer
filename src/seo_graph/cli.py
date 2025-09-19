@@ -279,6 +279,9 @@ def run_all_blogs(config_path: str = "blog_config.json") -> None:
         print(f"   Output: output/{blog['output_dir']}")
         
         try:
+            # Set focus_prefix to keep sections separate
+            focus_prefix = blog['url'] if blog['url'].endswith('/') else blog['url'] + '/'
+            
             run_all(
                 seed=blog['url'],
                 domain=blog['domain'],
@@ -287,7 +290,7 @@ def run_all_blogs(config_path: str = "blog_config.json") -> None:
                 max_depth=crawl_settings.get('max_depth', 3),
                 pillar=None,
                 sitemap=None,
-                focus_prefix=None,  # Allow broader crawling to find all blog content
+                focus_prefix=focus_prefix,  # Restrict to specific path
                 clusters=None,
                 doc_keywords_topk=20,
                 cluster_keywords_topk=15,
