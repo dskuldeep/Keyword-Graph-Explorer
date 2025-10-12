@@ -1,8 +1,8 @@
 cluster,keywords
-0,"session, maxim, observability, session level, llm, level, maxim docs, ai, user, feedback, traces, trace, node, trace session, traces using"
-6,"ai, hallucinations, evaluation, maxim, hallucination detection, prompt, hallucination, observability, agent, outputs, ai hallucinations, maxim ai, detection, hallucinations ai, maxim vs"
-1,"ai, maxim, evaluation, prompt, agent, observability, maxim ai, agents, prompts, testing, teams, llm, workflows, tracing, monitoring"
-5,"agent, simulation, ai, evaluation, maxim, observability, tool, https, memory, agent observability, evaluators, agents, agent simulation, experimentation, overview"
-3,"evaluation, agent, evals, ai, judge, rubrics, rag, tool, judges, rubric, injection, instructions, llm, evidence, long context"
-2,"id, event, bifrost, tags, trace id, email, gateway, trace, await, keys, const trace, trace logger, logger trace, id trace, id user"
-4,"create repository, repository, add metadata, install sdk, sdk initialize, initialize sdk, sdk, initialize, install, metadata, create, add, start tracing, sidebar, repository select"
+2,
+3,"prompt, ai, prompt management, prompts, versioning, maxim, prompt versioning, management, evaluation, teams, source, variants, testing, rollback, maxim ai"
+1,"ai, agent, observability, monitoring, teams, quality, ai observability, agents, infrastructure, evaluation, organizations, maxim, coordination, systems, multi agent"
+0,"agent, ai, evaluation, simulation, observability, maxim, evals, rag, agents, overview, tool, metrics, evaluators, quality, context"
+5,"agent, id, maxim, tool, agents, trace, context, self, logger, state, maxim docs, const, coordination, def, ai"
+6,"node, evaluators, evaluation, prompt, node level, auto, rag, quickstart, scheduled, prompt testing, retrieval, optimization, generation, maxim, auto evaluation"
+4,"ai, maxim, evaluation, agent, hallucinations, reliability, agents, observability, user, release, prompt, maxim ai, human, metrics, post release"

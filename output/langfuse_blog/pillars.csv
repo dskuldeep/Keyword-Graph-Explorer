@@ -1,40 +1,37 @@
 cluster,url,title,pagerank,semantic_sim,tfidf_sim,total_sim,cluster_keywords,excerpt
-0,https://langfuse.com/docs/sdk/typescript/guide,TypeScript SDK - Overview - Langfuse,0.07779548847413646,0.8674,0.7368,0.8152,"langfuse, otel, opentelemetry, span, sdk, api, packages, typescript sdk, spans, import, public, attributes, https, instrumentation, typescript","TypeScript SDK - Overview
-The modular Langfuse TypeScript SDK (v4) is built on OpenTelemetry for robust observability, better context management, and easy integration with third-party libraries.
-This documentation is for the TypeScript SDK v4. If you are looking for the documentation for the TypeScript SDK v3, please click here.
-If you are self-hosting Langfuse, the TypeScript SDK v4 requires Langfuse platform version ≥ 3.95.0 for all features to work correctly.
-Quickstart
-Get your first trace i"
-1,https://langfuse.com/blog/2025-05-19-launch-week-3,Langfuse Launch Week #3 - Langfuse Blog,0.005055794262760004,0.8873,0.526,0.7427,"langfuse, dashboards, day, week, launch, launch week, prompt, custom dashboards, prompts, features, april, custom, new, town, hall","Langfuse Launch Week #3
-A week dedicated to deeper insights and seamless integrations
-We are excited to announce Langfuse Launch Week #3!
-Starting on Monday, May 19 – Saturday, May 24, 2025, we’ll drop a fresh feature every single day. Expect to get deeper insights from your application data, more guidance on how to get started, improve and evaluate your LLM applications, and more ways to integrate with your favorite tools and frameworks.
-We’ll celebrate with a mid-week Virtual Community Hour an"
-2,https://langfuse.com/blog/2024-04-introducing-langfuse-2.0,Introducing Langfuse 2.0: the LLM Engineering Platform - Langfuse Blog,0.002838087119660117,0.8758,0.5051,0.7275,"langfuse, llm, dify, users, security, langflow, observability, proxy, data, applications, llamaindex, application, otel, decorator, hugging","Introducing Langfuse 2.0: The LLM Engineering Platform
-Extending Langfuse’s core tracing with evaluations, prompt management, LLM playground and datasets.
-We publicly launched Langfuse in late August of last year. Back then, the product was focused on production traces of LLM applications – because that was our main pain point when originally tinkering on code-generation and scraping agents.
-Our ambition was always to build open source tooling to help developers iterate on complex LLM workflows "
-3,https://langfuse.com/blog/2025-03-19-ai-agent-comparison,Comparing Open-Source AI Agent Frameworks - Langfuse Blog,0.005282039303747891,0.8942,0.7201,0.8245,"agent, agents, research, ai, deep research, deep, cursor, langgraph, ai agents, multi, report, agents sdk, queries, ai agent, tasks","Open-Source AI Agent Frameworks: Which One Is Right for You?
-Explore the leading open-source AI agent frameworks—LangGraph, OpenAI Agents SDK, Smolagents, CrewAI, AutoGen, Semantic Kernel, LlamaIndex agents, Strands Agents, and Pydantic AI agents. Compare features, learn when to use each, and see how to track agent behavior with Langfuse
-Building AI agents used to be a patchwork of scripts, prompt engineering, and trial-and-error. Today, there is a growing landscape of open-source frameworks des"
-4,https://langfuse.com/blog/update-2023-07,Langfuse Update — July 2023 - Langfuse Blog,0.005843886112935771,0.9296,0.7059,0.8401,"langfuse, haystack, langchain, trace, sdk, langfuse_handler, import, frontend, langchain integration, docker, user_input, streaming, chat, js ts, improved","Langfuse Update — July 2023
+0,https://langfuse.com/blog/2025-08-29-error-analysis-to-evaluate-llm-applications,Error Analysis to Evaluate LLM Applications - Langfuse Blog,0.008189911578530606,0.8443,0.5632,0.7319,"llm, evaluation, failure, observability, queue, annotation, otel, user, langfuse, metrics, traces, application, modes, failure modes, analysis","Error Analysis to Evaluate LLM Applications
+A practical guide to identifying, categorizing, and analyzing failure modes in LLM applications using Langfuse.
+To improve your LLM app, you must understand how it fails. Aggregate metrics won’t tell you if your system retrieves the wrong documents or if the model’s tone alienates users. Error analysis provides this crucial context.
+The framework in this guide is adapted from Hamel Husain’s Eval FAQ.
+This guide describes a four-step process to identify"
+1,https://langfuse.com/blog/update-2023-07,Langfuse Update — July 2023 - Langfuse Blog,0.005493716643814293,0.9001,0.5941,0.7777,"langfuse, dataset, haystack, api, langchain, decorator, trace, openai, day, sdk, hugging, hugging face, launch, launch week, os","Langfuse Update — July 2023
 Building out the core platform and preparing infrastructure for advanced analytics: Async SDKs, automated token counts, nested Trace UI, langchain integration, public GET API
 Hi all, a lot has happened since our launch two weeks ago and I’m excited to share our July update:
 - Faster integration
 - Langchain integration: Integrate with Langfuse in minutes when using Langchain
 - SDKs for Python and JS/TS: Now fully async, typed, and with improved DX for nested traces
 - N"
-5,https://langfuse.com/docs/prompts/get-started,Get Started with Open Source Prompt Management - Langfuse,0.05983988569090384,0.8262,0.6992,0.7754,"prompt, dataset, playground, get_prompt, items, langfuse, prompt langfuse, optional, dataset_name, tool, create, generation, get_client, variables, save","Get Started with Prompt Management
-This quickstart helps you to create your first prompt and use it in your application.
-Get API keys
-- Create Langfuse account or self-host Langfuse.
-- Create new API credentials in the project settings.
-Create a prompt
-Use the Langfuse UI to create a new prompt or update an existing one.
-Use prompt
-At runtime, you can fetch the latest production version from Langfuse. Learn more about control (versions/labels) here.
-from langfuse import get_client
-# Initialize L"
-6,https://langfuse.com/blog/2025-03-04-llm-evaluation-101-best-practices-and-challenges,"LLM Evaluation 101: Best Practices, Challenges & Proven Techniques - Langfuse Blog",0.004985340607780267,0.8023,0.6525,0.7424,"evaluation, failure, annotation, queue, voice, user, traces, click, script, dataset, llm, metrics, modes, failure modes, template","LLM Evaluation 101: Best Practices, Challenges & Proven Techniques
-Explore proven strategies for LLM evaluation — from offline and online benchmarking – this post briefs you on the state of the art.
-Evaluating large language models can feel like trying to untangle a giant ball of yarn—there’s a lot going on, and it’s often not obvious which thread to pull first. From wrangling unpredictable user inputs to picking the right metrics, the process can be overwhelming. But don’t panic! In this post, "
+2,https://langfuse.com/blog/announcing-our-seed-round,Langfuse raises $4M - Langfuse Blog,0.00340290381140789,0.848,0.6204,0.7569,"langfuse, dify, users, langflow, llm, dashboards, open source, data, llamaindex, community, clickhouse, product, open, script, cursor","Langfuse raises $4M
+We're thrilled to announce that Langfuse has raised a $4m seed round from Lightspeed Venture Partners, La Famiglia and Y Combinator.
+With Langfuse, we are building open source observability and product analytics for LLM-based applications. Our goal is to enable product and engineering teams to harness the power of Generative AI with the most useful and open suite of devtools focused on visibility and insights.
+When we first joined Y Combinator for the winter batch in early 20"
+3,https://langfuse.com/blog/2025-03-19-ai-agent-comparison,Comparing Open-Source AI Agent Frameworks - Langfuse Blog,0.004941874130241561,0.8833,0.7462,0.8285,"agent, agents, voice, ai, research, deep research, conversation, deep, testing, voice ai, langgraph, ai agents, multi, report, agents sdk","Open-Source AI Agent Frameworks: Which One Is Right for You?
+Explore the leading open-source AI agent frameworks—LangGraph, OpenAI Agents SDK, Smolagents, CrewAI, AutoGen, Semantic Kernel, LlamaIndex agents, Strands Agents, and Pydantic AI agents. Compare features, learn when to use each, and see how to track agent behavior with Langfuse
+Building AI agents used to be a patchwork of scripts, prompt engineering, and trial-and-error. Today, there is a growing landscape of open-source frameworks des"
+4,https://langfuse.com/blog/2024-11-17-launch-week-2,Langfuse Launch Week #2 - Langfuse Blog,0.005471474305015281,0.8495,0.5747,0.7396,"prompt, langfuse, playground, new, tool, prompts, get_prompt, webhooks, experiments, tool calling, alerts, observation, april, dataset, prompt langfuse","Langfuse Launch Week #2
+A week dedicated to unlocking model capabilities and integrating Langfuse into your development loop
+We are excited to announce Langfuse Launch Week #2!
+Starting on Monday, November 18th, 2024, we’ll unveil a major upgrade to the Langfuse platform every day until Friday. We’re topping it off with a Product Hunt launch on Friday and a Virtual Town Hall on Wednesday.
+Star us on GitHub and follow us on Twitter for daily updates.
+Want to see what we have launched in LW1 back "
+5,https://langfuse.com/blog/2024-09-langfuse-proxy,Should you use an LLM Proxy to Build your Application? - Langfuse Blog,0.003597122304876931,0.8854,0.7725,0.8402,"security, proxy, llm, langfuse, risks, security risks, requests, provider, measures, langfuse llm, observability layer, timings, application, limiting, layer","Should you use an LLM Proxy to Build your Application?
+Learn more about the pros and cons of using an LLM proxy.
+LLM Proxies are popular tools that add much functionality like caching, rate limiting, and routing to making LLM requests. This blog post will explain what a proxy is, what it does well and why ultimately we would recommend to think hard about using a proxy for your application.
+TLDR; Should you use an LLM Proxy?
+In most production grade applications, the benefits do not outweigh the "
+6,https://langfuse.com/docs/sdk/typescript/guide,TypeScript SDK - Overview - Langfuse,0.0790632325962824,0.8736,0.7622,0.8291,"sdk, langfuse, otel, span, opentelemetry, typescript sdk, typescript, v4, sdk v4, experiments, packages, spans, import, plan, attributes","TypeScript SDK - Overview
+The modular Langfuse TypeScript SDK (v4) is built on OpenTelemetry for robust observability, better context management, and easy integration with third-party libraries.
+This documentation is for the TypeScript SDK v4. If you are looking for the documentation for the TypeScript SDK v3, please click here.
+If you are self-hosting Langfuse, the TypeScript SDK v4 requires Langfuse platform version ≥ 3.95.0 for all features to work correctly.
+Quickstart
+Get your first trace i"

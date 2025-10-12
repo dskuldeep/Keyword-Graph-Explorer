@@ -1,28 +1,27 @@
 cluster,url,title,pagerank,semantic_sim,tfidf_sim,total_sim,cluster_keywords,excerpt
-0,https://getmaxim.ai/blog/building-a-gemini-powered-conversational-weather-agent-with-maxim-logging/,🌤️ Building a Gemini-Powered Conversational Weather Agent with Maxim Logging,0.005545286506470506,0.7541,0.7003,0.7326,"self, maxim, print, import, logger, agent, workflow, const, tool, sentiment, def, str, resume, analysis, text","🌤️ Building a Gemini-Powered Conversational Weather Agent with Maxim Logging
+0,https://www.getmaxim.ai/blog/content/images/size/w256h256/format/png/2024/06/gradient.svg,,0.005576208178443111,1.0,0.0,0.6,,
+1,https://getmaxim.ai/blog/mcptoolbench-raising-the-bar-for-realistic-ai-agent-tool-use-benchmarks/,Raising the Bar for Realistic AI Agent Tool-Use Benchmarks,0.005576208178443111,0.8885,0.7724,0.842,"tool, models, accuracy, mcp, parameter, tool accuracy, tools, model, slms, tool calls, agentic, systems, tool use, tasks, claude","MCPToolBench++: Raising the Bar for Realistic AI Agent Tool-Use Benchmarks
+Introduction
+At the heart of reliable AI agents lies one critical skill: effective tool calling. We can see this in action with systems like the new Kimi K2, which connects seamlessly to dozens of tools, including web search, map navigation, financial analysis, and automated workflows. This results in impressive versatility and great tool call accuracy. In today’s era of the MCP, the ability for models to select and opera"
+2,https://getmaxim.ai/blog/maxim-ai-may-2025-updates/,"✨ Agentic mode, Scheduled runs, New evals - Maxim’s updates from May!",0.005576208178443111,0.8388,0.7011,0.7837,"maxim, agent, agents, bifrost, evals, voice, dashboards, logs, custom, evaluate, workflows, tool, traces maxim, ai, support","✨ Agentic mode, Scheduled runs, New evals, and more
+Feature spotlight
+🤖 Agentic mode in the Prompt Playground
+Prototype complete agent behavior, including automatic tool calling, directly within the playground. Here’s what you can do:
+- Test multi-step flows: Experiment with and evaluate complex agentic interactions where the model automatically calls tools and executes steps until a final response is generated.
+- Set limits and termination conditions: Control the maximum number of tool calls al"
+3,https://getmaxim.ai/blog/when-ai-snitches-auditing-agents-that-spill-your-models-alignment-tea/,When AI Snitches: Auditing Agents That Spill Your Model’s (Alignment) Tea,0.005576208178443111,0.7924,0.6393,0.7311,"legal, agents, ai, model, code, harm, safety, auditing, models, misaligned, agent, actually, research, fine, os","When AI Snitches: Auditing Agents That Spill Your Model’s (Alignment) Tea
+Sure, your model aced every benchmark, but can you trust it when the stakes are real? Every frontier lab runs alignment post-training before shipping their chat models to the world. The problem? Actually auditing whether this alignment worked can be an absolute nightmare. You're basically trying to find needles in haystacks while the haystack keeps getting bigger and more complex. Enter Anthropic's latest move: they've bui"
+4,https://getmaxim.ai/blog/maxim-ai-june-2025-updates/,"Bifrost, Voice agent support, CrewAI integration- June updates",0.05358953312820129,0.892,0.8068,0.8579,"bifrost, schemas, llm, maxim, agent, ai, observability, calls, charts, integration, mistral, docker, providers, account, tool","✨ Bifrost, Voice agent support, CrewAI integration, and more
+Feature spotlight
+⚡️ Introducing Bifrost: The fastest LLM gateway
+We're excited to announce the public release of Bifrost, the fastest, most scalable LLM gateway out there. We've engineered Bifrost specifically for high-throughput, production-grade AI systems and optimized performance at every level. Here's how Bifrost improves your AI infrastructure:
+- Unmatched speed and efficiency: Up to 9.5x faster with ~54x lower P99 latency compa"
+5,https://getmaxim.ai/blog/building-a-gemini-powered-conversational-weather-agent-with-maxim-logging/,🌤️ Building a Gemini-Powered Conversational Weather Agent with Maxim Logging,0.005576208178443111,0.7541,0.6988,0.732,"self, maxim, print, import, logger, const, agent, ai, workflow, def, str, resume, tool, sentiment, score","🌤️ Building a Gemini-Powered Conversational Weather Agent with Maxim Logging
 “How’s the weather today in Delhi?”
 Simple question - but what if we wanted a conversational AI that could answer it, explain the temperature trend, and log every detail of its interaction for analysis?
 Agentic systems are booming. But building a reliable production-ready AI agent involves more than just connecting an LLM. You need tool usage, observability, error handling, and real-time responses. In this guide, we’ll "
-1,https://getmaxim.ai/blog/assets/built/screen.css?v=67a92e5277,,0.005545286506470506,1.0,0.0,0.6,,
-2,https://getmaxim.ai/blog/when-ai-snitches-auditing-agents-that-spill-your-models-alignment-tea/,When AI Snitches: Auditing Agents That Spill Your Model’s (Alignment) Tea,0.005545286506470506,0.7886,0.6253,0.7233,"legal, ai, model, models, agents, code, dataset, alignment, auditing, vulnerabilities, misaligned, judgment, actually, safety, research","When AI Snitches: Auditing Agents That Spill Your Model’s (Alignment) Tea
-Sure, your model aced every benchmark, but can you trust it when the stakes are real? Every frontier lab runs alignment post-training before shipping their chat models to the world. The problem? Actually auditing whether this alignment worked can be an absolute nightmare. You're basically trying to find needles in haystacks while the haystack keeps getting bigger and more complex. Enter Anthropic's latest move: they've bui"
-3,https://getmaxim.ai/blog/when-your-ai-transcription-turns-quarterly-revenue-into-quarterly-rabbit-2/,When AI Transcription Turns Tasty Burger Into Nasty Murder,0.0122751078250252,0.875,0.8589,0.8685,"audio, transcription, voice, audio quality, evaluator, sentiment analysis, sentiment, quality, recognition, models, speech, gemini, voice ai, analysis, gemini flash","When Your AI Transcription Turns ""Tasty Burger"" Into ""Nasty Murder""
+6,https://getmaxim.ai/blog/when-your-ai-transcription-turns-quarterly-revenue-into-quarterly-rabbit-2/,When AI Transcription Turns Tasty Burger Into Nasty Murder,0.005576208178443111,0.7995,0.6534,0.741,"audio, speech, wer, transcription, tokens, speaker, acoustic, voice, audio quality, models, evaluator, semantic, noise, noisy, length","When Your AI Transcription Turns ""Tasty Burger"" Into ""Nasty Murder""
 Introducing Maxim AI's first Voice Evaluators: SNR and WER
 We've all been there. You're relying on AI transcription for that crucial customer call analysis, and suddenly ""increase our market share"" becomes ""increase our marker chair."" While these mix-ups might seem amusing, they represent a serious challenge that's plaguing the entire Voice AI industry.
 Why Audio Quality is a Big Challenge Voice AI
 The industry is waking up to t"
-4,https://getmaxim.ai/blog/better-dashboards-smarter-workflows-maxim-weekly-release-notes-june-9-13-2025/,"🚀 Better Dashboards, Smarter Workflows – Maxim Weekly Release Notes (June 9–13, 2025)",0.053156332273047315,1.0,1.0,1.0,"dashboards, maxim, traces maxim, turn, better, traces, voice, week, custom dashboards, custom, console, summary, test runs, livekit, line integration","🚀 Better Dashboards, Smarter Workflows – Maxim Weekly Release Notes (June 9–13, 2025)
-Last week at Maxim, we rolled out several powerful upgrades to give teams more control, clarity, and customization across the platform. Here's what’s new:
-Custom Dashboards Just Got an Upgrade
-Dashboards are now more flexible and insightful:
-- Custom metric cards – Build exactly what you need to monitor
-- Group by properties – Slice data by dimensions that matter most
-- Choose your aggregation – Pick how you wa"
-5,https://getmaxim.ai/blog/maxim-ai-august-2025-updates/,"Voice simulation, SSO, Adaptive load balancing, GPT-5 and more",0.056829184367943084,0.7807,0.6561,0.7309,"bifrost, maxim, tool, simulation, ai, models, user, real, agent, schemas, evals, voice, mcp, provider, logs","✨ Voice simulation, Flexi evals, Adaptive load balancing, and more
-🎙️ Feature spotlight
-🤖 Voice simulation and evals are live on Maxim!
-Teams can now simulate multi-turn conversations with their voice agents and monitor performance across hundreds of scenarios and user personas – at a fraction of the time and effort required for manual testing.
-You can simply bring your voice agents onto the Maxim platform via phone number and interact with them through manual test calls or by running full-scale"
-6,https://getmaxim.ai/blog/sure-your-llm-is-smart-but-does-it-really-give-a-damn/,"Sure your LLM is smart, but does it really give a damn?",0.005545286506470506,0.8038,0.6543,0.744,"task, model, models, tool, harm, goal, accuracy, tool accuracy, agents, tools, company, direction, agent, os, height","Sure your LLM is smart, but does it really give a damn?
-You can take your model to the water, but you can’t make it think.
-Every frontier lab’s model drops are accompanied by boasts on improved capabilities on a dozen benchmarks. A recent study explores that the fact that a model is capable of accomplishing a task doesn’t necessarily mean that it will actually go through it. The extent to which large language models use their capabilities towards a given goal is known as their goal-directedness."
