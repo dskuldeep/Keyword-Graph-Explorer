@@ -9,7 +9,7 @@ from typing import Dict, List, Optional, Set, Tuple
 
 import requests
 from bs4 import BeautifulSoup
-from urllib.parse import urljoin, urlparse, parse_qs
+from urllib.parse import urljoin, urlparse, parse_qs, urlunparse
 import tldextract
 import trafilatura
 import xml.etree.ElementTree as ET
@@ -343,6 +343,116 @@ def normalize_url(base_url: str, link: str) -> str:
     return urljoin(base_url, link.split("#")[0])
 
 
+def discover_sitemap_from_robots(session: requests.Session, domain: str) -> Optional[str]:
+    """
+    Discover sitemap URL from robots.txt file.
+    Returns the first sitemap URL found, or None if no sitemap is found.
+    """
+    # Try both with and without www
+    robots_urls = [
+        f"https://{domain}/robots.txt",
+        f"https://www.{domain}/robots.txt",
+    ]
+    
+    for robots_url in robots_urls:
+        try:
+            resp = session.get(robots_url, timeout=10)
+            if resp.status_code == 200:
+                # Look for Sitemap: directive
+                for line in resp.text.split('\n'):
+                    line = line.strip()
+                    if line.lower().startswith('sitemap:'):
+                        sitemap_url = line.split(':', 1)[1].strip()
+                        print(f"   🗺️ Discovered sitemap from robots.txt: {sitemap_url}")
+                        return sitemap_url
+        except Exception:
+            continue
+    
+    # Try common sitemap locations as fallback
+    common_sitemap_urls = [
+        f"https://{domain}/sitemap.xml",
+        f"https://www.{domain}/sitemap.xml",
+        f"https://{domain}/sitemap_index.xml",
+        f"https://www.{domain}/sitemap_index.xml",
+    ]
+    
+    for sitemap_url in common_sitemap_urls:
+        try:
+            resp = session.head(sitemap_url, timeout=5, allow_redirects=True)
+            if resp.status_code == 200:
+                print(f"   🗺️ Found sitemap at: {sitemap_url}")
+                return sitemap_url
+        except Exception:
+            continue
+    
+    return None
+
+
+def extract_all_links_from_page(session: requests.Session, url: str, allowed_domain: str, focus_prefix: Optional[str] = None) -> List[str]:
+    """
+    Extract all links from a page, particularly useful for blog listing pages.
+    Returns a list of URLs found on the page that match the criteria.
+    """
+    discovered_urls = []
+    
+    try:
+        resp = session.get(url, timeout=15)
+        if resp.status_code != 200:
+            return discovered_urls
+            
+        soup = BeautifulSoup(resp.text, "html.parser")
+        
+        # Find all links
+        for a in soup.find_all("a", href=True):
+            href = a.get("href")
+            if not href:
+                continue
+                
+            # Normalize URL
+            full_url = urljoin(url, href)
+            
+            # Check if internal
+            if not is_internal_url(full_url, allowed_domain):
+                continue
+            
+            # Check if matches focus prefix
+            if focus_prefix and not full_url.startswith(focus_prefix):
+                continue
+            
+            # Avoid non-article pages
+            if any(pattern in full_url.lower() for pattern in [
+                '/author/', '/tag/', '/category/', '/page/', '/search', '/feed', '/rss'
+            ]):
+                continue
+            
+            discovered_urls.append(full_url)
+        
+        # Also look for article cards with data attributes
+        for card in soup.find_all(['article', 'div'], class_=lambda x: x and any(
+            cls in str(x).lower() for cls in ['post', 'article', 'blog', 'card', 'entry']
+        )):
+            # Look for links within article cards
+            for a in card.find_all("a", href=True):
+                href = a.get("href")
+                if href:
+                    full_url = urljoin(url, href)
+                    if is_internal_url(full_url, allowed_domain):
+                        if not focus_prefix or full_url.startswith(focus_prefix):
+                            discovered_urls.append(full_url)
+        
+    except Exception as e:
+        print(f"   ⚠️ Error extracting links from {url}: {e}")
+    
+    return list(set(discovered_urls))
+
+
+def normalize_url_for_comparison(url: str) -> str:
+    """Normalize URL for comparison by removing www. and trailing slashes."""
+    url = url.replace('://www.', '://')
+    url = url.rstrip('/')
+    return url
+
+
 def parse_sitemap_urls(
     session: requests.Session,
     sitemap_url: str,
@@ -353,6 +463,7 @@ def parse_sitemap_urls(
     """Fetch a sitemap or sitemap index and return contained URLs.
 
     include_prefix: if provided, only URLs starting with this prefix are returned.
+    URL matching is flexible and handles www variations.
     """
     try:
         resp = session.get(sitemap_url, timeout=20, headers={"User-Agent": "seo-graph/0.1"})
@@ -383,14 +494,22 @@ def parse_sitemap_urls(
                         break
         elif tag == "urlset":
             children = root.findall(".//{*}url") or root.findall(".//url")
+            # Normalize prefix for comparison if provided
+            normalized_prefix = normalize_url_for_comparison(include_prefix) if include_prefix else None
+            
             for u in children:
                 loc = u.findtext("{*}loc") or u.findtext("loc")
                 if not loc:
                     continue
                 if allowed_domain and not is_internal_url(loc, allowed_domain):
                     continue
-                if include_prefix and not loc.startswith(include_prefix):
-                    continue
+                
+                # Flexible prefix matching - normalize both URLs for comparison
+                if normalized_prefix:
+                    normalized_loc = normalize_url_for_comparison(loc)
+                    if not normalized_loc.startswith(normalized_prefix):
+                        continue
+                
                 urls.append(loc)
                 if len(urls) >= max_urls:
                     break
@@ -405,7 +524,8 @@ def parse_sitemap_urls(
                 seen.add(u)
                 ordered.append(u)
         return ordered
-    except Exception:
+    except Exception as e:
+        print(f"   ⚠️ Error parsing sitemap {sitemap_url}: {e}")
         return []
 
 
@@ -437,10 +557,23 @@ def crawl_site(
     queue: deque[Tuple[str, int]] = deque()
     initial_urls: List[str] = [seed_url]
     
-    # Add sitemap URLs if provided
+    # Auto-discover sitemap if not provided
+    if sitemap_url is None:
+        print(f"🔍 Auto-discovering sitemap for {allowed_domain}...")
+        sitemap_url = discover_sitemap_from_robots(session, allowed_domain)
+    
+    # Add sitemap URLs if available
     if sitemap_url:
+        print(f"📡 Fetching URLs from sitemap: {sitemap_url}")
         sm_urls = parse_sitemap_urls(session, sitemap_url, allowed_domain=allowed_domain, include_prefix=focus_prefix)
+        print(f"   Found {len(sm_urls)} URLs in sitemap")
         initial_urls = sm_urls + initial_urls
+    
+    # Extract all links from the seed page (blog landing page)
+    print(f"🔗 Extracting all links from landing page: {seed_url}")
+    landing_page_urls = extract_all_links_from_page(session, seed_url, allowed_domain, focus_prefix)
+    print(f"   Found {len(landing_page_urls)} links on landing page")
+    initial_urls.extend(landing_page_urls)
     
     # Enhanced discovery for JavaScript-based content
     if enable_js_discovery:

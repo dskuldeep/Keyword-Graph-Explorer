@@ -1,56 +1,37 @@
 cluster,url,title,pagerank,semantic_sim,tfidf_sim,total_sim,cluster_keywords,excerpt
-0,https://www.getmaxim.ai/blog/choosing-the-right-ai-agent-framework-a-comprehensive-guide/,Choosing the Right AI Agent Framework: A Comprehensive Guide,0.01552271275958073,0.8185,0.6778,0.7622,"agent, agents, maxim, text, python, multi agent, sdk, initialize, install, resources, import, multi, agno, financial, maxim sdk","Choosing the Right AI Agent Framework: A Comprehensive Guide
-The landscape of AI agent development has matured from experimental prototypes to production-grade systems. With numerous frameworks emerging, each with distinct philosophies and capabilities, choosing the right one demands careful evaluation of technical requirements, team expertise, and business objectives.
-At Maxim, we've conducted an extensive analysis of the leading open-source AI agent frameworks to provide you with actionable in"
-1,https://getmaxim.ai/docs/_next/static/media/e4af272ccee01ff0-s.p.woff2,,0.0030456852791878176,1.0,0.0,0.6,,
-2,https://getmaxim.ai/docs/introduction/overview,Platform Overview - Maxim Docs,0.04610388503995892,0.837,0.5045,0.704,"evaluators, models, speech, data, prompts, maxim, workflows, prompt, pricing, cloud, testing, application, quality, evaluation, model","Our advanced evaluation and observability tools help teams maintain quality, reliability, and speed throughout the AI application lifecycle.
-1. Experiment
-We have a Playground++ built for advanced prompt engineering, enabling rapid iteration, deployment, and experimentation.- Organize and version their prompts effectively
-- Deploy prompts with different deployment variables and experimentation strategies without code changes
-- Connect with databases, RAG pipelines, and prompt tools seamlessly
-- "
-3,https://getmaxim.ai/docs/dashboards/custom-logs-dashboard,Custom Logs Dashboards - Maxim Docs,0.01485131691903437,0.8361,0.6668,0.7684,"export, dashboard, filters, emails, summary emails, logs, summary, log, select, comparison, search bar, time, repository, bar, compare","Creating your first custom dashboard
-1
-Create a dashboard
-Select Dashboards in the left sidebar and click “Create custom logs dashboard”
-2
-Name your dashboard
-Enter a name that describes the dashboard purpose
-3
-Configure metrics
-Add charts to monitor key metrics:
-- Choose a visualization type
-- Select metrics (trace count, latency, token usage)
-- Pick repositories to analyze
-Compare metrics across applications by selecting multiple repositories
-4
-View your dashboard
-Track metrics over time with "
-4,https://getmaxim.ai/docs/settings/setup-sso-with-google,Set up Single Sign-On (SSO) with Google - Maxim Docs,0.014120499560063771,0.7169,0.5578,0.6532,"add, click, provider, authentication, role, app, saml, settings, factor, factor authentication, files, vault, api, context, idp","Overview
-This guide walks you through configuring Google as the Identity Provider (IdP) for Maxim using SAML 2.0. You will:- Create a custom SAML app in Google Admin Console
-- Download IdP metadata
-- Configure service provider details (ACS URL, Entity ID)
-- Map user attributes
-- Enable user access
-- Upload metadata to Maxim and test SSO
-Prerequisites
-- Google Workspace Super Admin access
-- Maxim AI admin access
-- SAML-based Single Sign-On (SSO) enabled for your plan. Check plans for more details"
-5,https://getmaxim.ai/docs/integrations/create-a-pagerduty-integration,Create a PagerDuty Integration - Maxim Docs,0.012578748700424806,0.8674,0.8198,0.8484,"integration, alert, alerts, click, slack, integrations, add integration, notification, pagerduty, url, select, navigate, service, add, channel","1
-Prerequisites
-Gather these requirements:
-- A PagerDuty account with permission to create a service and integration
-- A PagerDuty service where you want to receive notifications
-- The Integration Key (also known as the Routing Key) for the PagerDuty service
-- In PagerDuty, navigate to Services → Service Directory
-- Select your service
-- Go to the Integrations tab
-- Click Add or manage integrations
-- Click + New Integration
-- Enter a name (e.g., “Maxim Alerts”)
-- Select “Events API v2” as the in"
-6,https://getmaxim.ai/docs/settings/maxim-api-keys,Maxim API keys - Maxim Docs,0.012346939513171465,0.7869,0.5177,0.6792,"page, home, blog, cookbooks, started free, 2025, started, free, search, maxim, maxim api, sdk, notes, aug, july","Skip to main content
+0,https://www.getmaxim.ai/docs/library/evaluators/pre-built-evaluators/statistical-evaluators/bleu,BLEU - Maxim Docs,0.0005781308238402645,0.6416,0.4473,0.5639,"closer, scores, score, scores closer, str, distance, similarity, text, steps, statements, score closer, brief, reference, context, audio","Input
+output
+(str): The generated text to be evaluated.expectedOutput
+(str): The reference or ground truth text.
+Output
+Result
+(float): A score between 0 and 1.
+Interpretation
+- Higher scores (closer to 1): Indicates higher degree of overlap between the generated text and the ground truth, suggesting better output quality
+- Lower scores (closer to 0): Indicates lower degree of overlap between the generated text and the ground truth, suggesting bad output quality
+Formula
+The BLEU score is calcula"
+1,https://www.getmaxim.ai/docs/sdk/python/references/logger/components/trace,components.Trace - Maxim Docs,0.0015554437495933085,0.6629,0.556,0.6202,"def, str, class, dict, utilities, optional, dict str, page helpful, helpful, union, logger, list, staticmethod, staticmethod def, integration","Trace functionality for Components integration.
+@deprecated( ""This class will be removed in a future version. Use {} which is TypedDict."" ) @dataclass class TraceConfig()
+class TraceConfigDict(TypedDict)
+def get_trace_config_dict( config: Union[TraceConfig, TraceConfigDict]) -> TraceConfigDict
+config
+class Trace(EventEmittingBaseContainer)
+def __init__(config: Union[TraceConfig, TraceConfigDict], writer: LogWriter)
+writer
+def set_input(input: str)
+input
+@staticmethod def set_input_(writer: LogWr"
+2,https://www.getmaxim.ai/docs/sdk/typescript/reference/core/classes/Generation,Generation - Maxim Docs,0.00134797106807247,0.8423,0.7773,0.8163,"src, lib, defined src, src lib, ts, defined, lib logger, logger components, void, string, components, logger, generation ts, lib models, components generation","Class: Generation
+Defined in: src/lib/logger/components/generation.ts:124 Represents an LLM generation or completion. The Generation class tracks the complete lifecycle of LLM requests, including input messages, model parameters, results, and any errors. It supports both chat and text completion formats. GenerationExample
+Extends
+Constructors
+Constructor
+new Generation(Defined in: src/lib/logger/components/generation.ts:148 Creates a new generation log entry.config
+,writer
+):Generation
+Parameter"
+3,https://www.getmaxim.ai/docs/settings/maxim-api-keys,Maxim API keys - Maxim Docs,0.006171604598697617,0.8129,0.4957,0.6861,"maxim, agent, import, api, python, sdk, integration, overview, settings, provider, trace, openai, cloud, ai, tracing","Skip to main content
 Maxim Docs home page
 Search...
 ⌘K
@@ -89,3 +70,55 @@ Via SDK
 Set Up Alerts and Notifications
 Tracing
 Tracing "
+4,https://www.getmaxim.ai/docs/log repositories/log-repository/get-trace-by-id,Get trace by ID - Maxim Docs,0.0006998003295136292,0.8151,0.336,0.6234,"string, unique, unique identifier, identifier, dataset, api key, 100, api, key, delete, curl, alert, key authentication, repository, deleted","Authorizations
+API key for authentication
+Query Parameters
+Unique identifier for the trace
+Response
+Trace retrieved successfully
+curl --request GET \
+--url https://api.getmaxim.ai/v1/log-repositories/logs/traces \
+--header 'x-maxim-api-key: <api-key>'
+{
+""data"": {
+""id"": ""<string>"",
+""name"": ""<string>"",
+""tags"": {},
+""startTimestamp"": ""<string>"",
+""sessionId"": ""<string>"",
+""type"": ""<string>"",
+""input"": ""<any>"",
+""output"": ""<any>"",
+""feedback"": {
+""score"": 123,
+""comment"": ""<string>""
+},
+""duration"": 123,
+""end"
+5,https://www.getmaxim.ai/docs/library/evaluators/pre-built-evaluators/programmatic-evaluators/contains-special-characters,containsSpecialCharacters - Maxim Docs,0.0005410923424980162,0.9719,0.9217,0.9519,"string, input, boolean, validate, string number, boolean true, number, true, output, function, evaluator, valid, string valid, assuming evaluator, dataoutput string","Input
+input
+: The original input text or dataoutput
+: The string to be validatedexpectedOutput
+: The expected output to compare against.
+- Any of the input variables (
+input
+,output
+,expectedOutput
+) can be marked as optional. - The returned value from the
+validate
+function can be a boolean, string, or a number.
+Output
+Result
+: Boolean (true
+orfalse
+) | string | number
+Interpretation
+Assuming this evaluator returns a boolean
+- true: At least one special character was found
+- false: No special ch"
+6,https://www.getmaxim.ai/docs/introduction/overview,Platform Overview - Maxim Docs,0.034195585031176735,0.7714,0.3889,0.6184,"prompt, test, evaluators, dataset, agent, run, trace, prompts, evaluation, tool, add, logs, select, version, create","Our advanced evaluation and observability tools help teams maintain quality, reliability, and speed throughout the AI application lifecycle.
+1. Experiment
+We have a Playground++ built for advanced prompt engineering, enabling rapid iteration, deployment, and experimentation.- Organize and version their prompts effectively
+- Deploy prompts with different deployment variables and experimentation strategies without code changes
+- Connect with databases, RAG pipelines, and prompt tools seamlessly
+- "

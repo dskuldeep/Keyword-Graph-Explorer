@@ -1,25 +1,39 @@
 cluster,url,title,pagerank,semantic_sim,tfidf_sim,total_sim,cluster_keywords,excerpt
-0,https://www.braintrust.dev/blog/update-6,Weekly update 11/13/23 - Blog - Braintrust,0.0054555826796267495,0.8099,0.6226,0.735,"page, added, week, playground, year, prompt playground, sidebar, dashboard, monitor page, sdk, experiment, year review, monitor, version, 2023","Latest news
-Braintrust Weekly Update
-13 November 2023David Song
-It’s been another busy week at Braintrust. We’ve shipped some user experience improvements and fixes this week to make it easier for you to build reliable AI apps:
-We added function calling to our playground
-Many developers have been asking us to support OpenAI’s function calling in our prompt playground. We added it this week. Just click “Add tools” in your prompt to get started experimenting with OpenAI functions.
-Release notes:
--"
-1,https://www.braintrust.dev/blog/notion,How Notion develops world-class AI features  - Blog - Braintrust,0.008754582255058107,0.7957,0.5749,0.7074,"notion, gemini, gpt, models, zapier, claude, ai, reasoning, gemini models, product, feedback, team, 4o, gpt 4o, ship","How Notion develops world-class AI features
-Notion, a connected workspace for documents, knowledge bases, and project management systems, is the go-to platform for millions of users, from agile startups to global enterprises. Notion’s commitment to customer experience has always set them apart — but with the rise of generative AI, they saw an opportunity to push their platform even further.
-Co-founders Ivan Zhao and Simon Last were early in recognizing the potential of generative AI and started "
-2,https://www.braintrust.dev/blog/measuring-what-matters,Measuring what matters: An intro to AI evals - Blog - Braintrust,0.008710079608606343,0.8347,0.6033,0.7421,"evals, eval, agent, ai, test, evaluation, review, model, loop, scoring, score, output, scorers, data, scores","Measuring what matters: An intro to AI evals
+0,https://www.braintrust.dev/docs/platform/projects,Projects - Docs - Braintrust,0.02729304069453228,0.7553,0.5854,0.6874,"span, scores, btql, project, data, spans, select, mcp, review, score, loop, records, function, page, monitor","Projects
+A project is analogous to an AI feature in your application. Some customers create separate projects for development and production to help track workflows. Projects contain all experiments, logs, datasets and playgrounds for the feature.
+For example, a project might contain:
+- An experiment that tests the performance of a new version of a chatbot
+- A dataset of customer support conversations
+- A prompt that guides the chatbot's responses
+- A tool that helps the chatbot answer customer "
+1,https://www.braintrust.dev/blog/best-practices,Best practices - Braintrust blog - Braintrust,0.00902707237391104,0.8431,0.6358,0.7602,"ai, read, 2025 read, 2025, evals, model, 2024 read, dropbox, vercel, java, 2024, new, new model, 2023, production","Latest News
+Best practices
+Read
+Braintrust Java SDK: AI observability and evals for the JVM
+AI observability and evaluation tools for Java applications, built on OpenTelemetry.
+23 October 2025
+Read
+Measuring what matters: An intro to AI evals
+Learn how to build effective evals for your AI products with datasets, tasks, and scores.
+10 October 2025
+Read
+Claude Sonnet 4.5 analysis
+Learn how aspirational evals can help you figure out when new AI models unlock new product opportunities.
+29 September "
+2,https://www.braintrust.dev/blog/functions,Functions: flexible AI engineering primitives - Blog - Braintrust,0.0037936049078566353,0.7862,0.6163,0.7182,"prompt, braintrust, tool, functions, python, agent, run, code, prompts, version, create, event, use, tools, playground","Functions: flexible AI engineering primitives
+Over the past year, the field of software engineering has been inundated with AI. There are tons of tools for improving developer productivity with the help of large language models (LLMs), but very few make it straightforward to build and scale AI-powered products. That's because introducing AI models fundamentally changes the software development lifecycle. Instead of measuring performance and reliability, developers need to assess accuracy and qua"
+3,https://www.braintrust.dev/blog/ai-proxy,AI proxy: fostering a more open ecosystem - Blog - Braintrust,0.007183701950571945,0.8095,0.6046,0.7275,"api, proxy, providers, openai, realtime, realtime api, braintrust, api key, agent, ai, models, bedrock, azure, compliance, autoevals","AI proxy: fostering a more open ecosystem
+Like most of us, I spent last weekend thinking about the past, present, and future of AI. It's hard to imagine the industry without OpenAI — an institution we all look to, respect, and rely on — at its forefront. I for one am rooting for the company and brilliant folks who work there to continue leading the way. However, I also realized that the AI ecosystem benefits from being interoperable and default open and that we at Braintrust have an important ro"
+4,https://www.braintrust.dev/blog/2024,The top 10 most loved features of 2024 - Blog - Braintrust,0.004027677174871103,0.664,0.3731,0.5477,"attachment, blog, gpt, cookbook, gemini, models, 4o, year, gpt 4o, image, terraform, tech, braintrust, reasoning, portola","The top 10 most loved features of 2024
+This year was all about making Braintrust simpler, faster, and more powerful for you. Here are the top 10 features of 2024:
+1. Custom scorer, tool, and prompt functions
+Create and manage your own scorers, tools, and prompts, all within the SDK.
+2. AI proxy and hybrid self-hosting
+We bundled the AI proxy with the main API, introduced temp credentials for front-end requests, and broadened provider support (Cerebras, Fireworks, Lepton, etc.). Self-hosters also"
+5,https://www.braintrust.dev/blog/brainstore,Brainstore: the database designed for the AI engineering era - Blog - Braintrust,0.00907506459654021,0.8104,0.4927,0.6833,"brainstore, notion, ai, data, fintool, plane, zapier, diamond, team, product, braintrust, products, feedback, data plane, ceo","Brainstore: the purpose-built database for the AI engineering era
+AI engineering has completely changed how we build software. Organizations are processing more tokens than ever, running agent-based systems with thousands of intermediate steps, and collecting massive amounts of structured and unstructured data. But traditional observability tools just aren’t keeping up.
+That’s why we built Brainstore, a database built from the ground up for high-scale AI workloads. It’s 80x faster on real-world "
+6,https://www.braintrust.dev/blog/measuring-what-matters,Measuring what matters: An intro to AI evals - Blog - Braintrust,0.007182102723840177,0.8438,0.5897,0.7422,"evals, eval, scorers, ai, remote, playgrounds, examples, test, scoring, loom, great, coursera, output, quality, checks","Measuring what matters: An intro to AI evals
 This post is based on an online event on October 7, 2025. You can watch the full replay on YouTube.
 AI systems are non-deterministic. Give an LLM the same question twice, and you'll get different answers. This randomness creates a fundamental problem: how do you know your changes improved quality instead of just shifting failure modes around?
 Without a systematic evaluation process, teams build on vibes. You ship blind, fix one issue only to break ano"
-3,https://www.braintrust.dev/blog/ai-proxy,AI proxy: fostering a more open ecosystem - Blog - Braintrust,0.007241559561431176,0.771,0.5666,0.6892,"proxy, braintrust, api, api key, prompt, plane, tools, openai, providers, ai, create, attachments, data plane, data, custom scorers","AI proxy: fostering a more open ecosystem
-Like most of us, I spent last weekend thinking about the past, present, and future of AI. It's hard to imagine the industry without OpenAI — an institution we all look to, respect, and rely on — at its forefront. I for one am rooting for the company and brilliant folks who work there to continue leading the way. However, I also realized that the AI ecosystem benefits from being interoperable and default open and that we at Braintrust have an important ro"
-4,https://www.braintrust.dev/blog/reliable-ai,It's time to build reliable AI - Blog - Braintrust,0.006976007571689556,0.8455,0.6484,0.7667,"ai, braintrust, functions, companies, software, ceo, investors, building, prompts, ve, quality, financial, internal, making tools, round","It's time to build reliable AI
-Today, we're introducing Braintrust: the enterprise-grade stack for rapidly building and shipping AI products, without guesswork.
-Over the last year, the AI space has rapidly evolved. Building anything from chatbots to question-answering or content generation systems used to require months of work. Today, these and more advanced tasks can be solved with a handful of API calls. At the same time, market demand for AI to be a core component of every business has skyro"
-5,https://www.braintrust.dev/blog/atom,Braintrust Blog,0.002364085665378314,0.6802,0.5112,0.6126,"blog, cookbook, tech, compliance, braintrust, enterprise, collection, 30, 2024ankur, 2024ankur goyal, goyal excited, announce braintrust, security, enterprises, selected",Braintrust Blog
-6,https://www.braintrust.dev/blog/brainstore,Brainstore: the database designed for the AI engineering era - Blog - Braintrust,0.011825805320572627,0.8427,0.7141,0.7912,"brainstore, data, custom, default, fields, warehouse, storage, object storage, realtime, aggregation, summary, data warehouse, spans, plus, object","Brainstore: the purpose-built database for the AI engineering era
-AI engineering has completely changed how we build software. Organizations are processing more tokens than ever, running agent-based systems with thousands of intermediate steps, and collecting massive amounts of structured and unstructured data. But traditional observability tools just aren’t keeping up.
-That’s why we built Brainstore, a database built from the ground up for high-scale AI workloads. It’s 80x faster on real-world "

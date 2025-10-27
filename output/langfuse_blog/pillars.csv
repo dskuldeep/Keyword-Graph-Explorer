@@ -1,37 +1,47 @@
 cluster,url,title,pagerank,semantic_sim,tfidf_sim,total_sim,cluster_keywords,excerpt
-0,https://langfuse.com/blog/2025-08-29-error-analysis-to-evaluate-llm-applications,Error Analysis to Evaluate LLM Applications - Langfuse Blog,0.008189911578530606,0.8443,0.5632,0.7319,"llm, evaluation, failure, observability, queue, annotation, otel, user, langfuse, metrics, traces, application, modes, failure modes, analysis","Error Analysis to Evaluate LLM Applications
-A practical guide to identifying, categorizing, and analyzing failure modes in LLM applications using Langfuse.
-To improve your LLM app, you must understand how it fails. Aggregate metrics won’t tell you if your system retrieves the wrong documents or if the model’s tone alienates users. Error analysis provides this crucial context.
-The framework in this guide is adapted from Hamel Husain’s Eval FAQ.
-This guide describes a four-step process to identify"
-1,https://langfuse.com/blog/update-2023-07,Langfuse Update — July 2023 - Langfuse Blog,0.005493716643814293,0.9001,0.5941,0.7777,"langfuse, dataset, haystack, api, langchain, decorator, trace, openai, day, sdk, hugging, hugging face, launch, launch week, os","Langfuse Update — July 2023
-Building out the core platform and preparing infrastructure for advanced analytics: Async SDKs, automated token counts, nested Trace UI, langchain integration, public GET API
-Hi all, a lot has happened since our launch two weeks ago and I’m excited to share our July update:
-- Faster integration
-- Langchain integration: Integrate with Langfuse in minutes when using Langchain
-- SDKs for Python and JS/TS: Now fully async, typed, and with improved DX for nested traces
-- N"
-2,https://langfuse.com/blog/announcing-our-seed-round,Langfuse raises $4M - Langfuse Blog,0.00340290381140789,0.848,0.6204,0.7569,"langfuse, dify, users, langflow, llm, dashboards, open source, data, llamaindex, community, clickhouse, product, open, script, cursor","Langfuse raises $4M
-We're thrilled to announce that Langfuse has raised a $4m seed round from Lightspeed Venture Partners, La Famiglia and Y Combinator.
-With Langfuse, we are building open source observability and product analytics for LLM-based applications. Our goal is to enable product and engineering teams to harness the power of Generative AI with the most useful and open suite of devtools focused on visibility and insights.
-When we first joined Y Combinator for the winter batch in early 20"
-3,https://langfuse.com/blog/2025-03-19-ai-agent-comparison,Comparing Open-Source AI Agent Frameworks - Langfuse Blog,0.004941874130241561,0.8833,0.7462,0.8285,"agent, agents, voice, ai, research, deep research, conversation, deep, testing, voice ai, langgraph, ai agents, multi, report, agents sdk","Open-Source AI Agent Frameworks: Which One Is Right for You?
-Explore the leading open-source AI agent frameworks—LangGraph, OpenAI Agents SDK, Smolagents, CrewAI, AutoGen, Semantic Kernel, LlamaIndex agents, Strands Agents, and Pydantic AI agents. Compare features, learn when to use each, and see how to track agent behavior with Langfuse
-Building AI agents used to be a patchwork of scripts, prompt engineering, and trial-and-error. Today, there is a growing landscape of open-source frameworks des"
-4,https://langfuse.com/blog/2024-11-17-launch-week-2,Langfuse Launch Week #2 - Langfuse Blog,0.005471474305015281,0.8495,0.5747,0.7396,"prompt, langfuse, playground, new, tool, prompts, get_prompt, webhooks, experiments, tool calling, alerts, observation, april, dataset, prompt langfuse","Langfuse Launch Week #2
-A week dedicated to unlocking model capabilities and integrating Langfuse into your development loop
-We are excited to announce Langfuse Launch Week #2!
-Starting on Monday, November 18th, 2024, we’ll unveil a major upgrade to the Langfuse platform every day until Friday. We’re topping it off with a Product Hunt launch on Friday and a Virtual Town Hall on Wednesday.
-Star us on GitHub and follow us on Twitter for daily updates.
-Want to see what we have launched in LW1 back "
-5,https://langfuse.com/blog/2024-09-langfuse-proxy,Should you use an LLM Proxy to Build your Application? - Langfuse Blog,0.003597122304876931,0.8854,0.7725,0.8402,"security, proxy, llm, langfuse, risks, security risks, requests, provider, measures, langfuse llm, observability layer, timings, application, limiting, layer","Should you use an LLM Proxy to Build your Application?
-Learn more about the pros and cons of using an LLM proxy.
-LLM Proxies are popular tools that add much functionality like caching, rate limiting, and routing to making LLM requests. This blog post will explain what a proxy is, what it does well and why ultimately we would recommend to think hard about using a proxy for your application.
-TLDR; Should you use an LLM Proxy?
-In most production grade applications, the benefits do not outweigh the "
-6,https://langfuse.com/docs/sdk/typescript/guide,TypeScript SDK - Overview - Langfuse,0.0790632325962824,0.8736,0.7622,0.8291,"sdk, langfuse, otel, span, opentelemetry, typescript sdk, typescript, v4, sdk v4, experiments, packages, spans, import, plan, attributes","TypeScript SDK - Overview
-The modular Langfuse TypeScript SDK (v4) is built on OpenTelemetry for robust observability, better context management, and easy integration with third-party libraries.
-This documentation is for the TypeScript SDK v4. If you are looking for the documentation for the TypeScript SDK v3, please click here.
-If you are self-hosting Langfuse, the TypeScript SDK v4 requires Langfuse platform version ≥ 3.95.0 for all features to work correctly.
-Quickstart
-Get your first trace i"
+0,https://langfuse.com/blog/2024-07-ai-agent-observability-with-langfuse,AI Agent Observability with Langfuse - Langfuse Blog,0.0030679570454459405,0.8615,0.6854,0.791,"agent, ai, research, agents, deep research, deep, cursor, good, langgraph, ai agents, multi, product, use cases, report, agents sdk","AI Agent Observability with Langfuse
+Easily monitor, trace and debug your AI agents. Explore tools like LangGraph, Llama Agents, Dify, Flowise, and Langflow, and see how Langfuse helps to monitor and optimize your application.
+What are AI Agents?
+An AI agent is a system that autonomously performs tasks by planning its task execution and utilizing available tools. AI Agents leverage large language models (LLMs) to understand and respond to user inputs step-by-step and decide when to call external"
+1,https://langfuse.com/docs/prompts/get-started,Get Started with Open Source Prompt Management - Langfuse,0.051878404641213086,0.7962,0.6959,0.7561,"langfuse, prompt, movie, chat, critic, movie critic, get_prompt movie, langfuse get_prompt, get_prompt, chatbot, feedback, frontend, prompt langfuse, demo project, project","Get Started with Prompt Management
+This quickstart helps you to create your first prompt and use it in your application.
+Get API keys
+- Create Langfuse account or self-host Langfuse.
+- Create new API credentials in the project settings.
+Create a prompt
+Use the Langfuse UI to create a new prompt or update an existing one.
+Use prompt
+At runtime, you can fetch the latest production version from Langfuse. Learn more about control (versions/labels) here.
+from langfuse import get_client
+# Initialize L"
+2,https://langfuse.com/docs/scores/overview,Evaluation of LLM Applications - Langfuse,0.05400124112088192,0.91,0.6722,0.8149,"evaluation, llm, evaluator, voice, judge, evaluation methods, testing, conversation, annotation, queue, user, offline, llm judge, bot, test","Evaluation Overview
+Evaluation is a critical aspect of developing and deploying LLM applications. Usually, teams use a multitude of different evaluation methods to score the performance of their AI application depending on the use case and the stage of the development process.
+Watch this walkthrough of Langfuse Evaluation and how to use it to improve your LLM application.
+Why use LLM Evaluation?
+LLM evaluation is crucial for improving the accuracy and robustness of language models, ultimately en"
+3,https://langfuse.com/docs/get-started,Get Started with Tracing - Langfuse,0.003758588253016402,0.8045,0.7445,0.7805,"langfuse, opentelemetry, string, api, observation, span, https, sdk, mcp, import, attributes, langfuse com, public, api public, com","Get Started with Tracing
+This quickstart helps you to ingest your first trace in Langfuse.
+Get API keys
+- Create Langfuse account or self-host Langfuse.
+- Create new API credentials in the project settings.
+Ingest your first trace
+Use the drop-in replacement for the OpenAI Python SDK to get full observability.
+pip install langfuse
+Add you Langfuse credentials as environment variables.
+LANGFUSE_SECRET_KEY = ""sk-lf-...""
+LANGFUSE_PUBLIC_KEY = ""pk-lf-...""
+LANGFUSE_BASE_URL = ""https://cloud.langfuse."
+4,https://langfuse.com/blog/product-analytics-for-LLM-apps,Launch YC - Langfuse Blog,0.002851253926672147,0.8392,0.545,0.7215,"langfuse, llm, dify, metrics, observability, langflow, feedback, langchain, applications, features, usage, users, step llm, llm systems, community","Langfuse — Open source product analytics for LLM applications
+This is a cross-post of our Launch YC (W23) which explains why we're building Langfuse.
+TLDR: Langfuse is building open source product analytics (think ‘Mixpanel’) for LLM apps. We help companies to track and analyze quality, cost and latency across product releases and use cases.
+Hi everyone,
+we’re Max, Marc and Clemens. We were part of the Winter 23 batch and work on Langfuse, where we help teams make sense of how their LLM applicat"
+5,https://langfuse.com/blog/2025-05-31-langfuse-may-update,Langfuse May Update - Langfuse Blog,0.0022552622786551147,0.8973,0.4292,0.7101,"langfuse, haystack, dataset, trace, import, span, metadata, openai, decorator, sdk, prompt, day, otel, dashboards, playground","Langfuse May Update
+Langfuse May Update: Python SDK v3 GA, Launch Week #3 Recap, Custom Dashboards & More!
+May 2025 was our most action-packed month yet at Langfuse. We welcomed thousands of new users, powered through countless lines of code, wrapped our third Launch Week, shipped long-awaited API goodies, and rolled out a handful of fresh integrations.
+🔭 Python SDK v3 is now Generally Available
+Following extensive testing and community feedback, we’re excited to announce that Langfuse Python SD"
+6,https://langfuse.com/blog/2024-06-monitoring-llm-security,Monitoring LLM Security & Reducing LLM Risks - Langfuse Blog,0.0028609412068773266,0.9141,0.8472,0.8873,"security, llm, proxy, sanitized_prompt, llm proxy, otel, langfuse, risks, prompt, llm security, scanner, llm_guard, pii, anonymize, guard","Monitoring LLM Security in Langfuse
+How to use Langfuse to trace, prevent, and evaluate security risks common to LLM-based applications.
+Protecting against security risks and attacks is becoming increasingly important for ensuring LLM apps are production-ready. Not only do LLM applications need to be secure to protect users’ private and sensitive information, they also need ensure a level of quality and safety of responses to maintain product standards.
+This post offers an overview of how you ca"

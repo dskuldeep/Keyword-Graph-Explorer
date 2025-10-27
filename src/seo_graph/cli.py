@@ -278,6 +278,11 @@ def run_all_blogs(config_path: str = "blog_config.json") -> None:
         print(f"   URL: {blog['url']}")
         print(f"   Output: output/{blog['output_dir']}")
         
+        # Get sitemap URL from config or None
+        sitemap_url = blog.get('sitemap')
+        if sitemap_url:
+            print(f"   Sitemap: {sitemap_url}")
+        
         try:
             # Set focus_prefix to keep sections separate
             focus_prefix = blog['url'] if blog['url'].endswith('/') else blog['url'] + '/'
@@ -289,7 +294,7 @@ def run_all_blogs(config_path: str = "blog_config.json") -> None:
                 max_pages=crawl_settings.get('max_pages', 100),
                 max_depth=crawl_settings.get('max_depth', 3),
                 pillar=None,
-                sitemap=None,
+                sitemap=sitemap_url,  # Use sitemap from config
                 focus_prefix=focus_prefix,  # Restrict to specific path
                 clusters=None,
                 doc_keywords_topk=20,

@@ -1,8 +1,8 @@
 cluster,keywords
-5,"self, maxim, print, import, logger, const, agent, ai, workflow, def, str, resume, tool, sentiment, score"
-3,"legal, agents, ai, model, code, harm, safety, auditing, models, misaligned, agent, actually, research, fine, os"
-1,"tool, models, accuracy, mcp, parameter, tool accuracy, tools, model, slms, tool calls, agentic, systems, tool use, tasks, claude"
-0,
-4,"bifrost, schemas, llm, maxim, agent, ai, observability, calls, charts, integration, mistral, docker, providers, account, tool"
-2,"maxim, agent, agents, bifrost, evals, voice, dashboards, logs, custom, evaluate, workflows, tool, traces maxim, ai, support"
-6,"audio, speech, wer, transcription, tokens, speaker, acoustic, voice, audio quality, models, evaluator, semantic, noise, noisy, length"
+3,"maxim, bifrost, ai, week, voice, logs, sdk, prompt, agent, workflows, mistral, runs, cloud, tool, evals"
+2,"agent, agents, ai, models, tool, reasoning, legal, sql, cot, systems, workflow, mcp, maxim, const, paperbench"
+0,"audio, speech, snr, tts, ditto, wer, emotion, transcription, tokenization, acoustic, tokens, gense, dp, voice, synthetic"
+1,"print, self, agent, import, maxim, logger, os, st, weather, log, str, suggestions, trace, function, os harm"
+5,"model, models, o1, misalignment, gd, attacks, contamination, ai, ethical, em, attack, alignment, auditors, bias, auditing"
+6,"rag, documents, retrieval, document, query, chunks, hallucinations, retrieved, knowledge, relevant, generation, units, long context, chunking, context"
+4,"dataset, evaluators, evaluator, endpoint, click, assistant, test, prompt, evaluation, context source, clinical, preset, select, configure, ll"
