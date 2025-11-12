@@ -88,7 +88,7 @@
       "page"
     ],
     "min_title_length": 10,
-    "max_depth": 3
+    "max_depth": 4
   },
   "crawl_settings": {
     "max_pages": 1000,

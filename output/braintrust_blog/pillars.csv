@@ -1,39 +1,42 @@
 cluster,url,title,pagerank,semantic_sim,tfidf_sim,total_sim,cluster_keywords,excerpt
-0,https://www.braintrust.dev/docs/platform/projects,Projects - Docs - Braintrust,0.02729304069453228,0.7553,0.5854,0.6874,"span, scores, btql, project, data, spans, select, mcp, review, score, loop, records, function, page, monitor","Projects
-A project is analogous to an AI feature in your application. Some customers create separate projects for development and production to help track workflows. Projects contain all experiments, logs, datasets and playgrounds for the feature.
-For example, a project might contain:
-- An experiment that tests the performance of a new version of a chatbot
-- A dataset of customer support conversations
-- A prompt that guides the chatbot's responses
-- A tool that helps the chatbot answer customer "
-1,https://www.braintrust.dev/blog/best-practices,Best practices - Braintrust blog - Braintrust,0.00902707237391104,0.8431,0.6358,0.7602,"ai, read, 2025 read, 2025, evals, model, 2024 read, dropbox, vercel, java, 2024, new, new model, 2023, production","Latest News
-Best practices
+0,https://www.braintrust.dev/blog/gpt-5-vs-claude-opus,GPT-5 vs. Claude Opus 4.1 - Blog - Braintrust,0.013964910621933576,0.8379,0.7721,0.8116,"gemini, gpt, models, claude, reasoning, gemini models, 4o, gpt 4o, image, effort, opus, pro, multimodal, cost, claude opus","GPT-5 vs. Claude Opus 4.1
+Two of the supposedly most capable large language models, OpenAI's GPT-5 (tested 2025-08-07) and Anthropic's Claude Opus 4.1 (2025-08-05), landed within days of each other this week. Both promise significant improvements in reasoning, comprehension, and adaptability, but deciding which to deploy isn’t straightforward. Benchmarks tell part of the story, customer feedback fills in more of the picture, and ultimately, the right choice depends on your workload and constrain"
+1,https://www.braintrust.dev/blog/meta/brainstore/full-text-search.mp4,,0.004060285588794985,1.0,0.0,0.6,,
+2,https://www.braintrust.dev/blog/after-evals,I ran an eval. Now what? - Blog - Braintrust,0.013821006840205395,0.8988,0.6591,0.8029,"evals, test, data, model, application, improve, ai, examples, interesting, cases, eval, ai application, new model, loop, inputs","I ran an eval. Now what?
+So you built an AI application, curated an initial set of test examples, picked a scoring function, and ran an eval. You got a score—great!
+Now what?
+We'll walk you through how to think about that score, and more importantly, what steps you should take next to continuously improve both your AI application and your evaluation process, including:
+- How to determine what to focus on next
+- How to iteratively improve your evals and AI application
+- Best practices for creatin"
+3,https://www.braintrust.dev/blog/company,Company - Braintrust blog - Braintrust,0.021320679660836464,0.9263,0.8063,0.8783,"tech, enterprise tech, tech 30, soc, enterprise, compliance, ii, soc type, type ii, ii compliance, 30, 2024ankur, news braintrust, read, 2023","Latest News
+Company
 Read
-Braintrust Java SDK: AI observability and evals for the JVM
-AI observability and evaluation tools for Java applications, built on OpenTelemetry.
-23 October 2025
+Announcing our $36M Series A
+We’re thrilled to announce that we've raised $36 million to advance the future of AI software engineering, bringing our total funding to $45 million.
+8 October 2024
 Read
-Measuring what matters: An intro to AI evals
-Learn how to build effective evals for your AI products with datasets, tasks, and scores.
-10 October 2025
+Braintrust achieves SOC 2 Type II compliance
+We are excited to announce that Braintrust has achieved SOC 2 Type II compliance.
+15 July 2024
 Read
-Claude Sonnet 4.5 analysis
-Learn how aspirational evals can help you figure out when new AI models unlock new product opportunities.
-29 September "
-2,https://www.braintrust.dev/blog/functions,Functions: flexible AI engineering primitives - Blog - Braintrust,0.0037936049078566353,0.7862,0.6163,0.7182,"prompt, braintrust, tool, functions, python, agent, run, code, prompts, version, create, event, use, tools, playground","Functions: flexible AI engineering primitives
-Over the past year, the field of software engineering has been inundated with AI. There are tons of tools for improving developer productivity with the help of large language models (LLMs), but very few make it straightforward to build and scale AI-powered products. That's because introducing AI models fundamentally changes the software development lifecycle. Instead of measuring performance and reliability, developers need to assess accuracy and qua"
-3,https://www.braintrust.dev/blog/ai-proxy,AI proxy: fostering a more open ecosystem - Blog - Braintrust,0.007183701950571945,0.8095,0.6046,0.7275,"api, proxy, providers, openai, realtime, realtime api, braintrust, api key, agent, ai, models, bedrock, azure, compliance, autoevals","AI proxy: fostering a more open ecosystem
-Like most of us, I spent last weekend thinking about the past, present, and future of AI. It's hard to imagine the industry without OpenAI — an institution we all look to, respect, and rely on — at its forefront. I for one am rooting for the company and brilliant folks who work there to continue leading the way. However, I also realized that the AI ecosystem benefits from being interoperable and default open and that we at Braintrust have an important ro"
-4,https://www.braintrust.dev/blog/2024,The top 10 most loved features of 2024 - Blog - Braintrust,0.004027677174871103,0.664,0.3731,0.5477,"attachment, blog, gpt, cookbook, gemini, models, 4o, year, gpt 4o, image, terraform, tech, braintrust, reasoning, portola","The top 10 most loved features of 2024
-This year was all about making Braintrust simpler, faster, and more powerful for you. Here are the top 10 features of 2024:
-1. Custom scorer, tool, and prompt functions
-Create and manage your own scorers, tools, and prompts, all within the SDK.
-2. AI proxy and hybrid self-hosting
-We bundled the AI proxy with the main API, introduced temp credentials for front-end requests, and broadened provider support (Cerebras, Fireworks, Lepton, etc.). Self-hosters also"
-5,https://www.braintrust.dev/blog/brainstore,Brainstore: the database designed for the AI engineering era - Blog - Braintrust,0.00907506459654021,0.8104,0.4927,0.6833,"brainstore, notion, ai, data, fintool, plane, zapier, diamond, team, product, braintrust, products, feedback, data plane, ceo","Brainstore: the purpose-built database for the AI engineering era
-AI engineering has completely changed how we build software. Organizations are processing more tokens than ever, running agent-based systems with thousands of intermediate steps, and collecting massive amounts of structured and unstructured data. But traditional observability tools just aren’t keeping up.
-That’s why we built Brainstore, a database built from the ground up for high-scale AI workloads. It’s 80x faster on real-world "
-6,https://www.braintrust.dev/blog/measuring-what-matters,Measuring what matters: An intro to AI evals - Blog - Braintrust,0.007182102723840177,0.8438,0.5897,0.7422,"evals, eval, scorers, ai, remote, playgrounds, examples, test, scoring, loom, great, coursera, output, quality, checks","Measuring what matters: An intro to AI evals
-This post is based on an online event on October 7, 2025. You can watch the full replay on YouTube.
-AI systems are non-deterministic. Give an LLM the same question twice, and you'll get different answers. This randomness creates a fundamental problem: how do you know your changes improved quality instead of just shifting failure modes around?
-Without a systematic evaluation process, teams build on vibes. You ship blind, fix one issue only to break ano"
+Braintrust selected to be in the Enterprise Tech 30
+The Enterprise Tech 30 by Wing Venture Capital names the highest potential priv"
+4,https://www.braintrust.dev/blog/customer-stories,Customer stories - Braintrust blog - Braintrust,0.02454222876799242,0.8382,0.6122,0.7478,"read, ai, 2025 read, 2025, fintool, notion, loom, coursera, year, team, zapier, portola, 2024 read, 2023, diamond","Latest News
+Customer stories
+Read
+How Portola empowers subject matter experts to improve AI quality
+Learn how SMEs at Portola iterate on and deploy prompts to improve conversational AI.
+20 October 2025
+Read
+How Dropbox automates evals for conversational AI
+Learn best practices for scalable, rigorous evaluation from the Dropbox Dash team.
+15 October 2025
+Read
+How Graphite builds reliable AI code review at scale
+Learn how Graphite's engineering team uses systematic evaluation to build Diamond, the"
+5,https://www.braintrust.dev/blog/mcp,AI that knows your data - Blog - Braintrust,0.013786872953433674,0.7896,0.4489,0.6533,"braintrust, brainstore, data, api, blog, proxy, ai, vercel, api key, realtime, openai, tools, eval, traces, providers","AI that knows your data
+Your AI tools should know about your Braintrust experiments. They should understand your log schemas, help debug failed evaluations, and answer questions about your model performance.
+Today, we're introducing Braintrust's Model Context Protocol (MCP) server. MCP is Anthropic's open standard that lets AI tools securely access external data sources. We've built an MCP server that exposes your Braintrust data and works seamlessly with popular AI coding tools to provide bette"
+6,https://www.braintrust.dev/blog/five-lessons-evals,Five hard-learned lessons about AI evals - Blog - Braintrust,0.018302777228970002,0.8559,0.5222,0.7224,"ai, evals, agent, evaluations, braintrust, eval, new, scorers, dropbox, playgrounds, model, programming, team, async programming, custom scorers","Five hard-learned lessons about AI evals
+The team at Braintrust spends a lot of time deep in evaluation data, helping teams of all sizes ship reliable LLM‑powered products. We run the platform that powers those evals and observability workflows, so we see the successes and the failures up close. On an average day, our customers run ≈ 13 evals per org, and the most advanced teams push 3,000+ evals daily while spending hours poring over trace logs. All that usage has taught us five tough lessons. "

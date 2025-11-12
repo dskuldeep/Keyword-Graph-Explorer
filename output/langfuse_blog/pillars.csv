@@ -1,47 +1,30 @@
 cluster,url,title,pagerank,semantic_sim,tfidf_sim,total_sim,cluster_keywords,excerpt
-0,https://langfuse.com/blog/2024-07-ai-agent-observability-with-langfuse,AI Agent Observability with Langfuse - Langfuse Blog,0.0030679570454459405,0.8615,0.6854,0.791,"agent, ai, research, agents, deep research, deep, cursor, good, langgraph, ai agents, multi, product, use cases, report, agents sdk","AI Agent Observability with Langfuse
+0,https://langfuse.com/blog/2024-07-ai-agent-observability-with-langfuse,AI Agent Observability with Langfuse - Langfuse Blog,0.010848550242681563,0.8951,0.6783,0.8084,"agent, research, agents, ai, deep research, deep, cursor, langfuse, langgraph, new, observation types, ai agents, multi, multi agent, report","AI Agent Observability with Langfuse
 Easily monitor, trace and debug your AI agents. Explore tools like LangGraph, Llama Agents, Dify, Flowise, and Langflow, and see how Langfuse helps to monitor and optimize your application.
 What are AI Agents?
 An AI agent is a system that autonomously performs tasks by planning its task execution and utilizing available tools. AI Agents leverage large language models (LLMs) to understand and respond to user inputs step-by-step and decide when to call external"
-1,https://langfuse.com/docs/prompts/get-started,Get Started with Open Source Prompt Management - Langfuse,0.051878404641213086,0.7962,0.6959,0.7561,"langfuse, prompt, movie, chat, critic, movie critic, get_prompt movie, langfuse get_prompt, get_prompt, chatbot, feedback, frontend, prompt langfuse, demo project, project","Get Started with Prompt Management
-This quickstart helps you to create your first prompt and use it in your application.
-Get API keys
-- Create Langfuse account or self-host Langfuse.
-- Create new API credentials in the project settings.
-Create a prompt
-Use the Langfuse UI to create a new prompt or update an existing one.
-Use prompt
-At runtime, you can fetch the latest production version from Langfuse. Learn more about control (versions/labels) here.
-from langfuse import get_client
-# Initialize L"
-2,https://langfuse.com/docs/scores/overview,Evaluation of LLM Applications - Langfuse,0.05400124112088192,0.91,0.6722,0.8149,"evaluation, llm, evaluator, voice, judge, evaluation methods, testing, conversation, annotation, queue, user, offline, llm judge, bot, test","Evaluation Overview
-Evaluation is a critical aspect of developing and deploying LLM applications. Usually, teams use a multitude of different evaluation methods to score the performance of their AI application depending on the use case and the stage of the development process.
-Watch this walkthrough of Langfuse Evaluation and how to use it to improve your LLM application.
-Why use LLM Evaluation?
-LLM evaluation is crucial for improving the accuracy and robustness of language models, ultimately en"
-3,https://langfuse.com/docs/get-started,Get Started with Tracing - Langfuse,0.003758588253016402,0.8045,0.7445,0.7805,"langfuse, opentelemetry, string, api, observation, span, https, sdk, mcp, import, attributes, langfuse com, public, api public, com","Get Started with Tracing
-This quickstart helps you to ingest your first trace in Langfuse.
-Get API keys
-- Create Langfuse account or self-host Langfuse.
-- Create new API credentials in the project settings.
-Ingest your first trace
-Use the drop-in replacement for the OpenAI Python SDK to get full observability.
-pip install langfuse
-Add you Langfuse credentials as environment variables.
-LANGFUSE_SECRET_KEY = ""sk-lf-...""
-LANGFUSE_PUBLIC_KEY = ""pk-lf-...""
-LANGFUSE_BASE_URL = ""https://cloud.langfuse."
-4,https://langfuse.com/blog/product-analytics-for-LLM-apps,Launch YC - Langfuse Blog,0.002851253926672147,0.8392,0.545,0.7215,"langfuse, llm, dify, metrics, observability, langflow, feedback, langchain, applications, features, usage, users, step llm, llm systems, community","Langfuse — Open source product analytics for LLM applications
-This is a cross-post of our Launch YC (W23) which explains why we're building Langfuse.
-TLDR: Langfuse is building open source product analytics (think ‘Mixpanel’) for LLM apps. We help companies to track and analyze quality, cost and latency across product releases and use cases.
-Hi everyone,
-we’re Max, Marc and Clemens. We were part of the Winter 23 batch and work on Langfuse, where we help teams make sense of how their LLM applicat"
-5,https://langfuse.com/blog/2025-05-31-langfuse-may-update,Langfuse May Update - Langfuse Blog,0.0022552622786551147,0.8973,0.4292,0.7101,"langfuse, haystack, dataset, trace, import, span, metadata, openai, decorator, sdk, prompt, day, otel, dashboards, playground","Langfuse May Update
+1,https://langfuse.com/blog/2025-05-31-langfuse-may-update,Langfuse May Update - Langfuse Blog,0.005608974360228721,0.8854,0.5295,0.743,"langfuse, day, langflow, launch, week, launch week, dashboards, custom dashboards, python sdk, sdk, docs, new, prompt, openai, custom","Langfuse May Update
 Langfuse May Update: Python SDK v3 GA, Launch Week #3 Recap, Custom Dashboards & More!
 May 2025 was our most action-packed month yet at Langfuse. We welcomed thousands of new users, powered through countless lines of code, wrapped our third Launch Week, shipped long-awaited API goodies, and rolled out a handful of fresh integrations.
 🔭 Python SDK v3 is now Generally Available
 Following extensive testing and community feedback, we’re excited to announce that Langfuse Python SD"
-6,https://langfuse.com/blog/2024-06-monitoring-llm-security,Monitoring LLM Security & Reducing LLM Risks - Langfuse Blog,0.0028609412068773266,0.9141,0.8472,0.8873,"security, llm, proxy, sanitized_prompt, llm proxy, otel, langfuse, risks, prompt, llm security, scanner, llm_guard, pii, anonymize, guard","Monitoring LLM Security in Langfuse
-How to use Langfuse to trace, prevent, and evaluate security risks common to LLM-based applications.
-Protecting against security risks and attacks is becoming increasingly important for ensuring LLM apps are production-ready. Not only do LLM applications need to be secure to protect users’ private and sensitive information, they also need ensure a level of quality and safety of responses to maintain product standards.
-This post offers an overview of how you ca"
+2,https://langfuse.com/blog/2024-10-observability-in-multi-step-llm-systems,Observability in Multi-Step LLM Systems - Langfuse Blog,0.016489343214533506,0.8995,0.7798,0.8516,"otel, observability, llm, applications, genai, libraries, feedback, instrumentation, systems, bottlenecks, developers, golden data, opentelemetry, data, challenges","Observability in Multi-Step LLM Systems
+Optimize multi-step LLM systems with advanced observability, feedback, and testing strategies for better performance and reliability.
+Managing the complexity of Large Language Model (LLM) applications requires a focus on maintaining high performance, reliability, and efficiency. As these apps become increasingly complex, they introduce multiple points of failure that can affect quality, cost, and latency.
+This is where observability and traceability come i"
+3,https://langfuse.com/blog/announcing-our-seed-round,Langfuse raises $4M - Langfuse Blog,0.009014467702187865,0.8504,0.6657,0.7765,"product, langfuse, llm, string, dashboards, openai, production, use cases, gpt, anthropic, day, applications, google, mini, data","Langfuse raises $4M
+We're thrilled to announce that Langfuse has raised a $4m seed round from Lightspeed Venture Partners, La Famiglia and Y Combinator.
+With Langfuse, we are building open source observability and product analytics for LLM-based applications. Our goal is to enable product and engineering teams to harness the power of Generative AI with the most useful and open suite of devtools focused on visibility and insights.
+When we first joined Y Combinator for the winter batch in early 20"
+4,https://langfuse.com/blog/2024-04-python-decorator,Trace complex LLM applications with the Langfuse decorator (Python) - Langfuse Blog,0.017155571299272518,0.8799,0.5304,0.7401,"langfuse, langchain, llm, security, import, haystack, proxy, trace, rag, llamaindex, decorator, hugging, hugging face, os, face","Trace complex LLM applications with the Langfuse decorator (Python)
+When building RAG or agents, lots of LLM calls and non-LLM inputs feeds into the final output. The Langfuse decorator allows you to trace and evaluate holistically.
+Note: This blog post references our Python SDK v2. We have a new, improved SDK available based on OpenTelemetry. Please check out the SDK v3 for a more powerful and simpler to use SDK.
+When we initially built complex agents for web scraping and code generation while "
+5,https://langfuse.com/blog/2024-11-most-used-oss-llmops,Langfuse is the #1 most used Open Source LLMOps Product - Langfuse Blog,0.014937218371705072,0.8367,0.5465,0.7206,"langfuse, dify, llmops, open source, clickhouse, community, ingestion, users, source, llmops stack, source llmops, features, open, prompt, webhooks","Langfuse is the #1 Open Source LLMOps Product
+We have grown from a few core users within Y Combinator to thousands of teams in startups, tech companies, and enterprises. This article includes a summary of metrics that help compare different projects.
+We have collected different metrics and are excited to share that Langfuse is the most used Open Source LLMOps product out there.
+Langfuse offers developers a comprehensive set of tools for observability, evaluation, and prompt management, making it"
+6,https://langfuse.com/blog/2025-09-05-automated-evaluations,Automated Evaluations of LLM Applications - Langfuse Blog,0.022896764054299353,0.8758,0.6195,0.7733,"evaluation, failure, voice, conversation, testing, llm, bot, script, test, experiment, evaluators, user, template, modes, failure modes","Automated Evaluations of LLM Applications
+A practical guide to setting up automated evaluations for LLM applications and AI agents using Langfuse.
+In AI development, iterating quickly is important. Whether you’re refining a prompt, swapping a model, or changing your application logic, you need to understand the impact of each change on performance. Manually annotating outputs after every modification is slow and expensive, especially when you want to integrate evaluations into a CI/CD pipeline.
+"

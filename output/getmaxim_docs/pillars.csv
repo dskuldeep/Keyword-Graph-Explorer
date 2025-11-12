@@ -1,28 +1,5 @@
 cluster,url,title,pagerank,semantic_sim,tfidf_sim,total_sim,cluster_keywords,excerpt
-0,https://www.getmaxim.ai/docs/library/evaluators/pre-built-evaluators/statistical-evaluators/bleu,BLEU - Maxim Docs,0.0005781308238402645,0.6416,0.4473,0.5639,"closer, scores, score, scores closer, str, distance, similarity, text, steps, statements, score closer, brief, reference, context, audio","Input
-output
-(str): The generated text to be evaluated.expectedOutput
-(str): The reference or ground truth text.
-Output
-Result
-(float): A score between 0 and 1.
-Interpretation
-- Higher scores (closer to 1): Indicates higher degree of overlap between the generated text and the ground truth, suggesting better output quality
-- Lower scores (closer to 0): Indicates lower degree of overlap between the generated text and the ground truth, suggesting bad output quality
-Formula
-The BLEU score is calcula"
-1,https://www.getmaxim.ai/docs/sdk/python/references/logger/components/trace,components.Trace - Maxim Docs,0.0015554437495933085,0.6629,0.556,0.6202,"def, str, class, dict, utilities, optional, dict str, page helpful, helpful, union, logger, list, staticmethod, staticmethod def, integration","Trace functionality for Components integration.
-@deprecated( ""This class will be removed in a future version. Use {} which is TypedDict."" ) @dataclass class TraceConfig()
-class TraceConfigDict(TypedDict)
-def get_trace_config_dict( config: Union[TraceConfig, TraceConfigDict]) -> TraceConfigDict
-config
-class Trace(EventEmittingBaseContainer)
-def __init__(config: Union[TraceConfig, TraceConfigDict], writer: LogWriter)
-writer
-def set_input(input: str)
-input
-@staticmethod def set_input_(writer: LogWr"
-2,https://www.getmaxim.ai/docs/sdk/typescript/reference/core/classes/Generation,Generation - Maxim Docs,0.00134797106807247,0.8423,0.7773,0.8163,"src, lib, defined src, src lib, ts, defined, lib logger, logger components, void, string, components, logger, generation ts, lib models, components generation","Class: Generation
+0,https://www.getmaxim.ai/docs/sdk/typescript/reference/core/classes/Generation,Generation - Maxim Docs,0.0012973949813235171,0.8423,0.7775,0.8164,"src, lib, defined src, src lib, ts, defined, lib logger, logger components, void, string, components, logger, writer, lib models, components generation","Class: Generation
 Defined in: src/lib/logger/components/generation.ts:124 Represents an LLM generation or completion. The Generation class tracks the complete lifecycle of LLM requests, including input messages, model parameters, results, and any errors. It supports both chat and text completion formats. GenerationExample
 Extends
 Constructors
@@ -31,46 +8,30 @@ new Generation(Defined in: src/lib/logger/components/generation.ts:148 Creates a
 ,writer
 ):Generation
 Parameter"
-3,https://www.getmaxim.ai/docs/settings/maxim-api-keys,Maxim API keys - Maxim Docs,0.006171604598697617,0.8129,0.4957,0.6861,"maxim, agent, import, api, python, sdk, integration, overview, settings, provider, trace, openai, cloud, ai, tracing","Skip to main content
-Maxim Docs home page
-Search...
-⌘K
-Home
-Careers
-Blog
-Pricing
-Get started free
-Get started free
-Search...
-Navigation
-Settings
-Maxim API keys
-Documentation
-SDK
-API Reference
-Self Hosting
-Cookbooks
-Changelog
-Blog
-Cookbooks
-Tutorials
-Introduction
-Platform Overview
-Running Your First Eval
-Offline Evals
-Offline Evaluation Overview
-Offline Evaluation Concepts
-Via UI
-Via SDK
-Guides
-Online Evals
-Online Evaluation Overview
-Via UI
-Via SDK
-Set Up Alerts and Notifications
-Tracing
-Tracing "
-4,https://www.getmaxim.ai/docs/log repositories/log-repository/get-trace-by-id,Get trace by ID - Maxim Docs,0.0006998003295136292,0.8151,0.336,0.6234,"string, unique, unique identifier, identifier, dataset, api key, 100, api, key, delete, curl, alert, key authentication, repository, deleted","Authorizations
+1,https://www.getmaxim.ai/docs/library/evaluators/pre-built-evaluators/programmatic-evaluators/contains-special-characters,containsSpecialCharacters - Maxim Docs,0.0005082852185753594,0.9719,0.9239,0.9527,"input, string, boolean, validate, string number, boolean true, number, true, output, function, evaluator, valid, string valid, assuming evaluator, dataoutput string","Input
+input
+: The original input text or dataoutput
+: The string to be validatedexpectedOutput
+: The expected output to compare against.
+- Any of the input variables (
+input
+,output
+,expectedOutput
+) can be marked as optional. - The returned value from the
+validate
+function can be a boolean, string, or a number.
+Output
+Result
+: Boolean (true
+orfalse
+) | string | number
+Interpretation
+Assuming this evaluator returns a boolean
+- true: At least one special character was found
+- false: No special ch"
+2,https://www.getmaxim.ai/docs/online-evals/via-ui/set-up-auto-evaluation-on-logs,Set Up Auto Evaluation on Logs - Maxim Docs,0.0008913440142277579,0.6885,0.5304,0.6253,"logs, trace, session, span, dashboard, export, track, llm, metrics, add, human, spans, comparison, charts, evaluation","Why Evaluate Logs?
+We know that evaluation is a necessary step while building an LLM, but since an LLM can be non-deterministic, all possible scenarios can never be covered; thus evaluating the LLM on live system also becomes crucial. Evaluation on logs helps cover cases or scenarios that might not be covered by Test runs, ensuring that the LLM is performing optimally under various conditions. Additionally, it allows for potential issues to be identified early on which allows for making necessar"
+3,https://www.getmaxim.ai/docs/log repositories/log-repository/get-trace-by-id,Get trace by ID - Maxim Docs,0.0006735442814668304,0.8196,0.3395,0.6276,"string, unique, unique identifier, identifier, dataset, api key, api, key, 100, delete, curl, header, authentication, alert, key authentication","Authorizations
 API key for authentication
 Query Parameters
 Unique identifier for the trace
@@ -95,30 +56,30 @@ curl --request GET \
 },
 ""duration"": 123,
 ""end"
-5,https://www.getmaxim.ai/docs/library/evaluators/pre-built-evaluators/programmatic-evaluators/contains-special-characters,containsSpecialCharacters - Maxim Docs,0.0005410923424980162,0.9719,0.9217,0.9519,"string, input, boolean, validate, string number, boolean true, number, true, output, function, evaluator, valid, string valid, assuming evaluator, dataoutput string","Input
-input
-: The original input text or dataoutput
-: The string to be validatedexpectedOutput
-: The expected output to compare against.
-- Any of the input variables (
-input
-,output
-,expectedOutput
-) can be marked as optional. - The returned value from the
-validate
-function can be a boolean, string, or a number.
+4,https://www.getmaxim.ai/docs/sdk/python/integrations/crewai/crewai,CrewAI Integration - Maxim Docs,0.0020101400015520017,0.7814,0.4218,0.6375,"agent, maxim, prompt, test, evaluators, prompts, run, sdk, context, ai, dataset, variables, import, data, python","Maxim AI provides comprehensive agent monitoring, evaluation, and observability for your CrewAI applications. With Maxim’s one-line integration, you can easily trace and analyse agent interactions, performance metrics, and more.
+Features
+Prompt Management
+Maxim’s Prompt Management capabilities enable you to create, organize, and optimize prompts for your CrewAI agents. Rather than hardcoding instructions, leverage Maxim’s SDK to dynamically retrieve and apply version-controlled prompts.- Prompt "
+5,https://www.getmaxim.ai/docs/sdk/python/references/logger/anthropic/utils,anthropic.Utils - Maxim Docs,0.0009604231315455359,0.661,0.2413,0.4931,"def, returns, str, dict, class, utilities, dict str, optional, page helpful, __init__, helpful, logger, dataclass, dataclass class, functionality","AnthropicUtils
+parse_message_param
+to be parsed. Can contain strings, dicts, or MessageParam objects.
+override_role
+Optional[str] - Optional role to override the message role. If provided, all messages will use this role instead of their original role.
+with role and content extracted and standardized.
+Notes:
+- String messages are treated as user messages by default
+- Dict messages should have ‘role’ and ‘content’ keys
+- Content blocks are flattened into text content
+- Complex content structures "
+6,https://www.getmaxim.ai/docs/library/evaluators/pre-built-evaluators/statistical-evaluators/bleu,BLEU - Maxim Docs,0.0005418233065324444,0.6416,0.4462,0.5634,"closer, score, scores, scores closer, str, distance, similarity, text, steps, statements, score closer, inputs actual_output, context, audio, reference","Input
+output
+(str): The generated text to be evaluated.expectedOutput
+(str): The reference or ground truth text.
 Output
 Result
-: Boolean (true
-orfalse
-) | string | number
+(float): A score between 0 and 1.
 Interpretation
-Assuming this evaluator returns a boolean
-- true: At least one special character was found
-- false: No special ch"
-6,https://www.getmaxim.ai/docs/introduction/overview,Platform Overview - Maxim Docs,0.034195585031176735,0.7714,0.3889,0.6184,"prompt, test, evaluators, dataset, agent, run, trace, prompts, evaluation, tool, add, logs, select, version, create","Our advanced evaluation and observability tools help teams maintain quality, reliability, and speed throughout the AI application lifecycle.
-1. Experiment
-We have a Playground++ built for advanced prompt engineering, enabling rapid iteration, deployment, and experimentation.- Organize and version their prompts effectively
-- Deploy prompts with different deployment variables and experimentation strategies without code changes
-- Connect with databases, RAG pipelines, and prompt tools seamlessly
-- "
+- Higher scores (closer to 1): Indicates higher degree of overlap between the generated text and the ground truth, suggesting better output quality
+- Lower scores (closer to 0): Indicates lower degree of overlap between the generated text and the ground truth, suggesting bad output quality
+Formula
+The BLEU score is calcula"
