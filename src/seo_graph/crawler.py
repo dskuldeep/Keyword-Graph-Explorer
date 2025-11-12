@@ -596,12 +596,24 @@ def crawl_site(
         initial_urls.extend(pagination_urls)
         print(f"   Found {len(pagination_urls)} pagination URLs")
     
-    # Deduplicate initial URLs
+    # Deduplicate initial URLs and filter by focus_prefix
     seen_init: Set[str] = set()
+    filtered_count = 0
+    normalized_focus = normalize_url_for_comparison(focus_prefix) if focus_prefix else None
+    
     for u in initial_urls:
         if u not in seen_init:
+            # Strictly filter by focus_prefix using normalized comparison
+            if normalized_focus:
+                normalized_u = normalize_url_for_comparison(u)
+                if not normalized_u.startswith(normalized_focus):
+                    filtered_count += 1
+                    continue
             queue.append((u, 0))
             seen_init.add(u)
+    
+    if filtered_count > 0:
+        print(f"   🔍 Filtered out {filtered_count} URLs not matching focus prefix")
 
     print(f"🚀 Starting crawl with {len(queue)} initial URLs...")
     
@@ -609,6 +621,13 @@ def crawl_site(
         url, depth = queue.popleft()
         if url in visited or depth > max_depth:
             continue
+        
+        # Strict focus_prefix check - skip URLs that don't match
+        if focus_prefix:
+            normalized_url = normalize_url_for_comparison(url)
+            if not normalized_url.startswith(normalized_focus):
+                continue
+        
         visited.add(url)
 
         try:
@@ -630,9 +649,11 @@ def crawl_site(
 
         for l in abs_links:
             if l.href not in visited and len(pages) + len(queue) < max_pages:
-                # Allow one-hop expansion into non-focused URLs, but do not expand further
-                if focus_prefix and not l.href.startswith(focus_prefix) and depth >= 1:
-                    continue
+                # Strictly enforce focus_prefix - never crawl outside the focused section
+                if focus_prefix:
+                    normalized_link = normalize_url_for_comparison(l.href)
+                    if not normalized_link.startswith(normalized_focus):
+                        continue
                 queue.append((l.href, depth + 1))
 
         time.sleep(delay_seconds)
