@@ -33,6 +33,22 @@
       "sitemap": "https://langfuse.com/sitemap.xml"
     },
     {
+      "name": "langfuse.com/docs",
+      "url": "https://langfuse.com/docs",
+      "domain": "langfuse.com",
+      "output_dir": "langfuse_docs",
+      "description": "LLM observability and monitoring docs",
+      "sitemap": "https://langfuse.com/sitemap.xml"
+    },
+    {
+      "name": "blog.promptlayer.com/",
+      "url": "https://blog.promptlayer.com/",
+      "domain": "blog.promptlayer.com/",
+      "output_dir": "promptlayer_blog",
+      "description": "Promptlayer Blog",
+      "sitemap": "https://blog.promptlayer.com/sitemap-posts.xml"
+    },
+    {
       "name": "arize.com/blog",
       "url": "https://arize.com/blog/",
       "domain": "arize.com",

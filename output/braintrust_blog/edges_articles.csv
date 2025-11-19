@@ -141,6 +141,7 @@ https://www.braintrust.dev/blog/java-sdk,https://www.braintrust.dev/blog/enginee
 https://www.braintrust.dev/blog/java-sdk,https://www.braintrust.dev/blog/best-practices,1,Best Practices
 https://www.braintrust.dev/blog/java-sdk,https://www.braintrust.dev/blog/java-sdk,5,Getting started | The problem | What we built | What you can do with it | What's next
 https://www.braintrust.dev/blog/java-sdk,https://www.braintrust.dev/blog/portola,1,Previous How Portola empowers subject matter experts to improve AI quality
+https://www.braintrust.dev/blog/java-sdk,https://www.braintrust.dev/blog/three-pillars-ai-observability,1,Next The three pillars of AI observability
 https://www.braintrust.dev/blog/journey,https://www.braintrust.dev/blog/product,1,Product
 https://www.braintrust.dev/blog/journey,https://www.braintrust.dev/blog/journey,7,1. Start with a prototype | 2. Manually testing | 3. Get some friends to test | 4. Fix bugs and add features | 5. Evaluations enlightenment | 6. Launch 🚀 | Conclusion
 https://www.braintrust.dev/blog/journey,https://www.braintrust.dev/blog/reliable-ai,1,Previous It's time to build reliable AI
@@ -215,6 +216,10 @@ https://www.braintrust.dev/blog/soc2,https://www.braintrust.dev/blog/custom-scor
 https://www.braintrust.dev/blog/state-of-ai,https://www.braintrust.dev/blog/product,1,Product
 https://www.braintrust.dev/blog/state-of-ai,https://www.braintrust.dev/blog/journey,1,Previous The AI product development journey
 https://www.braintrust.dev/blog/state-of-ai,https://www.braintrust.dev/blog/ai-proxy,1,Next AI proxy: fostering a more open ecosystem
+https://www.braintrust.dev/blog/three-pillars-ai-observability,https://www.braintrust.dev/blog/best-practices,1,Best practices
+https://www.braintrust.dev/blog/three-pillars-ai-observability,https://www.braintrust.dev/blog/three-pillars-ai-observability,6,"Pillar 1: Traces (reproducible context, not just spans) | Pillar 2: Evals (systematically improve your product) | Pillar 3: Annotation (injecting expertise and taste) | What Braintrust provides | What this means for you | Why new pillars?"
+https://www.braintrust.dev/blog/three-pillars-ai-observability,https://www.braintrust.dev/blog/brainstore,2,Brainstore
+https://www.braintrust.dev/blog/three-pillars-ai-observability,https://www.braintrust.dev/blog/java-sdk,1,Previous Braintrust Java SDK: AI observability and evals for the JVM
 https://www.braintrust.dev/blog/vercel-marketplace,https://www.braintrust.dev/blog/product,1,Product
 https://www.braintrust.dev/blog/vercel-marketplace,https://www.braintrust.dev/blog/vercel-marketplace,8,Add Drain | Configure OpenTelemetry | Get started with Braintrust on Vercel Marketplace | How to set up the Braintrust integration | Install the Braintrust integration | The future of AI app development | Why build with Vercel? | Why developers need AI observability
 https://www.braintrust.dev/blog/vercel-marketplace,https://www.braintrust.dev/blog/dropbox,1,Previous How Dropbox automates evals for conversational AI
@@ -230,33 +235,6 @@ https://www.braintrust.dev/blog/zapier-ai,https://www.braintrust.dev/blog/custom
 https://www.braintrust.dev/blog/zapier-ai,https://www.braintrust.dev/blog/zapier-ai,9,1. Prototype & build v0 | 2. Ship v1 | 3. Collect user feedback | 4. Establish a set of evals | 5. Iterate to improve product quality | 6. Take a moment to be proud | 7. Optimize | Conclusion | Zapier's AI development process
 https://www.braintrust.dev/blog/zapier-ai,https://www.braintrust.dev/blog/ai-development-loops,1,Previous AI development loops
 https://www.braintrust.dev/blog/zapier-ai,https://www.braintrust.dev/blog/improve-evals,1,Next How to improve your evaluations
-https://www.braintrust.dev/blog/engineering,https://www.braintrust.dev/blog/java-sdk,1,
-https://www.braintrust.dev/blog/engineering,https://www.braintrust.dev/blog/product,1,Product
-https://www.braintrust.dev/blog/engineering,https://www.braintrust.dev/blog/engineering,5,Engineering
-https://www.braintrust.dev/blog/engineering,https://www.braintrust.dev/blog/best-practices,1,Best Practices
-https://www.braintrust.dev/blog/engineering,https://www.braintrust.dev/blog/agent-while-loop,1,
-https://www.braintrust.dev/blog/engineering,https://www.braintrust.dev/blog/faster-experiments,1,
-https://www.braintrust.dev/blog/engineering,https://www.braintrust.dev/blog/resilient-design,1,
-https://www.braintrust.dev/blog/engineering,https://www.braintrust.dev/blog/open-sourcing-proxy,1,
-https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/java-sdk,1,
-https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/product,1,Product
-https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/engineering,1,Engineering
-https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/best-practices,16,Best Practices | Best practices
-https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/measuring-what-matters,1,
-https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/claude-sonnet-4-5-aspirational-evals,1,
-https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/ab-testing-evals,1,
-https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/async-programming,1,
-https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/five-lessons-evals,1,
-https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/webinar-best-practices,1,
-https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/evaluating-agents,1,
-https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/new-model,1,
-https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/rag-mongodb,1,
-https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/after-evals,1,
-https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/improve-evals,1,
-https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/ai-development-loops,1,
-https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/getting-started-evals,1,
-https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/eval-feedback-loops,1,
-https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/journey,1,
 https://www.braintrust.dev/blog/company,https://www.braintrust.dev/blog/announcing-series-a,1,
 https://www.braintrust.dev/blog/company,https://www.braintrust.dev/blog/company,6,Company
 https://www.braintrust.dev/blog/company,https://www.braintrust.dev/blog/soc2,1,
@@ -264,16 +242,6 @@ https://www.braintrust.dev/blog/company,https://www.braintrust.dev/blog/wing-30,
 https://www.braintrust.dev/blog/company,https://www.braintrust.dev/blog/seed-round,1,
 https://www.braintrust.dev/blog/company,https://www.braintrust.dev/blog/state-of-ai,1,
 https://www.braintrust.dev/blog/company,https://www.braintrust.dev/blog/reliable-ai,1,
-https://www.braintrust.dev/blog/customer-stories,https://www.braintrust.dev/blog/portola,1,
-https://www.braintrust.dev/blog/customer-stories,https://www.braintrust.dev/blog/customer-stories,9,Customer stories
-https://www.braintrust.dev/blog/customer-stories,https://www.braintrust.dev/blog/dropbox,1,
-https://www.braintrust.dev/blog/customer-stories,https://www.braintrust.dev/blog/graphite,1,
-https://www.braintrust.dev/blog/customer-stories,https://www.braintrust.dev/blog/coursera,1,
-https://www.braintrust.dev/blog/customer-stories,https://www.braintrust.dev/blog/fintool,1,
-https://www.braintrust.dev/blog/customer-stories,https://www.braintrust.dev/blog/loom,1,
-https://www.braintrust.dev/blog/customer-stories,https://www.braintrust.dev/blog/notion,1,
-https://www.braintrust.dev/blog/customer-stories,https://www.braintrust.dev/blog/zapier-ai,1,
-https://www.braintrust.dev/blog/customer-stories,https://www.braintrust.dev/blog/hostinger-evals,1,
 https://www.braintrust.dev/blog/product,https://www.braintrust.dev/blog/java-sdk,1,
 https://www.braintrust.dev/blog/product,https://www.braintrust.dev/blog/product,21,Product
 https://www.braintrust.dev/blog/product,https://www.braintrust.dev/blog/engineering,1,Engineering
@@ -298,3 +266,41 @@ https://www.braintrust.dev/blog/product,https://www.braintrust.dev/blog/function
 https://www.braintrust.dev/blog/product,https://www.braintrust.dev/blog/custom-scorers,1,
 https://www.braintrust.dev/blog/product,https://www.braintrust.dev/blog/2023-summary,1,
 https://www.braintrust.dev/blog/product,https://www.braintrust.dev/blog/ai-proxy,1,
+https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/three-pillars-ai-observability,1,
+https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/best-practices,17,Best Practices | Best practices
+https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/java-sdk,1,
+https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/product,1,Product
+https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/engineering,1,Engineering
+https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/measuring-what-matters,1,
+https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/claude-sonnet-4-5-aspirational-evals,1,
+https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/ab-testing-evals,1,
+https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/async-programming,1,
+https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/five-lessons-evals,1,
+https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/webinar-best-practices,1,
+https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/evaluating-agents,1,
+https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/new-model,1,
+https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/rag-mongodb,1,
+https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/after-evals,1,
+https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/improve-evals,1,
+https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/ai-development-loops,1,
+https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/getting-started-evals,1,
+https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/eval-feedback-loops,1,
+https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/journey,1,
+https://www.braintrust.dev/blog/customer-stories,https://www.braintrust.dev/blog/portola,1,
+https://www.braintrust.dev/blog/customer-stories,https://www.braintrust.dev/blog/customer-stories,9,Customer stories
+https://www.braintrust.dev/blog/customer-stories,https://www.braintrust.dev/blog/dropbox,1,
+https://www.braintrust.dev/blog/customer-stories,https://www.braintrust.dev/blog/graphite,1,
+https://www.braintrust.dev/blog/customer-stories,https://www.braintrust.dev/blog/coursera,1,
+https://www.braintrust.dev/blog/customer-stories,https://www.braintrust.dev/blog/fintool,1,
+https://www.braintrust.dev/blog/customer-stories,https://www.braintrust.dev/blog/loom,1,
+https://www.braintrust.dev/blog/customer-stories,https://www.braintrust.dev/blog/notion,1,
+https://www.braintrust.dev/blog/customer-stories,https://www.braintrust.dev/blog/zapier-ai,1,
+https://www.braintrust.dev/blog/customer-stories,https://www.braintrust.dev/blog/hostinger-evals,1,
+https://www.braintrust.dev/blog/engineering,https://www.braintrust.dev/blog/java-sdk,1,
+https://www.braintrust.dev/blog/engineering,https://www.braintrust.dev/blog/product,1,Product
+https://www.braintrust.dev/blog/engineering,https://www.braintrust.dev/blog/engineering,5,Engineering
+https://www.braintrust.dev/blog/engineering,https://www.braintrust.dev/blog/best-practices,1,Best Practices
+https://www.braintrust.dev/blog/engineering,https://www.braintrust.dev/blog/agent-while-loop,1,
+https://www.braintrust.dev/blog/engineering,https://www.braintrust.dev/blog/faster-experiments,1,
+https://www.braintrust.dev/blog/engineering,https://www.braintrust.dev/blog/resilient-design,1,
+https://www.braintrust.dev/blog/engineering,https://www.braintrust.dev/blog/open-sourcing-proxy,1,

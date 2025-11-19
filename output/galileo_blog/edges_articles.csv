@@ -1,6 +1,4 @@
 source,target,weight,anchors
-https://galileo.ai/blog/ai-agent-testing-behavioral-validation,https://galileo.ai/blog/building-an-effective-llm-evaluation-framework-from-scratch,4,Galileo can help score each reasoning step
-https://galileo.ai/blog/ai-agent-testing-behavioral-validation,https://galileo.ai/blog/ai-agent-dynamic-environment-performance-testing,4,Agent performance testing in dynamic environments
 https://galileo.ai/blog/ai-agent-cost-optimization-observability,https://galileo.ai/blog/success-multi-agent-ai,4,multi-agent workflow
 https://galileo.ai/blog/ai-agent-cost-optimization-observability,https://galileo.ai/blog/ai-agent-evaluation,4,quality checks
 https://galileo.ai/blog/ai-agent-cost-optimization-observability,https://galileo.ai/blog/specification-first-ai-development,4,prompt engineering

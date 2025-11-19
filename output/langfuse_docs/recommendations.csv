@@ -1,0 +1,17 @@
+source_url,target_url,similarity,reason
+https://langfuse.com/docs/administration/data-retention,https://langfuse.com/docs/data-retention,1.0,High semantic similarity; add contextual link
+https://langfuse.com/docs/api-and-data-platform/overview,https://langfuse.com/docs/api-and-data-platform,1.0,High semantic similarity; add contextual link
+https://langfuse.com/docs/evaluation/experiments/datasets,https://langfuse.com/docs/evaluation/features/datasets,1.0,High semantic similarity; add contextual link
+https://langfuse.com/docs/evaluation/experiments/experiments-via-sdk,https://langfuse.com/docs/evaluation/features/datasets,0.5239,High semantic similarity; add contextual link
+https://langfuse.com/docs/evaluation/experiments/experiments-via-ui,https://langfuse.com/docs/evaluation/features/prompt-experiments,1.0,High semantic similarity; add contextual link
+https://langfuse.com/docs/evaluation/overview,https://langfuse.com/docs/evaluation,1.0,High semantic similarity; add contextual link
+https://langfuse.com/docs/metrics/overview,https://langfuse.com/docs/metrics,1.0,High semantic similarity; add contextual link
+https://langfuse.com/docs/observability/overview,https://langfuse.com/docs/observability,1.0,High semantic similarity; add contextual link
+https://langfuse.com/docs/observability/sdk/python/evaluation,https://langfuse.com/docs/evaluation/features/datasets,0.5228,High semantic similarity; add contextual link
+https://langfuse.com/docs/prompt-management/features/webhooks-slack-integrations,https://langfuse.com/docs/prompt-management/features/webhooks,1.0,High semantic similarity; add contextual link
+https://langfuse.com/docs/prompt-management/overview,https://langfuse.com/docs/prompt-management,1.0,High semantic similarity; add contextual link
+https://langfuse.com/docs/datasets/overview,https://langfuse.com/docs/evaluation/features/datasets,1.0,High semantic similarity; add contextual link
+https://langfuse.com/docs/scores/overview,https://langfuse.com/docs/evaluation,1.0,High semantic similarity; add contextual link
+https://langfuse.com/docs/evaluation/dataset-runs/run-via-ui,https://langfuse.com/docs/evaluation/features/prompt-experiments,1.0,High semantic similarity; add contextual link
+https://langfuse.com/docs/tracing,https://langfuse.com/docs/observability,1.0,High semantic similarity; add contextual link
+https://langfuse.com/docs/analytics,https://langfuse.com/docs/metrics,1.0,High semantic similarity; add contextual link

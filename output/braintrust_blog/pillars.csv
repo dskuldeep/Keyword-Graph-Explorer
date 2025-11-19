@@ -1,42 +1,32 @@
 cluster,url,title,pagerank,semantic_sim,tfidf_sim,total_sim,cluster_keywords,excerpt
-0,https://www.braintrust.dev/blog/gpt-5-vs-claude-opus,GPT-5 vs. Claude Opus 4.1 - Blog - Braintrust,0.013964910621933576,0.8379,0.7721,0.8116,"gemini, gpt, models, claude, reasoning, gemini models, 4o, gpt 4o, image, effort, opus, pro, multimodal, cost, claude opus","GPT-5 vs. Claude Opus 4.1
-Two of the supposedly most capable large language models, OpenAI's GPT-5 (tested 2025-08-07) and Anthropic's Claude Opus 4.1 (2025-08-05), landed within days of each other this week. Both promise significant improvements in reasoning, comprehension, and adaptability, but deciding which to deploy isn’t straightforward. Benchmarks tell part of the story, customer feedback fills in more of the picture, and ultimately, the right choice depends on your workload and constrain"
-1,https://www.braintrust.dev/blog/meta/brainstore/full-text-search.mp4,,0.004060285588794985,1.0,0.0,0.6,,
-2,https://www.braintrust.dev/blog/after-evals,I ran an eval. Now what? - Blog - Braintrust,0.013821006840205395,0.8988,0.6591,0.8029,"evals, test, data, model, application, improve, ai, examples, interesting, cases, eval, ai application, new model, loop, inputs","I ran an eval. Now what?
-So you built an AI application, curated an initial set of test examples, picked a scoring function, and ran an eval. You got a score—great!
-Now what?
-We'll walk you through how to think about that score, and more importantly, what steps you should take next to continuously improve both your AI application and your evaluation process, including:
-- How to determine what to focus on next
-- How to iteratively improve your evals and AI application
-- Best practices for creatin"
-3,https://www.braintrust.dev/blog/company,Company - Braintrust blog - Braintrust,0.021320679660836464,0.9263,0.8063,0.8783,"tech, enterprise tech, tech 30, soc, enterprise, compliance, ii, soc type, type ii, ii compliance, 30, 2024ankur, news braintrust, read, 2023","Latest News
+0,https://www.braintrust.dev/blog/brainstore,Brainstore: the database designed for the AI engineering era - Blog - Braintrust,0.030972441846530575,0.8611,0.7798,0.8286,"brainstore, data, fields, default, spans, summary, object storage, storage, object, columns, brainstore default, query, custom, browser, experiment","Brainstore: the purpose-built database for the AI engineering era
+AI engineering has completely changed how we build software. Organizations are processing more tokens than ever, running agent-based systems with thousands of intermediate steps, and collecting massive amounts of structured and unstructured data. But traditional observability tools just aren’t keeping up.
+That’s why we built Brainstore, a database built from the ground up for high-scale AI workloads. It’s 80x faster on real-world "
+1,https://www.braintrust.dev/blog/meta/brainstore/full-text-search.mp4,,0.004261602120576272,1.0,0.0,0.6,,
+2,https://www.braintrust.dev/blog/functions,Functions: flexible AI engineering primitives - Blog - Braintrust,0.01701009181310059,0.827,0.6522,0.7571,"braintrust, tools, loom, scorers, functions, prompt, tool, custom, python, custom scorers, dependencies, ai, uv, create, run","Functions: flexible AI engineering primitives
+Over the past year, the field of software engineering has been inundated with AI. There are tons of tools for improving developer productivity with the help of large language models (LLMs), but very few make it straightforward to build and scale AI-powered products. That's because introducing AI models fundamentally changes the software development lifecycle. Instead of measuring performance and reliability, developers need to assess accuracy and qua"
+3,https://www.braintrust.dev/blog/realtime-api,Building serverless apps with the OpenAI Realtime API - Blog - Braintrust,0.012727977565687741,0.836,0.5885,0.737,"proxy, api, plane, api key, openai, providers, realtime, realtime api, attachments, cloudflare, braintrust, structured outputs, attachment, aws, key","Building secure and scalable production apps with OpenAI’s Realtime API
+In early October, OpenAI released the Realtime API, designed for building advanced multimodal conversational experiences. This API enables rich AI applications with features like speech-to-speech interaction and simultaneous multimodal output. However, there are three key pain points that need to be solved before you can use the API to build secure and scalable production applications:
+- User-facing credentials
+- Logging
+- E"
+4,https://www.braintrust.dev/blog/journey,The AI product development journey - Blog - Braintrust,0.017603774014849242,0.7933,0.5095,0.6798,"ai, hostinger, notion, fintool, team, gemini, braintrust, zapier, gpt, coursera, evaluation, image, test, comments, monitor","The AI product development journey
+Building reliable AI apps is hard. It’s easy to build a cool demo but hard to build an AI app that works in production for real users. In traditional software development, there’s a set of best practices like setting up CI/CD and writing tests to make your software robust and easy to build on. But, with LLM apps it’s not obvious how to create these tests or processes.
+Everyone is still figuring out their evaluation process for AI apps. Once you get it set up, y"
+5,https://www.braintrust.dev/blog/company,Company - Braintrust blog - Braintrust,0.020984343500262816,0.7881,0.6494,0.7326,"braintrust, min, min read, blog, read, ai, year, vercel, tech, enterprise tech, tech 30, soc, java, enterprise, year review","Latest News
 Company
 Read
 Announcing our $36M Series A
 We’re thrilled to announce that we've raised $36 million to advance the future of AI software engineering, bringing our total funding to $45 million.
-8 October 2024
+8 October 20243 min
 Read
 Braintrust achieves SOC 2 Type II compliance
 We are excited to announce that Braintrust has achieved SOC 2 Type II compliance.
-15 July 2024
+15 July 20241 min
 Read
 Braintrust selected to be in the Enterprise Tech 30
-The Enterprise Tech 30 by Wing Venture Capital names the highest potential priv"
-4,https://www.braintrust.dev/blog/customer-stories,Customer stories - Braintrust blog - Braintrust,0.02454222876799242,0.8382,0.6122,0.7478,"read, ai, 2025 read, 2025, fintool, notion, loom, coursera, year, team, zapier, portola, 2024 read, 2023, diamond","Latest News
-Customer stories
-Read
-How Portola empowers subject matter experts to improve AI quality
-Learn how SMEs at Portola iterate on and deploy prompts to improve conversational AI.
-20 October 2025
-Read
-How Dropbox automates evals for conversational AI
-Learn best practices for scalable, rigorous evaluation from the Dropbox Dash team.
-15 October 2025
-Read
-How Graphite builds reliable AI code review at scale
-Learn how Graphite's engineering team uses systematic evaluation to build Diamond, the"
-5,https://www.braintrust.dev/blog/mcp,AI that knows your data - Blog - Braintrust,0.013786872953433674,0.7896,0.4489,0.6533,"braintrust, brainstore, data, api, blog, proxy, ai, vercel, api key, realtime, openai, tools, eval, traces, providers","AI that knows your data
-Your AI tools should know about your Braintrust experiments. They should understand your log schemas, help debug failed evaluations, and answer questions about your model performance.
-Today, we're introducing Braintrust's Model Context Protocol (MCP) server. MCP is Anthropic's open standard that lets AI tools securely access external data sources. We've built an MCP server that exposes your Braintrust data and works seamlessly with popular AI coding tools to provide bette"
-6,https://www.braintrust.dev/blog/five-lessons-evals,Five hard-learned lessons about AI evals - Blog - Braintrust,0.018302777228970002,0.8559,0.5222,0.7224,"ai, evals, agent, evaluations, braintrust, eval, new, scorers, dropbox, playgrounds, model, programming, team, async programming, custom scorers","Five hard-learned lessons about AI evals
-The team at Braintrust spends a lot of time deep in evaluation data, helping teams of all sizes ship reliable LLM‑powered products. We run the platform that powers those evals and observability workflows, so we see the successes and the failures up close. On an average day, our customers run ≈ 13 evals per org, and the most advanced teams push 3,000+ evals daily while spending hours poring over trace logs. All that usage has taught us five tough lessons. "
+The Enterprise Tech 30 by Wing Venture Capital names the highest pote"
+6,https://www.braintrust.dev/blog/measuring-what-matters,Measuring what matters: An intro to AI evals - Blog - Braintrust,0.01710553697021204,0.8138,0.6409,0.7446,"evals, eval, agent, ai, data, examples, dropbox, test, playgrounds, min read, programming, improve, model, new, scores","Measuring what matters: An intro to AI evals
+This post is based on an online event on October 7, 2025. You can watch the full replay on YouTube.
+AI systems are non-deterministic. Give an LLM the same question twice, and you'll get different answers. This randomness creates a fundamental problem: how do you know your changes improved quality instead of just shifting failure modes around?
+Without a systematic evaluation process, teams build on vibes. You ship blind, fix one issue only to break ano"
