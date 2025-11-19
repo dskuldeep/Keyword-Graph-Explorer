@@ -43,7 +43,7 @@ def run_all(seed: str, domain: str, out_dir: str, max_pages: int, max_depth: int
     with crawl_path.open("w") as f:
         json.dump({k: asdict(v) for k, v in pages.items()}, f)
 
-    G = build_link_graph(pages)
+    G = build_link_graph(pages, allowed_domain=domain)
 
     # Embeddings for article pages only
     article_nodes = [n for n, d in G.nodes(data=True) if d.get("is_article")]

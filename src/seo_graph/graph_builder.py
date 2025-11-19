@@ -8,14 +8,35 @@ import networkx as nx
 from .crawler import Page
 
 
-def is_article_url(url: str, config: dict = None) -> bool:
+def is_article_url(url: str, config: dict = None, allowed_domain: str = None) -> bool:
     """
     Determine if a URL represents an actual article content page.
     Excludes author pages, tag pages, category pages, etc.
     """
+    from urllib.parse import urlparse
+    import tldextract
+    
     # Load config if not provided
     if config is None:
         config = load_article_detection_config()
+    
+    # Check if this blog should skip path pattern checking (subdomain-based blogs)
+    skip_path_check = False
+    if allowed_domain:
+        try:
+            from pathlib import Path
+            import json
+            config_path = Path("blog_config.json")
+            if config_path.exists():
+                with config_path.open() as f:
+                    blog_config = json.load(f)
+                blog_paths = blog_config.get("blog_paths", [])
+                for blog in blog_paths:
+                    if blog.get("domain", "").rstrip('/') == allowed_domain.rstrip('/'):
+                        skip_path_check = blog.get("skip_path_pattern_check", False)
+                        break
+        except Exception:
+            pass
     
     url_patterns = config.get("url_patterns", ["/articles/", "/blog/"])
     exclude_patterns = config.get("exclude_patterns", [
@@ -31,6 +52,28 @@ def is_article_url(url: str, config: dict = None) -> bool:
     # Convert to lowercase for case-insensitive matching
     url_lower = url.lower()
     
+    # If skip_path_check is enabled, treat all URLs on the domain as articles unless excluded
+    if skip_path_check and allowed_domain:
+        url_netloc = urlparse(url).netloc
+        url_extracted = tldextract.extract(url_netloc)
+        allowed_extracted = tldextract.extract(allowed_domain.rstrip('/'))
+        
+        # Check if URL is on the same domain
+        if (url_extracted.domain == allowed_extracted.domain and 
+            url_extracted.suffix == allowed_extracted.suffix and
+            url_extracted.subdomain == allowed_extracted.subdomain):
+            # Exclude non-article pages
+            for pattern in exclude_patterns:
+                if pattern in url_lower:
+                    return False
+            # Exclude root/homepage
+            url_path = urlparse(url).path.rstrip('/')
+            if not url_path or url_path == '/':
+                return False
+            # If it passes filters, it's an article
+            return True
+    
+    # Original logic for path-based blogs
     # Check if URL matches any of the article patterns
     matches_article_pattern = any(pattern in url_lower for pattern in url_patterns)
     if not matches_article_pattern:
@@ -77,14 +120,14 @@ def load_article_detection_config() -> dict:
     }
 
 
-def build_link_graph(pages: Dict[str, Page]) -> nx.DiGraph:
+def build_link_graph(pages: Dict[str, Page], allowed_domain: str = None) -> nx.DiGraph:
     G = nx.DiGraph()
 
     for url, page in pages.items():
         G.add_node(
             url,
             title=page.title,
-            is_article=is_article_url(url),
+            is_article=is_article_url(url, allowed_domain=allowed_domain),
             depth=page.depth,
         )
 

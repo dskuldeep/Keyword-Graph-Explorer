@@ -37,9 +37,32 @@ def is_internal_url(url: str, allowed_domain: str) -> bool:
         netloc = urlparse(url).netloc
         if not netloc:
             return True
-        extracted = tldextract.extract(netloc)
-        domain = f"{extracted.domain}.{extracted.suffix}" if extracted.suffix else extracted.domain
-        return domain == allowed_domain
+        
+        # Remove trailing slash from allowed_domain if present
+        allowed_domain = allowed_domain.rstrip('/')
+        
+        # Extract domain components for both the URL and allowed_domain
+        url_extracted = tldextract.extract(netloc)
+        allowed_extracted = tldextract.extract(allowed_domain)
+        
+        # Get base domains (domain.suffix)
+        url_base = f"{url_extracted.domain}.{url_extracted.suffix}" if url_extracted.suffix else url_extracted.domain
+        allowed_base = f"{allowed_extracted.domain}.{allowed_extracted.suffix}" if allowed_extracted.suffix else allowed_extracted.domain
+        
+        # If allowed_domain has a subdomain, match exactly (including subdomain)
+        if allowed_extracted.subdomain:
+            # For subdomains, check if netloc matches allowed_domain exactly
+            # Normalize by removing www. prefix for comparison
+            normalized_netloc = netloc.replace('www.', '')
+            normalized_allowed = allowed_domain.replace('www.', '')
+            if normalized_netloc == normalized_allowed:
+                return True
+            # Also allow if it's the exact same netloc
+            if netloc == allowed_domain:
+                return True
+        
+        # For base domains without subdomain, match base domain
+        return url_base == allowed_base
     except Exception:
         return False
 
@@ -546,8 +569,13 @@ def crawl_site(
     Returns mapping URL -> Page.
     """
     if allowed_domain is None:
-        ext = tldextract.extract(urlparse(seed_url).netloc)
-        allowed_domain = f"{ext.domain}.{ext.suffix}" if ext.suffix else ext.domain
+        netloc = urlparse(seed_url).netloc
+        ext = tldextract.extract(netloc)
+        # Preserve subdomain if present, otherwise use base domain
+        if ext.subdomain:
+            allowed_domain = netloc  # Keep full subdomain.domain.suffix
+        else:
+            allowed_domain = f"{ext.domain}.{ext.suffix}" if ext.suffix else ext.domain
 
     session = requests.Session()
 

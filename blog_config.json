@@ -41,12 +41,13 @@
       "sitemap": "https://langfuse.com/sitemap.xml"
     },
     {
-      "name": "blog.promptlayer.com/",
+      "name": "blog.promptlayer.com",
       "url": "https://blog.promptlayer.com/",
-      "domain": "blog.promptlayer.com/",
+      "domain": "blog.promptlayer.com",
       "output_dir": "promptlayer_blog",
       "description": "Promptlayer Blog",
-      "sitemap": "https://blog.promptlayer.com/sitemap-posts.xml"
+      "sitemap": "https://blog.promptlayer.com/sitemap-posts.xml",
+      "skip_path_pattern_check": true
     },
     {
       "name": "arize.com/blog",
