@@ -1,5 +1,5 @@
 cluster,url,title,pagerank,semantic_sim,tfidf_sim,total_sim,cluster_keywords,excerpt
-0,https://www.getmaxim.ai/docs/library/evaluators/pre-built-evaluators/statistical-evaluators/bleu,BLEU - Maxim Docs,0.0005280371480727193,0.6416,0.4491,0.5646,"closer, score, scores, scores closer, str, distance, similarity, text, steps, binary, score closer, statements, brief, inputs actual_output, audio","Input
+0,https://www.getmaxim.ai/docs/library/evaluators/pre-built-evaluators/statistical-evaluators/bleu,BLEU - Maxim Docs,0.0005280303932597148,0.6416,0.448,0.5641,"closer, score, scores, scores closer, str, distance, similarity, text, steps, binary, score closer, statements, brief, audio, reference","Input
 output
 (str): The generated text to be evaluated.expectedOutput
 (str): The reference or ground truth text.
@@ -11,34 +11,46 @@ Interpretation
 - Lower scores (closer to 0): Indicates lower degree of overlap between the generated text and the ground truth, suggesting bad output quality
 Formula
 The BLEU score is calcula"
-1,https://www.getmaxim.ai/docs/logging/sdk-logging/push-logs,Push logs - Maxim Docs,0.0007378387949814574,0.6754,0.297,0.5241,"returns, trace, logs, span, session, __init__, integration, click, add, class, generation, raises, metrics, sdk, logging","Authorizations
-API key for authentication
-Body
-application/json
-- Trace: Start
-- Trace: End
-- Trace: Add Generation
-- Trace: Add Input
-- Trace: Add Span
-- Trace: Add Metadata
-- Trace: Add Event
-- Trace: Add Feedback
-- Trace: Add Retrieval
-- Trace: Add Tag
-- Trace: Add Tool Call
-- Trace: Add Output
-- Trace: Evaluate
-- Trace: Add Metric
-- Trace: Add to Session
-- Session: Create
-- Session: End
-- Session: Add Trace
-- Session: Add Feedback
-- Session: Add Tag
-- Session: Evaluate
-- Session: Add Metric
-"
-2,https://www.getmaxim.ai/docs/sdk/typescript/reference/core/classes/Generation,Generation - Maxim Docs,0.0012856216702389499,0.8423,0.7791,0.817,"src, lib, defined src, src lib, ts, defined, lib logger, logger components, void, string, components, logger, writer, lib models, components generation","Class: Generation
+1,https://www.getmaxim.ai/docs/settings/maxim-api-keys,Maxim API keys - Maxim Docs,0.006134645931727774,0.7898,0.4438,0.6514,"maxim, agent, trace, sdk, logs, import, python, llm, integration, api, models, click, session, metadata, span","Skip to main content
+Maxim Docs home page
+Search...
+⌘K
+Home
+Blog
+Pricing
+Get started
+Book a demo
+Book a demo
+Search...
+Navigation
+Settings
+Maxim API keys
+Documentation
+SDK
+API Reference
+Self Hosting
+Cookbooks
+Changelog
+Blog
+Cookbooks
+Tutorials
+Introduction
+Platform Overview
+Running Your First Eval
+Offline Evals
+Offline Evaluation Overview
+Offline Evaluation Concepts
+Via UI
+Via SDK
+Guides
+Online Evals
+Online Evaluation Overview
+Via UI
+Via SDK
+Set Up Alerts and Notifications
+Tracing
+Tracing Overvi"
+2,https://www.getmaxim.ai/docs/sdk/typescript/reference/core/classes/Generation,Generation - Maxim Docs,0.001285621649024911,0.8423,0.7795,0.8172,"src, lib, defined src, src lib, ts, defined, lib logger, logger components, void, components, string, logger, writer, components generation, generation ts","Class: Generation
 Defined in: src/lib/logger/components/generation.ts:124 Represents an LLM generation or completion. The Generation class tracks the complete lifecycle of LLM requests, including input messages, model parameters, results, and any errors. It supports both chat and text completion formats. GenerationExample
 Extends
 Constructors
@@ -47,56 +59,21 @@ new Generation(Defined in: src/lib/logger/components/generation.ts:148 Creates a
 ,writer
 ):Generation
 Parameter"
-3,https://www.getmaxim.ai/docs/sdk/python/integrations/openai/agents-sdk,Agents SDK - Maxim Docs,0.0014643134969838116,0.5315,0.2215,0.4075,"def, str, dict, page helpful, class, optional, utilities, helpful, dict str, logger, integration, page, list, kwargs, optional dict","from __future__ import annotations as _annotations
-import random
-import uuid
-from pydantic import BaseModel
-from agents import (
-Agent,
-HandoffOutputItem,
-GuardrailFunctionOutput,
-input_guardrail,
-ItemHelpers,
-MessageOutputItem,
-RunContextWrapper,
-Runner,
-ToolCallItem,
-ToolCallOutputItem,
-TResponseInputItem,
-function_tool,
-handoff
-)
-from agents.extensions.handoff_prompt import RECOMMENDED_PROMPT_PREFIX
-# CONTEXT
-class AirlineAgentContext(BaseModel):
-passenger_name: str | None = None
-confirmation"
-4,https://www.getmaxim.ai/docs/log repositories/log-repository/get-trace-by-id,Get trace by ID - Maxim Docs,0.0006674312288720421,0.8149,0.3361,0.6234,"string, unique, unique identifier, identifier, dataset, api key, key, api, 100, key authentication, delete, alert, curl, successfully, repository","Authorizations
-API key for authentication
-Query Parameters
-Unique identifier for the trace
-Response
-Trace retrieved successfully
-curl --request GET \
---url https://api.getmaxim.ai/v1/log-repositories/logs/traces \
---header 'x-maxim-api-key: <api-key>'
-{
-""data"": {
-""id"": ""<string>"",
-""name"": ""<string>"",
-""tags"": {},
-""startTimestamp"": ""<string>"",
-""sessionId"": ""<string>"",
-""type"": ""<string>"",
-""input"": ""<any>"",
-""output"": ""<any>"",
-""feedback"": {
-""score"": 123,
-""comment"": ""<string>""
-},
-""duration"": 123,
-""end"
-5,https://www.getmaxim.ai/docs/library/evaluators/pre-built-evaluators/programmatic-evaluators/contains-special-characters,containsSpecialCharacters - Maxim Docs,0.0004960707049058427,0.9719,0.9239,0.9527,"input, boolean, string, validate, string number, boolean true, number, true, output, function, valid, evaluator, string valid, assuming evaluator, dataoutput string","Input
+3,https://www.getmaxim.ai/docs/sdk/python/references/logger/anthropic/utils,anthropic.Utils - Maxim Docs,0.0009517064413109124,0.664,0.2475,0.4974,"def, str, returns, dict, class, dict str, utilities, __init__, page helpful, optional, helpful, logger, integration, functionality, raises","AnthropicUtils
+parse_message_param
+to be parsed. Can contain strings, dicts, or MessageParam objects.
+override_role
+Optional[str] - Optional role to override the message role. If provided, all messages will use this role instead of their original role.
+with role and content extracted and standardized.
+Notes:
+- String messages are treated as user messages by default
+- Dict messages should have ‘role’ and ‘content’ keys
+- Content blocks are flattened into text content
+- Complex content structures "
+4,https://www.getmaxim.ai/docs/alerts/alert/get-alerts,Get Alerts - Maxim Docs,0.0012634978645016516,0.7291,0.6314,0.69,"string, unique, unique identifier, identifier, api key, api, dataset, key, 100, curl, header, alert, delete, repository, folder","cURL
+curl --request GET \ --url https://api.getmaxim.ai/v1/alerts \ --header 'x-maxim-api-key: <api-key>'
+{ ""data"": [ { ""id"": ""<string>"", ""workspaceId"": ""<string>"", ""entityId"": ""<string>"", ""type"": ""<string>"", ""enabled"": true, ""config"": { ""metric"": ""<string>"", ""minimumThreshold"": 2, ""duration"": 123, ""operator"": ""<string>"", ""value"": ""<string>"", ""renotifyTTL"": -1 }, ""createdAt"": ""<string>"", ""updatedAt"": ""<string>"", ""notificationChannels"": [ { ""notificationChannel"": { ""id"": ""<string>"", ""type"": ""SLAC"
+5,https://www.getmaxim.ai/docs/library/evaluators/pre-built-evaluators/programmatic-evaluators/contains-special-characters,containsSpecialCharacters - Maxim Docs,0.0004960641037691334,0.9719,0.9239,0.9527,"input, boolean, string, validate, string number, boolean true, number, true, output, function, valid, evaluator, string valid, assuming evaluator, dataoutput string","Input
 input
 : The original input text or dataoutput
 : The string to be validatedexpectedOutput
@@ -117,7 +94,14 @@ Interpretation
 Assuming this evaluator returns a boolean
 - true: At least one special character was found
 - false: No special ch"
-6,https://www.getmaxim.ai/docs/sdk/python/integrations/crewai/crewai,CrewAI Integration - Maxim Docs,0.0019687193904432665,0.7999,0.44,0.6559,"agent, maxim, test, prompt, run, dataset, evaluators, context, api, endpoint, prompts, ai, variables, evaluation, data","Maxim AI provides comprehensive agent monitoring, evaluation, and observability for your CrewAI applications. With Maxim’s one-line integration, you can easily trace and analyse agent interactions, performance metrics, and more.
-Features
-Prompt Management
-Maxim’s Prompt Management capabilities enable you to create, organize, and optimize prompts for your CrewAI agents. Rather than hardcoding instructions, leverage Maxim’s SDK to dynamically retrieve and apply version-controlled prompts.- Prompt "
+6,https://www.getmaxim.ai/docs/introduction/running-your-first-eval,Running Your First Eval - Maxim Docs,0.008381281971799959,0.651,0.6293,0.6423,"prompt, test, agent, evaluators, run, dataset, prompts, evaluation, variables, endpoint, testing, context, evaluator, select, agents","1. Set Up Your Environment
+First, configure your AI model providers:1
+Go to `Settings` → `Models`.
+Click on the tab of the provider for which you want to add an API key.
+2
+Configure model provider
+Click on
+Add New
+and fill in the required details.Maxim requires at least one provider with access to GPT-3.5 and GPT-4 models. We use industry-standard encryption to securely store your API keys.
+2. Create Your First Prompt or HTTP Endpoint
+Create prompts to experiment and evaluate a call to a model w"

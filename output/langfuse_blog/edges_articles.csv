@@ -1,8 +1,8 @@
 source,target,weight,anchors
 https://langfuse.com/blog/2024-04-python-decorator,https://langfuse.com/blog/2024-04-python-decorator,12,
-https://langfuse.com/blog/2024-05-haystack-integration,https://langfuse.com/blog/2024-05-haystack-integration,7,Lydia You
 https://langfuse.com/blog/2024-05-haystack-integration,https://langfuse.com/blog/llama-index-integration,1,LlamaIndex
-https://langfuse.com/blog/2024-06-monitoring-llm-security,https://langfuse.com/blog/2024-06-monitoring-llm-security,14,Lydia You
+https://langfuse.com/blog/2024-05-haystack-integration,https://langfuse.com/blog/2024-05-haystack-integration,6,
+https://langfuse.com/blog/2024-06-monitoring-llm-security,https://langfuse.com/blog/2024-06-monitoring-llm-security,13,
 https://langfuse.com/blog/2024-07-ai-agent-observability-with-langfuse,https://langfuse.com/blog/2024-07-ai-agent-observability-with-langfuse,19,
 https://langfuse.com/blog/2024-07-ai-agent-observability-with-langfuse,https://langfuse.com/blog/2025-10-21-testing-llm-applications,1,CI/CD pipelines
 https://langfuse.com/blog/2024-07-ai-agent-observability-with-langfuse,https://langfuse.com/blog/2025-03-19-ai-agent-comparison,1,AI Agent Comparison
@@ -12,11 +12,11 @@ https://langfuse.com/blog/2024-08-what-is-langchain,https://langfuse.com/blog/qa
 https://langfuse.com/blog/2024-09-langfuse-proxy,https://langfuse.com/blog/2024-09-langfuse-proxy,6,
 https://langfuse.com/blog/2024-10-observability-in-multi-step-llm-systems,https://langfuse.com/blog/2024-10-observability-in-multi-step-llm-systems,33,
 https://langfuse.com/blog/2024-10-opentelemetry-for-llm-observability,https://langfuse.com/blog/2024-10-opentelemetry-for-llm-observability,11,
-https://langfuse.com/blog/2024-11-17-launch-week-2,https://langfuse.com/blog/2024-11-17-launch-week-2,16,
 https://langfuse.com/blog/2024-11-17-launch-week-2,https://langfuse.com/blog/launch-week-1,1,Check out the blog post
+https://langfuse.com/blog/2024-11-17-launch-week-2,https://langfuse.com/blog/2024-11-17-launch-week-2,15,
 https://langfuse.com/blog/2024-11-llm-product-management,https://langfuse.com/blog/2024-11-llm-product-management,13,
 https://langfuse.com/blog/2024-11-most-used-oss-llmops,https://langfuse.com/blog/2024-11-most-used-oss-llmops,8,
-https://langfuse.com/blog/2024-12-langfuse-v3-infrastructure-evolution,https://langfuse.com/blog/2024-12-langfuse-v3-infrastructure-evolution,21,Steffen Schmitz
+https://langfuse.com/blog/2024-12-langfuse-v3-infrastructure-evolution,https://langfuse.com/blog/2024-12-langfuse-v3-infrastructure-evolution,20,
 https://langfuse.com/blog/2025-01-22-evaluating-voice-ai-agents,https://langfuse.com/blog/2025-01-22-evaluating-voice-ai-agents,5,
 https://langfuse.com/blog/2025-02-20-the-agent-deep-dive-open-deep-research,https://langfuse.com/blog/2025-02-20-the-agent-deep-dive-open-deep-research,15,
 https://langfuse.com/blog/2025-02-28-langfuse-february-update,https://langfuse.com/blog/2025-02-28-langfuse-february-update,4,
@@ -27,11 +27,11 @@ https://langfuse.com/blog/2025-03-19-ai-agent-comparison,https://langfuse.com/bl
 https://langfuse.com/blog/2025-03-31-langfuse-march-update,https://langfuse.com/blog/2025-03-31-langfuse-march-update,7,
 https://langfuse.com/blog/2025-04-24-how-we-use-llms-to-scale-langfuse,https://langfuse.com/blog/2025-04-24-how-we-use-llms-to-scale-langfuse,7,
 https://langfuse.com/blog/2025-04-30-langfuse-april-update,https://langfuse.com/blog/2025-04-30-langfuse-april-update,8,
-https://langfuse.com/blog/2025-05-19-launch-week-3,https://langfuse.com/blog/2025-05-19-launch-week-3,9,
 https://langfuse.com/blog/2025-05-19-launch-week-3,https://langfuse.com/blog/2024-11-17-launch-week-2,1,Launch Week #2
+https://langfuse.com/blog/2025-05-19-launch-week-3,https://langfuse.com/blog/2025-05-19-launch-week-3,8,
 https://langfuse.com/blog/2025-05-19-launch-week-3,https://langfuse.com/blog/2025-05-21-customizable-dashboards,1,technical deep dive
-https://langfuse.com/blog/2025-05-21-customizable-dashboards,https://langfuse.com/blog/2025-05-21-customizable-dashboards,15,Steffen Schmitz
 https://langfuse.com/blog/2025-05-21-customizable-dashboards,https://langfuse.com/blog/2025-05-19-launch-week-3,2,Langfuse Launch Week 3 | launch week
+https://langfuse.com/blog/2025-05-21-customizable-dashboards,https://langfuse.com/blog/2025-05-21-customizable-dashboards,14,
 https://langfuse.com/blog/2025-05-21-customizable-dashboards,https://langfuse.com/blog/2024-12-langfuse-v3-infrastructure-evolution,1,v3 infra blog post
 https://langfuse.com/blog/2025-05-21-customizable-dashboards,https://langfuse.com/blog/2025-04-24-how-we-use-llms-to-scale-langfuse,1,post on how we use LLMs
 https://langfuse.com/blog/2025-05-31-langfuse-may-update,https://langfuse.com/blog/2025-05-31-langfuse-may-update,4,
@@ -50,27 +50,28 @@ https://langfuse.com/blog/2025-09-05-automated-evaluations,https://langfuse.com/
 https://langfuse.com/blog/2025-09-05-automated-evaluations,https://langfuse.com/blog/2025-08-29-error-analysis-to-evaluate-llm-applications,2,previous blog post
 https://langfuse.com/blog/2025-09-05-automated-evaluations,https://langfuse.com/blog/2025-10-21-testing-llm-applications,1,CI/CD for LLM Applications
 https://langfuse.com/blog/2025-09-30-langfuse-september-update,https://langfuse.com/blog/2025-09-30-langfuse-september-update,6,
-https://langfuse.com/blog/2025-10-09-evaluating-multi-turn-conversations,https://langfuse.com/blog/2025-10-09-evaluating-multi-turn-conversations,11,Abdallah Abedraba
+https://langfuse.com/blog/2025-10-09-evaluating-multi-turn-conversations,https://langfuse.com/blog/2025-10-09-evaluating-multi-turn-conversations,10,
 https://langfuse.com/blog/2025-10-09-evaluating-multi-turn-conversations,https://langfuse.com/blog/2025-08-29-error-analysis-to-evaluate-llm-applications,1,looking at data
 https://langfuse.com/blog/2025-10-09-evaluating-multi-turn-conversations,https://langfuse.com/blog/2025-10-21-testing-llm-applications,1,CI/CD for LLM Applications
 https://langfuse.com/blog/2025-10-13-state-of-llms-september-2025,https://langfuse.com/blog/2025-10-13-state-of-llms-september-2025,8,
 https://langfuse.com/blog/2025-10-13-state-of-llms-september-2025,https://langfuse.com/blog/2024-11-most-used-oss-llmops,1,leading open source LLM observability platform
-https://langfuse.com/blog/2025-10-21-testing-llm-applications,https://langfuse.com/blog/2025-10-21-testing-llm-applications,11,Abdallah Abedraba
+https://langfuse.com/blog/2025-10-21-testing-llm-applications,https://langfuse.com/blog/2025-10-21-testing-llm-applications,10,
 https://langfuse.com/blog/2025-10-21-testing-llm-applications,https://langfuse.com/blog/2025-08-29-error-analysis-to-evaluate-llm-applications,1,identifying 3-5 critical functionalities
-https://langfuse.com/blog/2025-10-28-rag-observability-and-evals,https://langfuse.com/blog/2025-10-28-rag-observability-and-evals,7,Abdallah Abedraba
-https://langfuse.com/blog/2025-10-29-launch-week-4,https://langfuse.com/blog/2025-10-29-launch-week-4,11,
+https://langfuse.com/blog/2025-10-28-rag-observability-and-evals,https://langfuse.com/blog/2025-10-28-rag-observability-and-evals,6,
+https://langfuse.com/blog/2025-10-29-launch-week-4,https://langfuse.com/blog/2025-10-29-launch-week-4,8,
 https://langfuse.com/blog/2025-10-29-launch-week-4,https://langfuse.com/blog/2025-11-06-experiment-interpretation,1,systematically interpreting experiment results
 https://langfuse.com/blog/2025-10-29-launch-week-4,https://langfuse.com/blog/2025-10-21-testing-llm-applications,1,integrating Langfuse into CI/CD pipelines
 https://langfuse.com/blog/2025-11-06-experiment-interpretation,https://langfuse.com/blog/2025-11-06-experiment-interpretation,12,
 https://langfuse.com/blog/2025-11-06-experiment-interpretation,https://langfuse.com/blog/2025-08-29-error-analysis-to-evaluate-llm-applications,2,Error Analysis
 https://langfuse.com/blog/2025-11-06-experiment-interpretation,https://langfuse.com/blog/2025-09-05-automated-evaluations,1,Automated Evaluations
-https://langfuse.com/blog/2025-11-12-evals,https://langfuse.com/blog/2025-11-12-evals,11,Abdallah Abedraba
+https://langfuse.com/blog/2025-11-12-evals,https://langfuse.com/blog/2025-11-12-evals,10,
 https://langfuse.com/blog/2025-11-12-evals,https://langfuse.com/blog/2025-10-28-rag-observability-and-evals,1,See Observability in RAG pipelines
 https://langfuse.com/blog/2025-11-12-evals,https://langfuse.com/blog/2025-08-29-error-analysis-to-evaluate-llm-applications.md,1,Error Analysis to Evaluate LLM Applications
 https://langfuse.com/blog/2025-11-12-evals,https://langfuse.com/blog/2025-09-05-automated-evaluations,1,Automated Evaluations of LLM Applications
 https://langfuse.com/blog/2025-11-12-evals,https://langfuse.com/blog/2025-10-21-testing-llm-applications,1,Testing LLM Applications
 https://langfuse.com/blog/2025-11-12-evals,https://langfuse.com/blog/2025-11-06-experiment-interpretation,1,Experiment Interpretation
 https://langfuse.com/blog/2025-11-20-incident-report,https://langfuse.com/blog/2025-11-20-incident-report,7,
+https://langfuse.com/blog/2025-11-25-vibe-coding-custom-annotation-ui,https://langfuse.com/blog/2025-11-25-vibe-coding-custom-annotation-ui,6,
 https://langfuse.com/blog/announcing-our-seed-round,https://langfuse.com/blog/announcing-our-seed-round,4,
 https://langfuse.com/blog/launch-week-1,https://langfuse.com/blog/launch-week-1,12,first town hall
 https://langfuse.com/blog/launch-week-1,https://langfuse.com/blog/2024-04-python-decorator,1,blog post

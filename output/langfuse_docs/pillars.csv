@@ -1,5 +1,11 @@
 cluster,url,title,pagerank,semantic_sim,tfidf_sim,total_sim,cluster_keywords,excerpt
-0,https://langfuse.com/docs/prompt-management/get-started,Get Started with Open Source Prompt Management - Langfuse,0.015582620293575256,0.7893,0.7323,0.7665,"prompt, movie, version, prompts, label, dataset, langfuse, movie critic, langfuse get_prompt, critic, get_prompt, playground, get_prompt movie, prompt management, management","Get Started with Prompt Management
+0,https://langfuse.com/docs/observability/sdk/python/instrumentation,Instrument your application with the Langfuse Python SDK - Langfuse,0.010691085828836894,0.803,0.7094,0.7655,"langfuse, observations, propagate_attributes, trace, tags, span, get_client, user_id, metadata, data, characters, environment, trace_id, ids, view","Instrumentation
+To instrument your application to send traces to Langfuse, you can use either native library instrumentations that work out of the box, or use custom instrumentation methods for fine-grained control.
+Custom Instrumentation
+There are three main ways to create spans with the Langfuse Python SDK. All of them are fully interoperable with each other.
+The @observe()
+decorator provides a convenient way to automatically trace function executions, including capturing their inputs, outputs"
+1,https://langfuse.com/docs/prompt-management/get-started,Get Started with Open Source Prompt Management - Langfuse,0.01604520569260969,0.8276,0.7668,0.8033,"prompt, movie, version, prompts, langfuse, label, critic, get_prompt, movie critic, langfuse get_prompt, get_prompt movie, prompt langfuse, mcp, prompt management, management","Get Started with Prompt Management
 This quickstart helps you to create your first prompt and use it in your application.
 Get API keys
 - Create Langfuse account or self-host Langfuse.
@@ -10,46 +16,35 @@ Use prompt
 At runtime, you can fetch the latest production version from Langfuse. Learn more about control (versions/labels) here.
 from langfuse import get_client
 # Initialize L"
-1,https://langfuse.com/docs/evaluation/overview,Evaluation of LLM Applications - Langfuse,0.016586975443028732,0.8396,0.6511,0.7642,"evaluation, score, scores, metrics, dataset, user, experiments, annotation, queue, experiment, evaluation methods, llm, numeric, data, traces","Evaluation Overview
-Evaluation is a critical aspect of developing and deploying LLM applications. Usually, teams use a multitude of different evaluation methods to score the performance of their AI application depending on the use case and the stage of the development process.
-Watch this walkthrough of Langfuse Evaluation and how to use it to improve your LLM application.
-Why use LLM Evaluation?
-LLM evaluation is crucial for improving the accuracy and robustness of language models, ultimately en"
-2,https://langfuse.com/docs/observability/features/metadata,Metadata - Langfuse,0.008011806462866606,0.8808,0.6298,0.7804,"observations, propagate_attributes, metadata, langfuse, tags, environment, retention, characters, environments, 200 characters, 200, datasets, session_id, data retention, user_id","Metadata
-Observations (see Langfuse Data Model) can be enriched with metadata to help you better understand your application and to correlate observations in Langfuse.
-You can filter by metadata keys in the Langfuse UI and API.
-Propagated Metadata
-Use propagate_attributes()
-to ensure metadata is automatically applied to all observations within a context. Propagated metadata are key-value pairs with values limited to max 200 characters strings. Keys are limited to alphanumeric characters only. If"
-3,https://langfuse.com/docs/observability/get-started,Get Started with Tracing - Langfuse,0.01522702357575221,0.8006,0.6587,0.7439,"langfuse, mcp, langfuse docs, organization, docs, client, server, api, langfuse com, mcp server, sso, public, users, com, node","Get Started with Tracing
-This quickstart helps you to ingest your first trace in Langfuse.
-Get API keys
-- Create Langfuse account or self-host Langfuse.
-- Create new API credentials in the project settings.
-Ingest your first trace
-Use the drop-in replacement for the OpenAI Python SDK to get full observability.
-pip install langfuse
-Add you Langfuse credentials as environment variables.
-LANGFUSE_SECRET_KEY = ""sk-lf-...""
-LANGFUSE_PUBLIC_KEY = ""pk-lf-...""
-LANGFUSE_BASE_URL = ""https://cloud.langfuse."
-4,https://langfuse.com/docs/observability/sdk/python/instrumentation,Instrument your application with the Langfuse Python SDK - Langfuse,0.010313936944376234,0.8214,0.7297,0.7847,"langfuse, trace, span, sdk, import, opentelemetry, get_client, const, ids, attributes, otel, langfusespanprocessor, openai, trace_id, spans","Instrumentation
-To instrument your application to send traces to Langfuse, you can use either native library instrumentations that work out of the box, or use custom instrumentation methods for fine-grained control.
-Custom Instrumentation
-There are three main ways to create spans with the Langfuse Python SDK. All of them are fully interoperable with each other.
-The @observe()
-decorator provides a convenient way to automatically trace function executions, including capturing their inputs, outputs"
-5,https://langfuse.com/docs/api-and-data-platform/features/query-via-sdk,Query Data via SDKs - Langfuse,0.008056516696388353,0.8975,0.5835,0.7719,"dataset, export, data, metrics, api, items, storage, sdks, dataset_name, export data, langfuse api, query, tuning, fine tuning, fine","Query Data via SDKs
+2,https://langfuse.com/docs/api-and-data-platform/features/query-via-sdk,Query Data via SDKs - Langfuse,0.008389141065686053,0.8323,0.4387,0.6749,"dataset, data, organization, export, api, langfuse, media, retention, storage, datasets, fine, items, delete, data retention, dataset_name","Query Data via SDKs
 Langfuse is open-source and data tracked with Langfuse is open. You can query data via: SDKs and API. For export functionality, see Export Data.
 Common use cases:
 - Train or fine-tune models on the production traces in Langfuse. E.g. to create a small model after having used a large model in production for a specific use case.
 - Collect few-shot examples to improve quality of output.
 - Programmatically create datasets.
 If you are new to Langfuse, we recommend familiarizing yo"
-6,https://langfuse.com/docs/observability/overview,LLM Observability & Application Tracing (open source) - Langfuse,0.010841984821474374,0.895,0.5236,0.7464,"langfuse, opentelemetry, openai, usage, observability, llm, model, cost, tracing, otel, gen_ai, observation, platform, trace, media","Observability & Tracing
-Langfuse is a platform for observability and tracing of LLM applications and agents. It captures everything happening during an LLM interaction: inputs, outputs, tool usage, retries, latencies and costs.
-Langfuse is based on OpenTelemetry to allow for easy integration with any OpenTelemetry-based instrumentation library.
-🎥
-Watch this walkthrough of Langfuse Observability and how to integrate it with your application.
-Why Tracing?
-- Faster development & debugging, understa"
+3,https://langfuse.com/docs/sdk/typescript/guide,TypeScript SDK - Overview - Langfuse,0.009829243244469635,0.8755,0.6642,0.791,"langfuse, sdk, opentelemetry, otel, trace, traces, mcp, node, client, tracing, langfusespanprocessor, import, span, instrumentation, const","TypeScript SDK - Overview
+The modular Langfuse TypeScript SDK (v4) is built on OpenTelemetry for robust observability, better context management, and easy integration with third-party libraries.
+This documentation is for the TypeScript SDK v4. If you are looking for the documentation for the TypeScript SDK v3, please click here.
+If you are self-hosting Langfuse, the TypeScript SDK v4 requires Langfuse platform version ≥ 3.95.0 for all features to work correctly.
+Quickstart
+Get your first trace i"
+4,https://langfuse.com/docs/evaluation/experiments/experiments-via-ui,Experiments via UI - Langfuse,0.010330251496240294,0.8691,0.7577,0.8245,"prompt, dataset, llm, playground, json, experiments, question, security, dataset item, tool, experiment, placeholder, placeholders, item, model","Experiments via UI (Prompt Experiments)
+You can execute Experiments via UI (also called Prompt Experiments) in the Langfuse UI to test different prompt versions from Prompt Management or language models and compare the results side-by-side.
+Optionally, you can use LLM-as-a-Judge Evaluators to automatically score the responses based on the expected outputs to further analyze the results on an aggregate level.
+Why use Prompt Experiments?
+- Quickly test different prompt versions or models
+- Structu"
+5,https://langfuse.com/docs/evaluation/overview,Evaluation of LLM Applications - Langfuse,0.01706046340969685,0.8167,0.5793,0.7218,"score, evaluation, metrics, scores, user, annotation, queue, dataset, comment, experiments, langfuse, feedback, llm, cost, evaluation methods","Evaluation Overview
+Evaluation is a critical aspect of developing and deploying LLM applications. Usually, teams use a multitude of different evaluation methods to score the performance of their AI application depending on the use case and the stage of the development process.
+Watch this walkthrough of Langfuse Evaluation and how to use it to improve your LLM application.
+Why use LLM Evaluation?
+LLM evaluation is crucial for improving the accuracy and robustness of language models, ultimately en"
+6,https://langfuse.com/docs/observability/troubleshooting-and-faq,Troubleshooting and FAQ for Langfuse Tracing - Langfuse,0.008240804794941478,0.9002,0.7756,0.8503,"langfuse, troubleshooting, faq, example project, questions, page, support, sso, langfuse cloud, password, units, github, social, enterprise sso, page faq","Troubleshooting and FAQ
+This page addresses frequently asked questions and common troubleshooting topics for Langfuse Observability.
+If you don’t find a solution to your issue here, try using Ask AI for instant answers. For bug reports, please open a ticket on GitHub Issues. For general questions or support, visit our support page.
+FAQ
+- How do I track LLM cost and tokens in Langfuse?
+- How to enable or disable Langfuse tracing?
+- How to evaluate sessions/conversations?
+- How to manage different"

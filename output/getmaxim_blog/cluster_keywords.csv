@@ -1,8 +1,8 @@
 cluster,keywords
-6,"agent, agents, legal, tool, ai, models, task, agentfold, model, web, evaluation, agentic, mcp, attacks, memory"
-3,"maxim, logs, bifrost, week, ai, agent, observability, tool, trace, mistral, evaluator, evaluators, fireworks, prompt, dashboards"
-1,"audio, speech, o1, sentiment, misalignment, snr, tts, compression, wer, ditto, emotion, model, transcription, reddit, bifrost"
-5,"ai, maxim, clinical, assistant, prompt, teams, sql, atomicwork, ll, maxim ai, mindtickle, engineering, emotion, clinc, comm100"
-4,"agent, print, import, st, weather, self, const, logger, suggestions, maxim, classname, resume, div, sessionid, agents"
-2,"rag, retrieval, documents, document, query, contamination, chunks, relevant, context, retrieved, generation, units, chunking, synthetic, fine"
-0,"reasoning, cot, models, nothinking, hallucinations, factuality, bias, model, coconut, moral, games, ethical, claude, ai, thinking"
+3,"week, trace, span, maxim, logs, st, evaluator, suggestions, traces, print, bifrost, updates, evaluators, resume, spans"
+5,"audio, speech, emotion, snr, acoustic, compression, tts, wer, ditto, semantic, vita, vita audio, voice, transcription, gense"
+6,"models, model, tool, agent, ai, agents, o1, reasoning, misalignment, k2, claude, task, contamination, legal, agentic"
+2,"rag, retrieval, documents, document, cot, query, nothinking, agentfold, reasoning, context, units, synthetic, model, steps, relevant"
+1,"bifrost, maxim, logs, workspace, evals, litellm, plugins, clinical, size, google cloud, notes, duplicated, log size, providers, synthetic"
+4,"ai, agent, maxim, agents, observability, import, comm100, workflow, atomicwork, print, tool, prompt, const, clinc, a2a"
+0,
