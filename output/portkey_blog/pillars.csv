@@ -1,0 +1,28 @@
+cluster,url,title,pagerank,semantic_sim,tfidf_sim,total_sim,cluster_keywords,excerpt
+0,https://portkey.ai/blog/a-survey-of-large-language-models-summary/,A Survey of Large Language Models - Summary,0.0036240944916805396,0.7801,0.5382,0.6833,"language, reasoning, language models, llms, models, prompting, transformer, chain thought, thought, pre, tuning, lms, prompt, shot, method","A Survey of Large Language Models - Summary
+This paper surveys the recent advances in Large Language Models (LLMs), which are pre-trained Transformer models over large-scale corpora. The paper discusses the background, key findings, and mainstream techniques of LLMs, focusing on pre-training, adaptation tuning, utilization, and capacity eval
+Arxiv URL: https://arxiv.org/abs/2303.18223v1
+Authors: Wayne Xin Zhao, Kun Zhou, Junyi Li, Tianyi Tang, Xiaolei Wang, Yupeng Hou, Yingqian Min, Beichen Zhan"
+1,https://portkey.ai/blog/?page=5,LLMs in Prod Blog ● Portkey,0.0006624086573325153,1.0,1.0,1.0,"mcp, ai, access, control, ai platform, agents, hallucinations, production environments, servers, environments, access control, production, platform, llm, fontys","Latest — 12 Jan 2026 We Tracked $93M in LLM Spends Last Year. Now the Data is Yours. Accurate pricing for 2,000+ models across 40+ providers. Free API, no auth required.
+How Fontys ICT built an institutional AI platform with a gateway architecture Fontys ICT shares how it built a governed, multi-provider AI platform using a gateway architecture to ensure equitable access, EU compliance, and cost control.
+LLM hallucinations in production Hallucinations in LLM applications increase at scale. This "
+2,https://portkey.ai/blog/claude-sonnet-4-5-vs-gpt-5/,"Claude Sonnet 4.5 vs GPT-5: performance, efficiency, and pricing compared.",0.003724053073676653,0.6103,0.4036,0.5276,"reasoning, o1, walmart, gpt, segmentation, text, generative, ai, webui, open webui, coding, mamba, image, rag, interactive","Claude Sonnet 4.5 vs GPT-5: performance, efficiency, and pricing compared.
+A head-to-head comparison of Claude Sonnet 4.5 and GPT-5, covering coding, reasoning, math, tool use, cost, and ecosystem integrations , with insights on where each model is best suited for enterprise use.
+Claude Sonnet 4.5 and GPT-5 are the newest flagship models from Anthropic and OpenAI. Both were released in 2025 with a focus on stronger reasoning, coding ability, and agentic workflows.
+Claude Sonnet 4.5 offers long-c"
+3,https://portkey.ai/blog/the-complete-guide-to-prompt-engineering/,Prompt Engineering Guide: Techniques & Management Tips for LLMs,0.011647183503167128,0.8471,0.7854,0.8224,"prompt, prompts, prompting, prompt engineering, engineering, claude, model, shot, chatgpt, tasks, ai, shot prompting, responses, dspy, prompt chaining","The Complete Guide to Prompt Engineering
+What is Prompt Engineering?
+At its core, prompt engineering is about designing, refining, and optimizing the prompts that guide generative AI models. When working with large language models (LLMs), the way a prompt is written can significantly affect the output. Prompt engineering ensures that you create prompts that consistently generate accurate and useful responses across different scenarios and projects.
+For developers, this means having a clear proce"
+4,https://portkey.ai/blog/what-is-an-llm-gateway/,What is an LLM Gateway?,0.009335223248113502,0.8113,0.5066,0.6894,"portkey, llm, provider, ai, routing, model, cache, providers, observability, gateway, openai, requests, guardrails, llm gateway, models","What is an LLM Gateway?
+An LLM Gateway simplifies managing large language models, enhancing the performance, security, and scalability of real-world AI applications.
+LLMs have quietly become the backbone of AI-driven products, powering everything from instant customer support to summarizing terabytes of internal documents. Their ability to handle diverse language tasks accurately has made them essential to many modern AI applications. But behind the scenes, teams are dealing with the complexitie"
+5,https://portkey.ai/blog/how-does-an-ai-gateway-improve-building-ai-apps/,How does an AI gateway improve building AI apps,0.0026231462688385324,0.8002,0.5796,0.712,"ai, teams, agents, portkey, access, agent, ai agents, gateway, guardrails, usage, genai, governance, security, finops, cost","How an AI gateway improves AI app building
+See how how an AI gateway improve building AI apps acting as a control layer between AI apps and model providers for routing, governance, and observability.
+Building an AI app has become deceptively easy. A few lines of code, an API key, and a model endpoint are often enough to get a working prototype.
+The difficulty shows up once that prototype starts behaving like a real product.
+As soon as an AI app is exposed to real users, teams begin dealing with "
+6,https://portkey.ai/blog/model-context-protocol/,Deep Dive into Model Context Protocol (MCP),0.004162441241436493,0.8801,0.8169,0.8548,"mcp, server, servers, protocol, mcp servers, tools, tool, context, agents, agent, hub, client, ai, authentication, mcp server","Model Context Protocol (MCP): Everything You Need to Know to Get Started
+Learn how Model Context Protocol (MCP) revolutionizes AI integration, eliminating custom code and enabling standardized communication between LLMs and external systems. [Complete Guide with Examples]
+The AI landscape is facing a critical inflection point. While models like GPT-4.5 and Claude 3.7 Sonnet demonstrate remarkable cognitive abilities, they remain isolated islands of intelligence—powerful but disconnected.
+A criti"

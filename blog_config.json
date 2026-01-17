@@ -72,6 +72,30 @@
       "output_dir": "getmaxim_docs",
       "description": "GetMaxim documentation and guides",
       "sitemap": "https://www.getmaxim.ai/docs/sitemap.xml"
+    },
+    {
+      "name": "https://portkey.ai/blog/",
+      "url": "https://portkey.ai/blog/",
+      "domain": "portkey.ai",
+      "output_dir": "portkey_blog",
+      "description": "Portkey LLM Gateway",
+      "sitemap": "https://portkey.ai/blog/sitemap-posts.xml"
+    },
+    {
+      "name": "https://www.helicone.ai/blog",
+      "url": "https://www.helicone.ai/blog",
+      "domain": "https://www.helicone.ai/blog",
+      "output_dir": "helicone_blog",
+      "description": "AI evaluation and testing platform blog",
+      "sitemap": "https://www.helicone.ai/sitemap-0.xml"
+    },
+    {
+      "name": "https://www.truefoundry.com/blog",
+      "url": "https://www.truefoundry.com/blog",
+      "domain": "Truefiundrycom",
+      "output_dir": "truefoundry_blog",
+      "description": "AI evaluation and testing platform blog",
+      "sitemap": "https://www.helicone.ai/sitemap-0.xml"
     }
   ],
   "article_detection": {

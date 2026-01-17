@@ -1,0 +1,31 @@
+cluster,url,title,pagerank,semantic_sim,tfidf_sim,total_sim,cluster_keywords,excerpt
+0,https://www.helicone.ai/blog/building-first-mcp-for-developers,Extend Your AI Agents: Build and Deploy Your First MCP,0.0010032891694304019,0.9219,0.9245,0.9229,"mcp, server, mcp server, mcp servers, servers, figma, claude desktop, custom mcp, desktop, protocol, weather, claude, city, mcps, groq","How to Build Your First MCP Server: Full Guide for Developers
+Anthropic's Model Context Protocol (MCP) is a new standard that allows AI applications to interact directly with external tools, APIs, and services through natural language. By providing a structured, plug-and-play framework, MCP simplifies building AI agents that can perform complex actions beyond basic chat.
+In this guide, we'll show you how to integrate pre-built MCPs, build a custom MCP server, and add observability with Helicone "
+1,https://www.helicone.ai/blog/gpt-4o-mini-vs-claude-3.5-sonnet,GPT-4o Mini vs. Claude 3.5 Sonnet: A Detailed Comparison for Developers,0.0018417010393214903,0.8081,0.5787,0.7163,"claude, gpt, o1, reasoning, gemini, mini, o3, sonnet, claude sonnet, pro, o1 pro, openai, claude code, 4o, gpt 4o","GPT-4o Mini vs. Claude 3.5 Sonnet: A Detailed Comparison for Developers
+On July 18, 2024, OpenAI introduced GPT-4o mini, the most cost-efficient AI model released yet designed by OpenAI. GPT-4o mini showed impressive capabilities at a fraction of the cost of Claude 3.5 Sonnet, being roughly 20x cheaper for input tokens and 25x cheaper for output tokens.
+Despite being a smaller model, GPT-4o mini performs surprisingly well on many benchmarks, often standing nearly on par with larger models like C"
+2,https://www.helicone.ai/blog/best-langsmith-alternatives,Compare: The Best LangSmith Alternatives & Competitors - Helicone,0.07978129852254601,0.8711,0.5065,0.7252,"helicone, llm, honeyhive, langsmith, observability, galileo, cag, evaluation, langfuse, webui, posthog, self hosting, vault, hosting, traceloop","Compare: The Best LangSmith Alternatives & Competitors
+Observability tools like LangSmith allow developers to monitor, analyze, and optimize AI model performance, which helps overcome the ""black box"" nature of LLMs.
+However, as LangSmith's on-premise version becomes expensive, users are seeking more flexible alternatives. But which LangSmith alternative is the best in 2024? We will shed some light.
+Top LLM observability tools (updated July 2024)
+- Helicone
+- Phoenix by Arize
+- Langfuse
+- HoneyHi"
+3,https://www.helicone.ai/blog/debugging-chatbots-and-ai-agents-with-sessions,Debugging RAG Chatbots and AI Agents with Sessions,0.011190116031006642,0.7602,0.4947,0.654,"agents, query, prompting, chunking, session, rag, reasoning, thought, chain, stage, cot, agent, agentic rag, const, chatbot","Debugging RAG Chatbots and AI Agents with Sessions
+When does your AI agent start hallucinating in the multi-step process? Have you noticed consistent issues with a specific part of your agentic workflow?
+These are common questions we faced when building our own RAG-powered chatbots and AI agents. Getting reliable responses and minimizing errors like hallucination was incredibly challenging, without visibility into how our users interacted with our large language models.
+In this guide, we explore"
+4,https://www.helicone.ai/blog/how-ai-gateways-enhance-app-reliability,How AI Gateways Enhance App Reliability,0.0010509415437956963,0.871,0.7774,0.8336,"ai gateway, gateway, ai, provider, openrouter, routing, helicone ai, helicone, gateways, providers, const, litellm, model, ai gateways, infrastructure","How to Use AI Gateways to Enhance AI App Reliability
+Most businesses (including over 90% of Helicone users) run 5+ different LLMs in their applications. This isn't a temporary trend—it's the new normal as teams optimize for cost, performance, and capability across different use cases.
+But here's the problem.
+Each model comes with its own SDK, authentication scheme, rate limits, and quirks. One provider goes down, your app fails. Switch models, rewrite integrations. Track costs across providers? "
+5,https://www.helicone.ai/blog/ai-agent-builders,Comparing Top Open-Source AI Agent Frameworks & Platforms,0.1196043061881358,0.8426,0.6858,0.7799,"agent, agents, ai, crewai, langchain, grok, manus, dify, autogen, ethical, llamaindex, browser, sam, janus, janus pro","7 Awesome Platforms & Frameworks for Building AI Agents (Open-Source & More)
+The hype around AI agents has reached fever pitch—but what's actually possible with today's technology?
+While we're not yet at the level of fully autonomous ""super agents"" that can replace humans, AI agents have matured significantly in 2025, offering practical tools that deliver real business value—unlike what the critics might have you believe.
+This guide compares the top open-source AI agent builders and platforms fo"
+6,https://www.helicone.ai/blog/test-your-llm-prompts,How to test your LLM prompts (with examples),0.0055231833723935414,0.814,0.599,0.728,"prompt, llm, helicone, prompts, cache, fine, user, caching, evaluation, injection, hallucinations, prompt injection, security, classification, cost","How to Systematically Test and Improve Your LLM Prompts
+Looking for how to test and evaluate your LLM prompts effectively? You've come to the right place.
+Large Language Models (LLMs) are sensitive to prompt changes, where even minor wording changes can dramatically alter output. Poor prompts risk incorrect information, irrelevant responses, and unnecessary API calls that waste money.
+In this article, we uncover why thorough prompt testing and experimentation is crucial, and just how to go about"

@@ -1,36 +1,33 @@
 cluster,url,title,pagerank,semantic_sim,tfidf_sim,total_sim,cluster_keywords,excerpt
-0,https://langfuse.com/blog/2025-10-13-state-of-llms-september-2025,State of LLMs on the Application Layer - Langfuse Blog,0.011507377051385244,0.8474,0.613,0.7536,"cloudflare, script, template, openai, 12, benchmarking, gpt, anthropic, status, google, mini, instance, market, page, infrastructure","State of LLMs on the Application Layer
-We have analyzed model adoption of 20.000+ organizations building LLM applications and agents in the last 12 months. Here is what we found.
-About Langfuse
-Langfuse is the leading open source LLM observability platform powering safe and scalable LLM applications for 10s of thousands of organizations. The data on Langfuse Cloud tells a story of a rapidly growing market and allows us to get a unique view on the state of the LLM application layer.
-We power glob"
-1,https://langfuse.com/blog/2024-11-17-launch-week-2,Langfuse Launch Week #2 - Langfuse Blog,0.02061198572873787,0.8769,0.6447,0.784,"langfuse, prompt, launch, day, week, april, prompts, town, hall, launch week, webhooks, alerts, playground, friday, evals","Langfuse Launch Week #2
-A week dedicated to unlocking model capabilities and integrating Langfuse into your development loop
-We are excited to announce Langfuse Launch Week #2!
-Starting on Monday, November 18th, 2024, we’ll unveil a major upgrade to the Langfuse platform every day until Friday. We’re topping it off with a Product Hunt launch on Friday and a Virtual Town Hall on Wednesday.
-Star us on GitHub and follow us on Twitter for daily updates.
-Want to see what we have launched in LW1 back "
-2,https://langfuse.com/blog/2025-08-29-error-analysis-to-evaluate-llm-applications,Error Analysis to Evaluate LLM Applications - Langfuse Blog,0.04372030081966973,0.875,0.6538,0.7865,"failure, llm, error analysis, error, analysis, testing, modes, failure modes, evaluation, dataset, annotation, experiment, evaluators, judge, example","Error Analysis to Evaluate LLM Applications
+0,https://langfuse.com/blog/2024-04-introducing-langfuse-2.0,Introducing Langfuse 2.0: the LLM Engineering Platform - Langfuse Blog,0.002629103592555986,0.8973,0.4904,0.7346,"langfuse, llm, dify, langflow, haystack, mcp, security, langchain, otel, proxy, import, llamaindex, decorator, hugging, hugging face","Introducing Langfuse 2.0: The LLM Engineering Platform
+Extending Langfuse’s core tracing with evaluations, prompt management, LLM playground and datasets.
+We publicly launched Langfuse in late August of last year. Back then, the product was focused on production traces of LLM applications – because that was our main pain point when originally tinkering on code-generation and scraping agents.
+Our ambition was always to build open source tooling to help developers iterate on complex LLM workflows "
+1,https://langfuse.com/blog/2025-08-29-error-analysis-to-evaluate-llm-applications,Error Analysis to Evaluate LLM Applications - Langfuse Blog,0.024389991922933906,0.9495,0.8709,0.918,"error analysis, analysis, error, failure, modes, failure modes, annotation queue, annotation, queue, dataset, open coding, testing, turn, synthetic, 29","Error Analysis to Evaluate LLM Applications
 A practical guide to identifying, categorizing, and analyzing failure modes in LLM applications using Langfuse.
 To improve your LLM app, you must understand how it fails. Aggregate metrics won’t tell you if your system retrieves the wrong documents or if the model’s tone alienates users. Error analysis provides this crucial context.
 The framework in this guide is adapted from Hamel Husain’s Eval FAQ.
 This guide describes a four-step process to identify"
-3,https://langfuse.com/blog/qa-chatbot-for-langfuse-docs,🤖 Q&A Chatbot for Langfuse Docs - Langfuse Blog,0.02965409539112264,0.9078,0.8152,0.8708,"langfuse, chatbot, frontend, streaming, chat, feedback, docs, langfuse docs, embedding, user feedback, id, search, model openai, ve built, similarity","Q&A Chatbot for the Langfuse Docs
-Summary of how we've built a Q&A chatbot for the Langfuse docs and how Langfuse helps us to improve it
-We’ve built a new Q&A chatbot to help users find the right information in the Langfuse docs. In this post, I’ll briefly summarize how we’ve built it and how we use Langfuse to monitor and improve it.
-Update: All Langfuse Cloud users now have view-only access to this project. View live example to explore it yourself.
-👋 Do you have any questions about Langfuse?
-A"
-4,https://langfuse.com/blog/2024-07-ai-agent-observability-with-langfuse,AI Agent Observability with Langfuse - Langfuse Blog,0.012180864608936708,0.8368,0.6123,0.747,"agent, ai, research, voice, agents, deep research, deep, conversation, bot, good, cursor, multi, voice ai, conversations, langgraph","AI Agent Observability with Langfuse
-Easily monitor, trace and debug your AI agents. Explore tools like LangGraph, Llama Agents, Dify, Flowise, and Langflow, and see how Langfuse helps to monitor and optimize your application.
-What are AI Agents?
-An AI agent is a system that autonomously performs tasks by planning its task execution and utilizing available tools. AI Agents leverage large language models (LLMs) to understand and respond to user inputs step-by-step and decide when to call external"
-5,https://langfuse.com/blog/2024-04-introducing-langfuse-2.0,Introducing Langfuse 2.0: the LLM Engineering Platform - Langfuse Blog,0.0028122093198161805,0.9004,0.4913,0.7368,"langfuse, llm, langchain, dify, langflow, security, users, haystack, import, otel, llmops, sdk, proxy, rag, dataset","Introducing Langfuse 2.0: The LLM Engineering Platform
-Extending Langfuse’s core tracing with evaluations, prompt management, LLM playground and datasets.
-We publicly launched Langfuse in late August of last year. Back then, the product was focused on production traces of LLM applications – because that was our main pain point when originally tinkering on code-generation and scraping agents.
-Our ambition was always to build open source tooling to help developers iterate on complex LLM workflows "
-6,https://langfuse.com/blog/2025-05-19-launch-week-3,Langfuse Launch Week #3 - Langfuse Blog,0.016109366552782226,0.8665,0.6957,0.7982,"dashboards, day, langfuse, week, launch, custom dashboards, launch week, custom, string, folders, june, map, python sdk, query, prices","Langfuse Launch Week #3
+2,https://langfuse.com/blog/2025-05-19-launch-week-3,Langfuse Launch Week #3 - Langfuse Blog,0.011086898125245465,0.887,0.5687,0.7597,"langfuse, day, launch, week, launch week, prompt, dashboards, custom dashboards, prompts, new, custom, april, changelog, town, hall","Langfuse Launch Week #3
 A week dedicated to deeper insights and seamless integrations
 We are excited to announce Langfuse Launch Week #3!
 Starting on Monday, May 19 – Saturday, May 24, 2025, we’ll drop a fresh feature every single day. Expect to get deeper insights from your application data, more guidance on how to get started, improve and evaluate your LLM applications, and more ways to integrate with your favorite tools and frameworks.
 We’ll celebrate with a mid-week Virtual Community Hour an"
+3,https://langfuse.com/blog/2025-03-19-ai-agent-comparison,Comparing Open-Source AI Agent Frameworks - Langfuse Blog,0.01398309087936598,0.914,0.7889,0.864,"agent, agents, research, deep research, ai, deep, langgraph, ai agents, multi agent, report, multi, openai, agents sdk, queries, openai agents","Open-Source AI Agent Frameworks: Which One Is Right for You?
+Explore the leading open-source AI agent frameworks—LangGraph, OpenAI Agents SDK, Smolagents, CrewAI, AutoGen, Semantic Kernel, LlamaIndex agents, Strands Agents, and Pydantic AI agents. Compare features, learn when to use each, and see how to track agent behavior with Langfuse
+Building AI agents used to be a patchwork of scripts, prompt engineering, and trial-and-error. Today, there is a growing landscape of open-source frameworks des"
+4,https://langfuse.com/blog/update-2023-07,Langfuse Update — July 2023 - Langfuse Blog,0.011384814062581705,0.8986,0.6307,0.7915,"cloudflare, langfuse, sdk, js, langchain, api, fixed, docker, trace, js ts, improved, ts, analytics, tiers, status","Langfuse Update — July 2023
+Building out the core platform and preparing infrastructure for advanced analytics: Async SDKs, automated token counts, nested Trace UI, langchain integration, public GET API
+Hi all, a lot has happened since our launch two weeks ago and I’m excited to share our July update:
+- Faster integration
+- Langchain integration: Integrate with Langfuse in minutes when using Langchain
+- SDKs for Python and JS/TS: Now fully async, typed, and with improved DX for nested traces
+- N"
+5,https://langfuse.com/blog/announcing-our-seed-round,Langfuse raises $4M - Langfuse Blog,0.008215976752263696,0.8592,0.6312,0.768,"langfuse, clickhouse, product, self, cursor, community, open, llm, open source, data, openai, ai, dashboards, string, use cases","Langfuse raises $4M
+We're thrilled to announce that Langfuse has raised a $4m seed round from Lightspeed Venture Partners, La Famiglia and Y Combinator.
+With Langfuse, we are building open source observability and product analytics for LLM-based applications. Our goal is to enable product and engineering teams to harness the power of Generative AI with the most useful and open suite of devtools focused on visibility and insights.
+When we first joined Y Combinator for the winter batch in early 20"
+6,https://langfuse.com/blog/2025-09-05-automated-evaluations,Automated Evaluations of LLM Applications - Langfuse Blog,0.01259179313684091,0.8906,0.5359,0.7487,"evaluation, voice, testing, llm, langfuse, question, conversation, script, bot, experiment, template, test, evaluators, output, judge","Automated Evaluations of LLM Applications
+A practical guide to setting up automated evaluations for LLM applications and AI agents using Langfuse.
+In AI development, iterating quickly is important. Whether you’re refining a prompt, swapping a model, or changing your application logic, you need to understand the impact of each change on performance. Manually annotating outputs after every modification is slow and expensive, especially when you want to integrate evaluations into a CI/CD pipeline.
+"

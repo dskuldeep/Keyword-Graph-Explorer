@@ -1,50 +1,52 @@
 cluster,url,title,pagerank,semantic_sim,tfidf_sim,total_sim,cluster_keywords,excerpt
-0,https://langfuse.com/docs/observability/sdk/python/instrumentation,Instrument your application with the Langfuse Python SDK - Langfuse,0.010691085828836894,0.803,0.7094,0.7655,"langfuse, observations, propagate_attributes, trace, tags, span, get_client, user_id, metadata, data, characters, environment, trace_id, ids, view","Instrumentation
-To instrument your application to send traces to Langfuse, you can use either native library instrumentations that work out of the box, or use custom instrumentation methods for fine-grained control.
-Custom Instrumentation
-There are three main ways to create spans with the Langfuse Python SDK. All of them are fully interoperable with each other.
-The @observe()
-decorator provides a convenient way to automatically trace function executions, including capturing their inputs, outputs"
-1,https://langfuse.com/docs/prompt-management/get-started,Get Started with Open Source Prompt Management - Langfuse,0.01604520569260969,0.8276,0.7668,0.8033,"prompt, movie, version, prompts, langfuse, label, critic, get_prompt, movie critic, langfuse get_prompt, get_prompt movie, prompt langfuse, mcp, prompt management, management","Get Started with Prompt Management
-This quickstart helps you to create your first prompt and use it in your application.
-Get API keys
-- Create Langfuse account or self-host Langfuse.
-- Create new API credentials in the project settings.
-Create a prompt
-Use the Langfuse UI to create a new prompt or update an existing one.
-Use prompt
-At runtime, you can fetch the latest production version from Langfuse. Learn more about control (versions/labels) here.
-from langfuse import get_client
-# Initialize L"
-2,https://langfuse.com/docs/api-and-data-platform/features/query-via-sdk,Query Data via SDKs - Langfuse,0.008389141065686053,0.8323,0.4387,0.6749,"dataset, data, organization, export, api, langfuse, media, retention, storage, datasets, fine, items, delete, data retention, dataset_name","Query Data via SDKs
+0,https://langfuse.com/docs/api-and-data-platform/features/query-via-sdk,Query Data via SDKs - Langfuse,0.009133680751960844,0.8285,0.5208,0.7054,"data, api, retention, storage, export, data retention, langfuse, delete, assets, metrics, v2, data platform, media assets, 2025, blob storage","Query Data via SDKs
 Langfuse is open-source and data tracked with Langfuse is open. You can query data via: SDKs and API. For export functionality, see Export Data.
 Common use cases:
 - Train or fine-tune models on the production traces in Langfuse. E.g. to create a small model after having used a large model in production for a specific use case.
 - Collect few-shot examples to improve quality of output.
 - Programmatically create datasets.
 If you are new to Langfuse, we recommend familiarizing yo"
-3,https://langfuse.com/docs/sdk/typescript/guide,TypeScript SDK - Overview - Langfuse,0.009829243244469635,0.8755,0.6642,0.791,"langfuse, sdk, opentelemetry, otel, trace, traces, mcp, node, client, tracing, langfusespanprocessor, import, span, instrumentation, const","TypeScript SDK - Overview
-The modular Langfuse TypeScript SDK (v4) is built on OpenTelemetry for robust observability, better context management, and easy integration with third-party libraries.
-This documentation is for the TypeScript SDK v4. If you are looking for the documentation for the TypeScript SDK v3, please click here.
-If you are self-hosting Langfuse, the TypeScript SDK v4 requires Langfuse platform version ≥ 3.95.0 for all features to work correctly.
-Quickstart
-Get your first trace i"
-4,https://langfuse.com/docs/evaluation/experiments/experiments-via-ui,Experiments via UI - Langfuse,0.010330251496240294,0.8691,0.7577,0.8245,"prompt, dataset, llm, playground, json, experiments, question, security, dataset item, tool, experiment, placeholder, placeholders, item, model","Experiments via UI (Prompt Experiments)
+1,https://langfuse.com/docs/evaluation/experiments/experiments-via-ui,Experiments via UI - Langfuse,0.010993847776489445,0.8578,0.7721,0.8235,"dataset, experiment, prompt, run, experiments, items, item, evaluation, question, test, dataset item, dataset items, datasets, task, dataset_name","Experiments via UI (Prompt Experiments)
 You can execute Experiments via UI (also called Prompt Experiments) in the Langfuse UI to test different prompt versions from Prompt Management or language models and compare the results side-by-side.
 Optionally, you can use LLM-as-a-Judge Evaluators to automatically score the responses based on the expected outputs to further analyze the results on an aggregate level.
 Why use Prompt Experiments?
 - Quickly test different prompt versions or models
 - Structu"
-5,https://langfuse.com/docs/evaluation/overview,Evaluation of LLM Applications - Langfuse,0.01706046340969685,0.8167,0.5793,0.7218,"score, evaluation, metrics, scores, user, annotation, queue, dataset, comment, experiments, langfuse, feedback, llm, cost, evaluation methods","Evaluation Overview
-Evaluation is a critical aspect of developing and deploying LLM applications. Usually, teams use a multitude of different evaluation methods to score the performance of their AI application depending on the use case and the stage of the development process.
-Watch this walkthrough of Langfuse Evaluation and how to use it to improve your LLM application.
-Why use LLM Evaluation?
-LLM evaluation is crucial for improving the accuracy and robustness of language models, ultimately en"
-6,https://langfuse.com/docs/observability/troubleshooting-and-faq,Troubleshooting and FAQ for Langfuse Tracing - Langfuse,0.008240804794941478,0.9002,0.7756,0.8503,"langfuse, troubleshooting, faq, example project, questions, page, support, sso, langfuse cloud, password, units, github, social, enterprise sso, page faq","Troubleshooting and FAQ
-This page addresses frequently asked questions and common troubleshooting topics for Langfuse Observability.
-If you don’t find a solution to your issue here, try using Ask AI for instant answers. For bug reports, please open a ticket on GitHub Issues. For general questions or support, visit our support page.
-FAQ
-- How do I track LLM cost and tokens in Langfuse?
-- How to enable or disable Langfuse tracing?
-- How to evaluate sessions/conversations?
-- How to manage different"
+2,https://langfuse.com/docs/prompt-management/features/guaranteed-availability,Guaranteed Availability of Prompts - Langfuse,0.008914297249771932,0.8582,0.7217,0.8036,"prompt, langfuse, movie, get_prompt, langfuse get_prompt, generation, get_prompt movie, prod, flush, critic, movie critic, cache, fallback, network, metrics","Guaranteed Availability
+💡
+Implementing this is usually not necessary as it adds complexity to your application. The Langfuse Prompt Management is highly available due to multiple caching layers and we closely monitor its performance (status page). However, if you require 100% availability, you can use the following options.
+The Langfuse API has high uptime and prompts are cached locally in the SDKs to prevent network issues from affecting your application.
+However, get_prompt()
+/getPrompt()
+will"
+3,https://langfuse.com/docs/prompt-management/get-started,Get Started with Open Source Prompt Management - Langfuse,0.017334110265616307,0.8517,0.682,0.7838,"prompt, prompts, version, movie, langfuse, label, playground, labels, prompt management, management, chat, config, production, critic, comment","Get Started with Prompt Management
+This guide walks you through creating and using a prompt with Langfuse. If you’re looking to understand what prompt management is and why it matters, check out the Prompt Management Overview first. For details on how prompts are structured in Langfuse and how it works in the background, see Core Concepts.
+Get API keys
+- Create Langfuse account or self-host Langfuse.
+- Create new API credentials in the project settings.
+Create a prompt
+Use the Langfuse UI to cre"
+4,https://langfuse.com/docs/observability/sdk/instrumentation,Instrument your application with the Langfuse SDKs - Langfuse,0.014016364859057356,0.8194,0.6793,0.7633,"langfuse, observations, propagate_attributes, tags, trace, span, user_id, get_client, metadata, characters, trace_id, level, view, 200 characters, propagate","Instrumentation
+There are two main ways to instrument your application with the Langfuse SDKs:
+- Using our native integrations for popular LLM and agent libraries such as OpenAI, LangChain or the Vercel AI SDK. They automatically create observations and traces and capture prompts, responses, usage, and errors.
+- Manually instrumenting your application with the Langfuse SDK. The SDKs provide 3 ways to create observations:
+All approaches are interoperable. You can nest a decorator-created observat"
+5,https://langfuse.com/docs/metrics/overview,Open Source LLM Metrics - Langfuse,0.009061049024569326,0.8602,0.5538,0.7376,"score, scores, metrics, evaluation, annotation, cost, user, llm application, llm, traces, queue, organization, audit, usage, application","Metrics
+Langfuse metrics derive actionable insights from observability and evaluation traces.
+Metrics can be sliced and diced via the customizable dashboards and the metrics API.
+Features
+Metrics & Dimensions
+Metrics:
+- Quality is measured through user feedback, model-based scoring, human-in-the-loop scored samples or custom scores via SDKs/API (see scores). Quality is assessed over time as well as across prompt versions, LLMs and users.
+- Cost and Latency are accurately measured and broken down"
+6,https://langfuse.com/docs/sdk/typescript/guide,Langfuse SDKs - Langfuse,0.010888532846931694,0.8095,0.6074,0.7287,"langfuse, mcp, opentelemetry, traces, otel, server, trace, organization, node, project, langfuse docs, span, example project, data, users","Langfuse SDKs
+Langfuse offers two SDKs:
+- Python
+- JS/TS
+- Other Languages via OpenTelemetry
+The Langfuse SDKs are the recommended way to create custom observations and traces and use the Langfuse prompt-management and evaluation features.
+Key benefits
+- Based on OpenTelemetry, so you can use any OTEL-based instrumentation library for your LLM stack.
+- Fully async requests, meaning Langfuse adds almost no latency.
+- Interoperable with Langfuse native integrations.
+- Accurate latency tracking via"

@@ -1,8 +1,8 @@
 cluster,keywords
-3,"week, trace, span, maxim, logs, st, evaluator, suggestions, traces, print, bifrost, updates, evaluators, resume, spans"
-5,"audio, speech, emotion, snr, acoustic, compression, tts, wer, ditto, semantic, vita, vita audio, voice, transcription, gense"
-6,"models, model, tool, agent, ai, agents, o1, reasoning, misalignment, k2, claude, task, contamination, legal, agentic"
-2,"rag, retrieval, documents, document, cot, query, nothinking, agentfold, reasoning, context, units, synthetic, model, steps, relevant"
-1,"bifrost, maxim, logs, workspace, evals, litellm, plugins, clinical, size, google cloud, notes, duplicated, log size, providers, synthetic"
-4,"ai, agent, maxim, agents, observability, import, comm100, workflow, atomicwork, print, tool, prompt, const, clinc, a2a"
-0,
+0,"agent, agents, tool, models, o1, model, ai, task, legal, agentic, mcp, claude, evaluation, tasks, a2a"
+4,"reasoning, models, cot, model, agentfold, nothinking, data, synthetic, thinking, k2, context, training, rlms, tool, steps"
+5,"print, rise science, contamination, rise, tts, ditto, suggestions, hallucinations, bifrost, science, sentiment, misalignment, resume, attacks, coaching"
+2,"maxim, ai, bifrost, agent, logs, prompt, week, evaluation, trace, observability, teams, tool, atomicwork, evaluators, clinical"
+6,"speech, audio, emotion, snr, compression, acoustic, transcription, streaming, voice, attention, talker, chain talker, frames, semantic, diffusion"
+1,"const, agent, import, classname, str, div, self, print, weather, game, stock, financial, maxim, server, text"
+3,"rag, retrieval, documents, query, document, retrieved, chunks, generation, relevant, units, vector, chunking, answers, long context, rag systems"

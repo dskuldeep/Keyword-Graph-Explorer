@@ -1,6 +1,12 @@
 from __future__ import annotations
 
 from typing import Dict, List, Optional, Tuple
+import os
+
+# Fix for macOS threading issues with PyTorch
+os.environ["OMP_NUM_THREADS"] = "1"
+os.environ["MKL_NUM_THREADS"] = "1"
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 import numpy as np
 from sklearn.cluster import KMeans
