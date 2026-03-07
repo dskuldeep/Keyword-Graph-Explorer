@@ -1,38 +1,25 @@
 cluster,url,title,pagerank,semantic_sim,tfidf_sim,total_sim,cluster_keywords,excerpt
-0,https://www.getmaxim.ai/blog/ai-agent-quality-evaluation/,Understanding AI Agents and Evaluating their Quality,0.008441252980568734,0.7952,0.5884,0.7125,"agent, agents, tool, models, o1, model, ai, task, legal, agentic, mcp, claude, evaluation, tasks, a2a","Agent Evaluation: Understanding Agentic Systems and their Quality
-This is Part 1 of our Agent Evaluations series. Here are Part 2 and Part 3 in this series
-In today’s rapidly advancing world of artificial intelligence (AI), agentic systems are becoming an integral part of numerous industries, powering everything from customer support to robotics. But what exactly are these systems, and why is measuring their quality so critical for businesses and users alike? In this blog post, we will explore t"
-1,https://www.getmaxim.ai/blog/building-a-simple-second-brain-ai-agent-with-vercel-ai-sdk-maxim-ai/,Building a Simple Second Brain AI Agent with Vercel AI SDK & Maxim AI,0.023622062836471034,0.7914,0.6095,0.7186,"const, agent, import, classname, str, div, self, print, weather, game, stock, financial, maxim, server, text","Building a Simple Second Brain AI Agent with Vercel AI SDK & Maxim AI
-A comprehensive step-by-step tutorial on creating a RAG-powered knowledge base system with observability.
-Table of Contents
-- Project Overview
-- Architecture & Technology Stack
-- Environment Setup
-- Database Configuration
-- Embedding System Implementation
-- RAG Implementation
-- Maxim AI Integration for Observability
-- AI Chat API with Tools
-- Frontend Implementation
-- Testing & Deployment
-- Advanced Features
-Project Overview
-T"
-2,https://www.getmaxim.ai/blog/maxim-ai-january-2025-updates/,✨ Maxim AI January 2025 Updates,0.0014416848380624724,0.8385,0.5409,0.7194,"maxim, ai, bifrost, agent, logs, prompt, week, evaluation, trace, observability, teams, tool, atomicwork, evaluators, clinical","✨ Maxim AI January 2025 Updates
+0,https://www.getmaxim.ai/blog/maxim-ai-january-2025-updates/,✨ Maxim AI January 2025 Updates,0.0010149654580117345,0.8318,0.5409,0.7154,"maxim, ai, agent, bifrost, prompt, logs, atomicwork, trace, print, week, tool, comm100, clinc, team, observability","✨ Maxim AI January 2025 Updates
 Feature spotlight
 🔍 Evaluate and monitor AI agents using Maxim
 It is a constant challenge for AI teams to debug, monitor, and understand what's going wrong in the complex workflows of AI agents, which involve multiple steps, i.e., LLM calls, tool calls, data retrievals, etc.
 To ensure the quality of AI agents, evaluation needs to happen at each step, i.e., for LLM generation, planner action, tool call, etc. With Maxim’s observability and evaluation suite, you can "
-3,https://www.getmaxim.ai/blog/rag-evaluation-metrics/,RAG Architecture Analysis: Optimize Retrieval & Generation,0.0014416848380624724,0.8777,0.67,0.7946,"rag, retrieval, documents, query, document, retrieved, chunks, generation, relevant, units, vector, chunking, answers, long context, rag systems","Evaluating RAG performance: Metrics and benchmarks
+1,https://www.getmaxim.ai/blog/beyond-autoregression-llada2-1-and-the-case-for-self-editing-language-models/,Beyond Autoregression: LLaDA2.1 and the Case for Self-Editing Language Models,0.0010149654580117345,0.7751,0.5214,0.6736,"model, tokens, synthetic, contamination, data, rlms, llada2, hallucinations, tokenization, synthetic data, rlm, gense, dp, privacy, diffusion","Beyond Autoregression: LLaDA2.1 and the Case for Self-Editing Language Models
+Introduction
+Every mainstream large language model today generates text the same way: one token at a time, left to right, no looking back. It works remarkably well, but it has a structural flaw that's easy to overlook until you care about speed at scale. The model can never go back and fix a mistake. Once a token is committed, everything downstream conditions on it, errors included. Diffusion language models (dLLMs) of"
+2,https://www.getmaxim.ai/blog/rag-evaluation-metrics/,RAG Architecture Analysis: Optimize Retrieval & Generation,0.0010149654580117345,0.8449,0.6309,0.7593,"rag, retrieval, documents, query, document, attention, xmemory, memory, semantic highlighting, highlighting, semantic, relevant, rag systems, retrieved, generation","Evaluating RAG performance: Metrics and benchmarks
 Introduction
 RAG architectures facilitate the extraction of pertinent information, enhancing the overall quality and accuracy of generated outputs. This blog explores the intricacies of RAG architecture, focusing on the evaluation of its retrieval and generation components, the structure of effective evaluation datasets, and the metrics essential for assessing system performance. Additionally, it highlights the role of platforms like Maxim in op"
-4,https://www.getmaxim.ai/blog/skipping-the-thinking-how-simple-prompts-can-outperform-complex-reasoning-in-ai/,"Skipping the ""Thinking"": How Simple Prompts Can Outperform Complex Reasoning in AI",0.002054418831394734,0.7726,0.4572,0.6465,"reasoning, models, cot, model, agentfold, nothinking, data, synthetic, thinking, k2, context, training, rlms, tool, steps","Skipping the ""Thinking"": How Simple Prompts Can Outperform Complex Reasoning in AI
+3,https://www.getmaxim.ai/blog/post-training-doesnt-create-your-models-character-it-inherits-one/,Post-Training Doesn't Create Your Model's Character. It Inherits One,0.061165201237624124,0.5537,0.6925,0.6092,"misalignment, model, psm, em, auditors, character, auditing, ai, post training, insecure, investigator, alignment, training, behaviours, misaligned","Post-Training Doesn't Create Your Model's Character. It Inherits One
 Introduction
-In the realm of AI, especially with large language models, the prevailing belief is that complex reasoning tasks require detailed, step-by-step ""thinking"" processes. These processes often involve generating extensive intermediate steps before arriving at a solution, consuming significant computational resources.
-However, the paper titled ""Reasoning Models Can Be Effective Without Thinking"" challenges "
-5,https://www.getmaxim.ai/blog/building-an-ai-product-review-analyzer-structured-outputs-with-together-ai-and-maxim-observability/,Building an AI Product Review  Analyzer: Structured Outputs with Together AI and Maxim Observability,0.001977491277540013,0.5964,0.456,0.5402,"print, rise science, contamination, rise, tts, ditto, suggestions, hallucinations, bifrost, science, sentiment, misalignment, resume, attacks, coaching","Building an AI Product Review Analyzer: Structured Outputs with Together AI and Maxim Observability
-In today's data-driven world, businesses need to extract structured insights from unstructured text at scale. Whether it's analyzing customer reviews, processing support tickets, or extracting key information from documents, the ability to get consistent, structured outputs from Large Language Models (LLMs) has become crucial.
-In this comprehensive guide, we'll build a Product Review Analyzer that"
-6,https://www.getmaxim.ai/blog/vita-audio-making-ai-voice-assistants-actually-feel-instant/,VITA-Audio: Making AI Voice Assistants Actually Feel Instant,0.0014416848380624724,0.7822,0.6525,0.7304,"speech, audio, emotion, snr, compression, acoustic, transcription, streaming, voice, attention, talker, chain talker, frames, semantic, diffusion","VITA-Audio: Making AI Voice Assistants Actually Feel Instant
+Every team building on top of LLMs has a version of the same mental model: pretraining teaches the model what it knows, and post-training teaches it how to behave. Don't want it to say harmful things? Train that out. Want it to be more helpful? Push that in. It's a clean, controllable story. The problem is it's not really true. Behavior isn't a layer you add on top of the model. It's baked into who the model alread"
+4,https://www.getmaxim.ai/blog/ai-agent-quality-evaluation/,Understanding AI Agents and Evaluating their Quality,0.01126471693894397,0.8419,0.6618,0.7699,"agent, agents, mcp, web, tool, task, os harm, memory, a2a, harm, ai, metrics, evaluation, browsing, ai agents","Agent Evaluation: Understanding Agentic Systems and their Quality
+This is Part 1 of our Agent Evaluations series. Here are Part 2 and Part 3 in this series
+In today’s rapidly advancing world of artificial intelligence (AI), agentic systems are becoming an integral part of numerous industries, powering everything from customer support to robotics. But what exactly are these systems, and why is measuring their quality so critical for businesses and users alike? In this blog post, we will explore t"
+5,https://www.getmaxim.ai/blog/vita-audio-making-ai-voice-assistants-actually-feel-instant/,VITA-Audio: Making AI Voice Assistants Actually Feel Instant,0.0010149654580117345,0.8334,0.5772,0.7309,"speech, audio, voice, emotion, wer, snr, streaming, compression, diffusion, ditto, personaplex, tts, vita, vita audio, emotional","VITA-Audio: Making AI Voice Assistants Actually Feel Instant
 Have you ever noticed that frustrating pause when you ask your voice assistant a question? You speak, there's a beat of silence, and then it finally starts responding. That delay might seem minor, but it breaks the natural flow of conversation and reminds you that you're talking to a machine, not a person.
 A new research paper introduces VITA-Audio, a breakthrough that could make AI voice interactions feel truly instantaneous. Let's di"
+6,https://www.getmaxim.ai/blog/kimi-k2-thinking-engineering-deep-reasoning-at-scale/,Kimi K2 Thinking: Engineering Deep Reasoning at Scale,0.0025419476634345873,0.7264,0.4681,0.6231,"models, reasoning, model, cot, o1, ai, tool, nothinking, gd, bias, attacks, claude, thinking, legal, k2","Kimi K2 Thinking: Engineering Deep Reasoning at Scale
+Introduction
+Moonshot AI recently open-sourced Kimi K2 and its reasoning-optimized variant, K2 Thinking. As someone who works with large language models, I wanted to break down what makes this release interesting and where it pushes forward the state of open-source AI.
+K2 Thinking is a 1-trillion parameter model that can maintain coherent reasoning across hundreds of sequential steps (executing code, searching the web, calling APIs etc) witho"

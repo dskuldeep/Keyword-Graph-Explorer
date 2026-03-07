@@ -1,8 +1,8 @@
 cluster,keywords
-2,"reasoning, o1, walmart, gpt, segmentation, text, generative, ai, webui, open webui, coding, mamba, image, rag, interactive"
-4,"portkey, llm, provider, ai, routing, model, cache, providers, observability, gateway, openai, requests, guardrails, llm gateway, models"
-3,"prompt, prompts, prompting, prompt engineering, engineering, claude, model, shot, chatgpt, tasks, ai, shot prompting, responses, dspy, prompt chaining"
-5,"ai, teams, agents, portkey, access, agent, ai agents, gateway, guardrails, usage, genai, governance, security, finops, cost"
-0,"language, reasoning, language models, llms, models, prompting, transformer, chain thought, thought, pre, tuning, lms, prompt, shot, method"
-1,"mcp, ai, access, control, ai platform, agents, hallucinations, production environments, servers, environments, access control, production, platform, llm, fontys"
-6,"mcp, server, servers, protocol, mcp servers, tools, tool, context, agents, agent, hub, client, ai, authentication, mcp server"
+0,"reasoning, models, language, gpt, language models, transformer, prompting, cache, llms, o1, sot, method, thought, tasks, walmart"
+3,"mcp, tools, servers, tool, server, agent, agents, authorization, client, protocol, mcp servers, access, connectors, mcp server, ai"
+6,"portkey, llm, ai, provider, model, routing, observability, guardrails, openai, open source, agent, source, open, vertex, llm observability"
+1,"ai, teams, agents, usage, governance, ai agents, gateway, guardrails, costs, access, genai, portkey, provider, llm, finops"
+5,"prompt, prompts, prompt engineering, engineering, prompting, ai, tasks, prompt chaining, prompt security, chaining, model, dspy, claude, security, outputs"
+2,"mcp, enterprise, ai, event driven, driven architecture, mcp registry, agents, announcement, registry, protocol, mcp gateway, event, multi, agentic, inference"
+4,

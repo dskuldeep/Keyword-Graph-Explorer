@@ -368,7 +368,7 @@ cp blog_config.json blog_config.json.backup
 ### 2. Run Analysis for All Paths
 ```bash
 # Process all configured blog paths
-python -m seo_graph.cli all-blogs
+python3 -m src/seo_graph.cli all-blogs
 
 # Or specify a custom config file
 python -m seo_graph.cli all-blogs --config my_custom_config.json

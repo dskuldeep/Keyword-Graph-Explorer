@@ -1,24 +1,5 @@
 cluster,url,title,pagerank,semantic_sim,tfidf_sim,total_sim,cluster_keywords,excerpt
-0,https://www.getmaxim.ai/docs/library/evaluators/pre-built-evaluators/statistical-evaluators/bleu,BLEU - Maxim Docs,0.0005062916442224236,0.6401,0.4517,0.5648,"closer, scores, score, str, scores closer, distance, similarity, text, steps, gemini, score closer, statements, output, reference, audio","Input
-output
-(str): The generated text to be evaluated.expectedOutput
-(str): The reference or ground truth text.
-Output
-Result
-(float): A score between 0 and 1.
-Interpretation
-- Higher scores (closer to 1): Indicates higher degree of overlap between the generated text and the ground truth, suggesting better output quality
-- Lower scores (closer to 0): Indicates lower degree of overlap between the generated text and the ground truth, suggesting bad output quality
-Formula
-The BLEU score is calcula"
-1,https://www.getmaxim.ai/docs/offline-evals/via-ui/prompts/prompt-playground,Prompt Playground - Maxim Docs,0.0012025808668995404,0.6998,0.4759,0.6103,"prompt, test, evaluators, agent, dataset, logs, run, evaluation, prompts, click, select, context, dashboard, create, version","What is the Prompt Playground?
-Prompts in Maxim provide a powerful way to experiment with prompt structures, models and configurations. Maxim’s playground allows you to iterate over prompts, test their effectiveness, and ensure they work well before integrating them into more complex workflows for your application.Selecting a model
-Maxim supports a wide range of models, including:- Open-source models
-- Closed models
-- Custom models
-Adding system and user prompts
-In the prompt editor, add your sy"
-2,https://www.getmaxim.ai/docs/sdk/typescript/reference/core/classes/Generation,Generation - Maxim Docs,0.0012433131065375347,0.8423,0.7801,0.8174,"src, lib, defined src, src lib, ts, defined, lib logger, logger components, void, components, string, logger, lib models, writer, components generation","Class: Generation
+0,https://www.getmaxim.ai/docs/sdk/typescript/reference/core/classes/Generation,Generation - Maxim Docs,0.0011387442141689314,0.8426,0.7825,0.8185,"src, lib, defined src, src lib, ts, defined, lib logger, logger components, void, components, logger, string, lib models, components generation, generation ts","Class: Generation
 Defined in: src/lib/logger/components/generation.ts:124 Represents an LLM generation or completion. The Generation class tracks the complete lifecycle of LLM requests, including input messages, model parameters, results, and any errors. It supports both chat and text completion formats. GenerationExample
 Extends
 Constructors
@@ -27,68 +8,75 @@ new Generation(Defined in: src/lib/logger/components/generation.ts:148 Creates a
 ,writer
 ):Generation
 Parameter"
-3,https://www.getmaxim.ai/docs/prompts/prompt-version/get-prompt-versions,Get Prompt Versions - Maxim Docs,0.000667907980139561,0.8079,0.4818,0.6775,"string, api, api key, unique, key, unique identifier, identifier, curl, header, delete, dataset, folder, 100, 123, prompt","curl --request GET \
---url https://api.getmaxim.ai/v1/prompts/versions \
---header 'x-maxim-api-key: <api-key>'
+1,https://www.getmaxim.ai/docs/prompts/prompt/update-prompt,Update Prompt - Maxim Docs,0.0011274061646626829,0.919,0.7856,0.8656,"string, api, api key, key, delete, header, id string, request delete, delete url, 123, string string, curl request, type, ai v1, api getmaxim","curl --request PUT \
+--url https://api.getmaxim.ai/v1/prompts \
+--header 'Content-Type: application/json' \
+--header 'x-maxim-api-key: <api-key>' \
+--data '
+{
+""workspaceId"": ""<string>"",
+""id"": ""<string>"",
+""name"": ""<string>"",
+""description"": ""<string>"",
+""folderId"": ""<string>""
+}
+'
 {
 ""data"": {
 ""id"": ""<string>"",
-""version"": 123,
-""description"": ""<string>"",
-""promptId"": ""<string>"",
-""config"": {
-""tags"": {},
-""model"": ""<string>"",
-""author"": {
-""id"": ""<string>"",
 ""name"": ""<string>"",
-""email"": ""<string>"",
-""image"": ""<string>""
-},
-""modelId"": ""<string>"",
-""messages"": [
-{
-""id"": ""<string>"",
-""index"": 123,
-""payload"": {
-""role"": ""<string>"",
-""content"": ""<string>""
-},
-""currentType"": ""<string>"
-4,https://www.getmaxim.ai/docs/sdk/python/references/logger/anthropic/utils,anthropic.Utils - Maxim Docs,0.0009199238412967764,0.6598,0.2373,0.4908,"def, returns, str, dict, class, utilities, dict str, __init__, page helpful, optional, helpful, logger, integration, page, dataclass","AnthropicUtils
-parse_message_param
-to be parsed. Can contain strings, dicts, or MessageParam objects.
-override_role
-Optional[str] - Optional role to override the message role. If provided, all messages will use this role instead of their original role.
-with role and content extracted and standardized.
-Notes:
-- String messages are treated as user messages by default
-- Dict messages should have ‘role’ and ‘content’ keys
-- Content blocks are flattened into text content
-- Complex content structures "
-5,https://www.getmaxim.ai/docs/library/evaluators/pre-built-evaluators/programmatic-evaluators/contains-special-characters,containsSpecialCharacters - Maxim Docs,0.00047598161134557285,0.9719,0.9235,0.9526,"boolean, input, string, validate, string number, boolean true, number, output, true, function, valid, evaluator, string valid, assuming evaluator, dataoutput string","Input
-input
-: The original input text or dataoutput
-: The string to be validatedexpectedOutput
-: The expected output to compare against.
-- Any of the input variables (
-input
-,output
-,expectedOutput
-) can be marked as optional. - The returned value from the
-validate
-function can be a boolean, string, or a number.
-Output
-Result
-: Boolean (true
-orfalse
-) | string | number
-Interpretation
-Assuming this evaluator returns a boolean
-- true: At least one special character was found
-- false: No special ch"
-6,https://www.getmaxim.ai/docs/offline-evals/via-sdk/agent-http/quickstart,SDK HTTP Agent Quickstart - Maxim Docs,0.000427070120933396,0.7586,0.413,0.6203,"maxim, trace, agent, sdk, import, llm, api, openai, const, python, span, metadata, integrate, overview, track","How to get started with the Maxim SDK?
+""description"": ""<string>"",
+""workspaceId"": ""<string>"",
+""accountId"": ""<string>"",
+""folderId"": ""<string>"",
+""createdById"": ""<string>"",
+""createdAt"": ""<string>"",
+""updatedAt"": ""<st"
+2,https://www.getmaxim.ai/docs/offline-evals/via-sdk/agent-http/quickstart,SDK HTTP Agent Quickstart - Maxim Docs,0.0003688203768609086,0.8024,0.4292,0.6531,"maxim, agent, trace, api, import, sdk, openai, const, context, python, logger, settings, integrate, streaming, google","How to get started with the Maxim SDK?
 Get started with evaluating AI agents accessible via HTTP endpoints using the Maxim SDK. This guide will walk you through setting up the SDK and running your first agent evaluation test run.Installation
 First, install the Maxim SDK for your preferred language:Getting Your API Key
 Before you can use the Maxim SDK, you need to obtain an API key from the Maxim platform:- Log in to Maxim: Go to app.getmaxim.ai/login and sign in to your account
 - Navigate to Set"
+3,https://www.getmaxim.ai/docs/prompt-engineering/prompt-playground,Prompt Playground - Maxim Docs,0.007118019477996166,0.7742,0.5123,0.6694,"prompt, test, agent, prompts, evaluators, dataset, run, simulation, endpoint, partial, version, context, create, evaluation, variables","What is the Prompt Playground?
+Prompts in Maxim provide a powerful way to experiment with prompt structures, models and configurations. Maxim’s playground allows you to iterate over prompts, test their effectiveness, and ensure they work well before integrating them into more complex workflows for your application.Selecting a model
+Maxim supports a wide range of models, including:- Open-source models
+- Closed models
+- Custom models
+Adding system and user prompts
+In the prompt editor, add your sy"
+4,https://www.getmaxim.ai/docs/offline-evals/via-sdk/offline-evals-via-logging,Offline Evaluations via Logging - Maxim Docs,0.0005980742167800094,0.6823,0.5322,0.6222,"logs, trace, dashboard, evaluation, span, track, metrics, human, llm, charts, audit logs, summary emails, export, emails, log","What are Offline Evaluations via Logging?
+Offline evaluations allow you to test and validate your AI Agent before it goes live with end users. Unlike online evaluations that run in production, offline evals give you the opportunity to:- Test against a curated set of inputs with expected outputs
+- Validate tool calls, retrieved context, and generation quality
+- Run evaluations in a controlled environment
+- Iterate quickly without impacting real users
+withEvaluators
+function, you can capture every"
+5,https://www.getmaxim.ai/docs/library/evaluators/pre-built-evaluators/ai-evaluators/context-precision,Context Precision - Maxim Docs,0.0004020500039509941,0.6148,0.3719,0.5176,"input, boolean, output, string, closer, validate, string number, boolean true, number, scores, scores closer, true, text, score, str","This evaluator uses weighted cumulative precision (WCP) which prioritizes the relevance of top-ranked context nodes and rewards correct ordering. This approach is critical because LLMs tend to focus more on earlier context nodes, and incorrect ranking can lead to hallucinations.
+Input
+- Required Inputs:
+input
+: The original user querycontext
+: List of context chunks retrieved for the responseexpected_output
+: The expected response that should be generated
+Output
+Result
+: Value in the continuous "
+6,https://www.getmaxim.ai/docs/sdk/python/references/logger/components/base,Base - Maxim Docs,0.0010981998193122981,0.6401,0.589,0.6197,"def, str, returns, dict, class, dict str, utilities, optional, __init__, logger, dataclass, dataclass class, integration, page helpful, list","EvaluateContainerWithVariables
+__init__
+with_variables
+EvaluateContainer
+Methods:
+with_variables
+- Allows adding variables to be used by the evaluators.
+__init__
+with_variables
+with_evaluators
+Returns:
+Base functionality for Components integration.
+class EvaluateContainerWithVariables()
+def __init__(id: str, entity: Entity, log_writer: LogWriter,
+for_evaluators: List[str]) -> None
+def with_variables(variables: Dict[str, str])
+class EvaluateContainer()
+with_variables
+- Allows adding variables to "

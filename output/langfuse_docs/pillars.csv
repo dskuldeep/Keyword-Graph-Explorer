@@ -1,52 +1,51 @@
 cluster,url,title,pagerank,semantic_sim,tfidf_sim,total_sim,cluster_keywords,excerpt
-0,https://langfuse.com/docs/api-and-data-platform/features/query-via-sdk,Query Data via SDKs - Langfuse,0.009133680751960844,0.8285,0.5208,0.7054,"data, api, retention, storage, export, data retention, langfuse, delete, assets, metrics, v2, data platform, media assets, 2025, blob storage","Query Data via SDKs
-Langfuse is open-source and data tracked with Langfuse is open. You can query data via: SDKs and API. For export functionality, see Export Data.
-Common use cases:
-- Train or fine-tune models on the production traces in Langfuse. E.g. to create a small model after having used a large model in production for a specific use case.
-- Collect few-shot examples to improve quality of output.
-- Programmatically create datasets.
-If you are new to Langfuse, we recommend familiarizing yo"
-1,https://langfuse.com/docs/evaluation/experiments/experiments-via-ui,Experiments via UI - Langfuse,0.010993847776489445,0.8578,0.7721,0.8235,"dataset, experiment, prompt, run, experiments, items, item, evaluation, question, test, dataset item, dataset items, datasets, task, dataset_name","Experiments via UI (Prompt Experiments)
-You can execute Experiments via UI (also called Prompt Experiments) in the Langfuse UI to test different prompt versions from Prompt Management or language models and compare the results side-by-side.
-Optionally, you can use LLM-as-a-Judge Evaluators to automatically score the responses based on the expected outputs to further analyze the results on an aggregate level.
-Why use Prompt Experiments?
-- Quickly test different prompt versions or models
-- Structu"
-2,https://langfuse.com/docs/prompt-management/features/guaranteed-availability,Guaranteed Availability of Prompts - Langfuse,0.008914297249771932,0.8582,0.7217,0.8036,"prompt, langfuse, movie, get_prompt, langfuse get_prompt, generation, get_prompt movie, prod, flush, critic, movie critic, cache, fallback, network, metrics","Guaranteed Availability
-💡
-Implementing this is usually not necessary as it adds complexity to your application. The Langfuse Prompt Management is highly available due to multiple caching layers and we closely monitor its performance (status page). However, if you require 100% availability, you can use the following options.
-The Langfuse API has high uptime and prompts are cached locally in the SDKs to prevent network issues from affecting your application.
-However, get_prompt()
-/getPrompt()
-will"
-3,https://langfuse.com/docs/prompt-management/get-started,Get Started with Open Source Prompt Management - Langfuse,0.017334110265616307,0.8517,0.682,0.7838,"prompt, prompts, version, movie, langfuse, label, playground, labels, prompt management, management, chat, config, production, critic, comment","Get Started with Prompt Management
-This guide walks you through creating and using a prompt with Langfuse. If you’re looking to understand what prompt management is and why it matters, check out the Prompt Management Overview first. For details on how prompts are structured in Langfuse and how it works in the background, see Core Concepts.
-Get API keys
-- Create Langfuse account or self-host Langfuse.
-- Create new API credentials in the project settings.
-Create a prompt
-Use the Langfuse UI to cre"
-4,https://langfuse.com/docs/observability/sdk/instrumentation,Instrument your application with the Langfuse SDKs - Langfuse,0.014016364859057356,0.8194,0.6793,0.7633,"langfuse, observations, propagate_attributes, tags, trace, span, user_id, get_client, metadata, characters, trace_id, level, view, 200 characters, propagate","Instrumentation
-There are two main ways to instrument your application with the Langfuse SDKs:
-- Using our native integrations for popular LLM and agent libraries such as OpenAI, LangChain or the Vercel AI SDK. They automatically create observations and traces and capture prompts, responses, usage, and errors.
-- Manually instrumenting your application with the Langfuse SDK. The SDKs provide 3 ways to create observations:
-All approaches are interoperable. You can nest a decorator-created observat"
-5,https://langfuse.com/docs/metrics/overview,Open Source LLM Metrics - Langfuse,0.009061049024569326,0.8602,0.5538,0.7376,"score, scores, metrics, evaluation, annotation, cost, user, llm application, llm, traces, queue, organization, audit, usage, application","Metrics
-Langfuse metrics derive actionable insights from observability and evaluation traces.
-Metrics can be sliced and diced via the customizable dashboards and the metrics API.
-Features
-Metrics & Dimensions
-Metrics:
-- Quality is measured through user feedback, model-based scoring, human-in-the-loop scored samples or custom scores via SDKs/API (see scores). Quality is assessed over time as well as across prompt versions, LLMs and users.
-- Cost and Latency are accurately measured and broken down"
-6,https://langfuse.com/docs/sdk/typescript/guide,Langfuse SDKs - Langfuse,0.010888532846931694,0.8095,0.6074,0.7287,"langfuse, mcp, opentelemetry, traces, otel, server, trace, organization, node, project, langfuse docs, span, example project, data, users","Langfuse SDKs
-Langfuse offers two SDKs:
-- Python
-- JS/TS
-- Other Languages via OpenTelemetry
-The Langfuse SDKs are the recommended way to create custom observations and traces and use the Langfuse prompt-management and evaluation features.
-Key benefits
-- Based on OpenTelemetry, so you can use any OTEL-based instrumentation library for your LLM stack.
-- Fully async requests, meaning Langfuse adds almost no latency.
-- Interoperable with Langfuse native integrations.
-- Accurate latency tracking via"
+0,https://langfuse.com/docs/observability/features/metadata,Metadata - Langfuse,0.01443638348045666,0.8535,0.6373,0.767,"langfuse, get_client, observations, propagate_attributes, environment, span, tags, metadata, ids, flush, version, characters, level, trace, client","Metadata
+Observations (see Langfuse Data Model) can be enriched with metadata to help you better understand your application and to correlate observations in Langfuse.
+You can filter by metadata keys in the Langfuse UI and API.
+Propagated Metadata
+Use propagate_attributes()
+to ensure metadata is automatically applied to all observations within a context. Propagated metadata are key-value pairs with values limited to max 200 characters strings. Keys are limited to alphanumeric characters only. If"
+1,https://langfuse.com/docs/docs-mcp,Langfuse Docs MCP Server - Langfuse,0.01459209686524589,0.8724,0.671,0.7918,"mcp, langfuse, server, example project, docs, mcp server, langfuse docs, client, docs mcp, langfuse features, data platform, trace context, project, context, prompt","Langfuse Docs MCP Server
+The Langfuse Docs MCP server exposes the Langfuse docs to AI agents.
+Core use case: Use Cursor (or other AI Coding Agent) to automatically integrate Langfuse Tracing into your codebase, see get started for detailed instructions and an example prompt.
+This is the public MCP server for the Langfuse documentation. There is also an authenticated MCP server to integrate with the rest of the Langfuse data platform (docs).
+Install
+Add Langfuse Docs MCP to Cursor via the one-cli"
+2,https://langfuse.com/docs/glossary,Glossary - Langfuse,0.028048608279257165,0.8431,0.6714,0.7744,"langfuse, observation, usage, agent, cost, observation type, graph, observation types, logs, type, units, langfuse cloud, actions, represents, traces","Glossary
+This glossary provides definitions for key terms and concepts used throughout the Langfuse documentation. Use the filters below to browse by category or search for specific terms.
+Showing 54 of 54 terms
+A
+Agent
+(Observation Type)An observation type that represents an AI agent workflow, including multi-step reasoning processes, tool orchestration, and autonomous decision-making. Used to track agent behavior and interactions.
+A visual representation of complex AI agent workflows in Langfu"
+3,https://langfuse.com/docs/api-and-data-platform/features/public-api,Public API - Langfuse,0.017322023124935408,0.8305,0.6021,0.7391,"langfuse, api, storage, organization, media, users, export, data, projects, sso, scim, blob storage, blob, agent, public","Public API
+Langfuse is open and meant to be extended via custom workflows and integrations. All Langfuse data and features are available via the API.
+/api/public
+References:
+- API Reference: https://api.reference.langfuse.com
+- OpenAPI spec: https://cloud.langfuse.com/generated/api/openapi.yml
+- Postman collection: https://cloud.langfuse.com/generated/postman/collection.json
+There are 3 different groups of APIs:
+- This page -> Project-level APIs: CRUD traces/evals/prompts/configuration within a "
+4,https://langfuse.com/docs/metrics/features/metrics-api,Metrics API - Langfuse,0.041611362311862826,0.8703,0.7051,0.8042,"metrics, api, data, v2, retention, metrics api, organization, notifications, 2025, user, 00, cost, data retention, dimensions, dashboards","Metrics API
+GET /api/public/metrics
+The Metrics API enables you to retrieve customized analytics from your Langfuse data. This endpoint allows you to specify dimensions, metrics, filters, and time granularity to build powerful custom reports and dashboards for your LLM applications.
+Metrics API v2 (Beta)
+The v2 Metrics API is currently in beta. The API is stable for production use, but some parameters and behaviors may change based on user feedback before general availability.
+Cloud-only (Beta):"
+5,https://langfuse.com/docs/evaluation/evaluation-methods/scores-via-sdk,Scores via API/SDK - Langfuse,0.015473274328403456,0.8621,0.5984,0.7566,"score, scores, comment, annotation, comments, queue, delete, corrected, add, experiment, agreement, numeric, data, trace observation, select","Scores via API/SDK
+You can use the Langfuse SDKs or API to add scores to traces, observations, sessions and dataset runs. This is an evaluation method that allows to set up custom evaluation workflows and extend the scoring capabilities of Langfuse. See Scores for the data model.
+Common Use Cases
+-
+Collecting user feedback: collect in-app feedback from your users on application quality or performance. Can be captured in the frontend via our Browser SDK. -> Example Notebook
+-
+Custom evaluation da"
+6,https://langfuse.com/docs/evaluation/core-concepts,Concepts - Langfuse,0.01869665706559487,0.8552,0.7823,0.826,"dataset, evaluation, run, prompt, experiment, llm, experiments, application, evaluators, item, judge, task, items, langfuse, evaluator","Core Concepts
+This page digs into the different concepts of evaluations, and what’s available in Langfuse.
+Ready to start?
+- Create a dataset to measure your LLM application’s performance consistently
+- Run an experiment to get an overview of how your application is doing
+- Set up LLM-as-a-Judge to evaluate your live traces
+The Evaluation Loop
+LLM applications often have a constant loop of testing and monitoring.
+Offline evaluation lets you test your application against a fixed dataset before yo"
