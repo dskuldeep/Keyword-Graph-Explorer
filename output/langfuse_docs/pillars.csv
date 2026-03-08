@@ -1,24 +1,13 @@
 cluster,url,title,pagerank,semantic_sim,tfidf_sim,total_sim,cluster_keywords,excerpt
-0,https://langfuse.com/docs/observability/features/metadata,Metadata - Langfuse,0.01443638348045666,0.8535,0.6373,0.767,"langfuse, get_client, observations, propagate_attributes, environment, span, tags, metadata, ids, flush, version, characters, level, trace, client","Metadata
-Observations (see Langfuse Data Model) can be enriched with metadata to help you better understand your application and to correlate observations in Langfuse.
-You can filter by metadata keys in the Langfuse UI and API.
-Propagated Metadata
-Use propagate_attributes()
-to ensure metadata is automatically applied to all observations within a context. Propagated metadata are key-value pairs with values limited to max 200 characters strings. Keys are limited to alphanumeric characters only. If"
-1,https://langfuse.com/docs/docs-mcp,Langfuse Docs MCP Server - Langfuse,0.01459209686524589,0.8724,0.671,0.7918,"mcp, langfuse, server, example project, docs, mcp server, langfuse docs, client, docs mcp, langfuse features, data platform, trace context, project, context, prompt","Langfuse Docs MCP Server
-The Langfuse Docs MCP server exposes the Langfuse docs to AI agents.
-Core use case: Use Cursor (or other AI Coding Agent) to automatically integrate Langfuse Tracing into your codebase, see get started for detailed instructions and an example prompt.
-This is the public MCP server for the Langfuse documentation. There is also an authenticated MCP server to integrate with the rest of the Langfuse data platform (docs).
-Install
-Add Langfuse Docs MCP to Cursor via the one-cli"
-2,https://langfuse.com/docs/glossary,Glossary - Langfuse,0.028048608279257165,0.8431,0.6714,0.7744,"langfuse, observation, usage, agent, cost, observation type, graph, observation types, logs, type, units, langfuse cloud, actions, represents, traces","Glossary
-This glossary provides definitions for key terms and concepts used throughout the Langfuse documentation. Use the filters below to browse by category or search for specific terms.
-Showing 54 of 54 terms
-A
-Agent
-(Observation Type)An observation type that represents an AI agent workflow, including multi-step reasoning processes, tool orchestration, and autonomous decision-making. Used to track agent behavior and interactions.
-A visual representation of complex AI agent workflows in Langfu"
-3,https://langfuse.com/docs/api-and-data-platform/features/public-api,Public API - Langfuse,0.017322023124935408,0.8305,0.6021,0.7391,"langfuse, api, storage, organization, media, users, export, data, projects, sso, scim, blob storage, blob, agent, public","Public API
+0,https://langfuse.com/docs/observability/data-model,Tracing Data Model in Langfuse - Langfuse,0.019941440732925267,0.8479,0.5027,0.7098,"langfuse, observation, agent, environment, data, metadata, comment, flush, level, observe, example project, get_client, graph, observations, traces","Core Concepts
+This page digs into the underlying concepts of how Langfuse structures and captures your data. Understanding these will make debugging and working with traces easier.
+Ready to start? Check out the Get Started guide to ingest your first trace.
+Observations, Traces, and Sessions
+Langfuse organizes an application’s data into three core concepts: observations, traces, and sessions.
+Observations
+Observations
+are the individual steps within a trace. Langfuse supports a number of LLM appl"
+1,https://langfuse.com/docs/api-and-data-platform/features/public-api,Public API - Langfuse,0.019181627261285424,0.8416,0.654,0.7666,"api, langfuse, organization, users, langfuse api, export, public, projects, data, sso, scim, llm, agent, enterprise sso, password","Public API
 Langfuse is open and meant to be extended via custom workflows and integrations. All Langfuse data and features are available via the API.
 /api/public
 References:
@@ -27,25 +16,36 @@ References:
 - Postman collection: https://cloud.langfuse.com/generated/postman/collection.json
 There are 3 different groups of APIs:
 - This page -> Project-level APIs: CRUD traces/evals/prompts/configuration within a "
-4,https://langfuse.com/docs/metrics/features/metrics-api,Metrics API - Langfuse,0.041611362311862826,0.8703,0.7051,0.8042,"metrics, api, data, v2, retention, metrics api, organization, notifications, 2025, user, 00, cost, data retention, dimensions, dashboards","Metrics API
-GET /api/public/metrics
-The Metrics API enables you to retrieve customized analytics from your Langfuse data. This endpoint allows you to specify dimensions, metrics, filters, and time granularity to build powerful custom reports and dashboards for your LLM applications.
-Metrics API v2 (Beta)
-The v2 Metrics API is currently in beta. The API is stable for production use, but some parameters and behaviors may change based on user feedback before general availability.
-Cloud-only (Beta):"
-5,https://langfuse.com/docs/evaluation/evaluation-methods/scores-via-sdk,Scores via API/SDK - Langfuse,0.015473274328403456,0.8621,0.5984,0.7566,"score, scores, comment, annotation, comments, queue, delete, corrected, add, experiment, agreement, numeric, data, trace observation, select","Scores via API/SDK
-You can use the Langfuse SDKs or API to add scores to traces, observations, sessions and dataset runs. This is an evaluation method that allows to set up custom evaluation workflows and extend the scoring capabilities of Langfuse. See Scores for the data model.
-Common Use Cases
--
-Collecting user feedback: collect in-app feedback from your users on application quality or performance. Can be captured in the frontend via our Browser SDK. -> Example Notebook
--
-Custom evaluation da"
-6,https://langfuse.com/docs/evaluation/core-concepts,Concepts - Langfuse,0.01869665706559487,0.8552,0.7823,0.826,"dataset, evaluation, run, prompt, experiment, llm, experiments, application, evaluators, item, judge, task, items, langfuse, evaluator","Core Concepts
-This page digs into the different concepts of evaluations, and what’s available in Langfuse.
-Ready to start?
-- Create a dataset to measure your LLM application’s performance consistently
-- Run an experiment to get an overview of how your application is doing
-- Set up LLM-as-a-Judge to evaluate your live traces
-The Evaluation Loop
-LLM applications often have a constant loop of testing and monitoring.
-Offline evaluation lets you test your application against a fixed dataset before yo"
+2,https://langfuse.com/docs/evaluation/experiments/experiments-via-sdk,Experiments via SDK - Langfuse,0.026830129931730527,0.8449,0.7891,0.8226,"dataset, experiment, prompt, run, experiments, evaluation, item, task, items, langfuse, test, question, result, dataset item, online","Experiments via SDK
+Experiments via SDK are used to programmatically loop your applications or prompts through a dataset and optionally apply Evaluation Methods to the results. You can use a dataset hosted on Langfuse or a local dataset as the foundation for your experiment.
+See also the JS/TS SDK reference and the Python SDK reference for more details on running experiments via the SDK.
+Why use Experiments via SDK?
+- Full flexibility to use your own application logic
+- Use custom scoring functi"
+3,https://langfuse.com/docs/docs-mcp,Langfuse Docs MCP Server - Langfuse,0.01593933729535195,0.9269,0.7939,0.8737,"mcp, server, mcp server, docs, langfuse, langfuse docs, client, docs mcp, context, prompt, ai, base64, trace, search, demo","Langfuse Docs MCP Server
+The Langfuse Docs MCP server exposes the Langfuse docs to AI agents.
+Core use case: Use Cursor (or other AI Coding Agent) to automatically integrate Langfuse Tracing into your codebase, see get started for detailed instructions and an example prompt.
+This is the public MCP server for the Langfuse documentation. There is also an authenticated MCP server to integrate with the rest of the Langfuse data platform (docs).
+Install
+Add Langfuse Docs MCP to Cursor via the one-cli"
+4,https://langfuse.com/docs/metrics/overview,Open Source LLM Metrics - Langfuse,0.02734501039604042,0.8707,0.6184,0.7698,"metrics, usage, cost, count, metrics api, corrected, organization, units, notifications, langfuse cloud, user, cloud, api, dashboards, dimensions","Metrics
+Langfuse metrics derive actionable insights from observability and evaluation traces.
+Metrics can be sliced and diced via the customizable dashboards and the metrics API.
+Features
+Metrics & Dimensions
+Metrics:
+- Quality is measured through user feedback, model-based scoring, human-in-the-loop scored samples or custom scores via SDKs/API (see scores). Quality is assessed over time as well as across prompt versions, LLMs and users.
+- Cost and Latency are accurately measured and broken down"
+5,https://langfuse.com/docs/administration/data-retention,Data Retention - Langfuse,0.015918322456353738,0.8513,0.6596,0.7746,"media, storage, delete, retention, logs, blob storage, organization, data, blob, actions, data retention, user, enterprise, s3, project","Data Retention
+- Hobby(Not Available)
+- Core(Not Available)
+- Pro
+- Enterprise
+- Self Hosted(Enterprise Edition)(Enterprise)
+With Langfuse’s Data Retention feature, you can control how long your event data (Traces, Observations, Scores, and Media Assets) is stored in Langfuse.
+Configuration
+Data retention is configured on a project level, and we accept a number of days with a minimum of 3 days. Project owners and administrators can change the data retention setting within the Project Settings vi"
+6,https://langfuse.com/docs/evaluation/evaluation-methods/score-analytics,Score Analytics - Langfuse,0.021447282111602274,0.8395,0.6014,0.7443,"score, scores, annotation, evaluation, queue, llm, run, evaluator, experiment, agreement, numeric, add, judge, concepts, value","Score Analytics
+Score Analytics provides a lightweight, zero-configuration way to analyze your evaluation data out of the box. Whether you’re validating that different LLM judges produce consistent results, checking if human annotations align with automated evaluations, or exploring score distributions and trends, Score Analytics helps you build confidence in your evaluation process.
+Why use Score Analytics?
+Score Analytics complements Langfuse’s experiment SDK and self-serve dashboards by offer"

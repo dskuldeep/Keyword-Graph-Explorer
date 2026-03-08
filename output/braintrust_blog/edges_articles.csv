@@ -258,36 +258,6 @@ https://www.braintrust.dev/blog/wing-30,https://www.braintrust.dev/blog/company,
 https://www.braintrust.dev/blog/wing-30,https://www.braintrust.dev/blog/2023-summary,1,"Previous 2023, a year in review"
 https://www.braintrust.dev/blog/wing-30,https://www.braintrust.dev/blog/eval-feedback-loops,1,Next Eval feedback loops
 https://www.braintrust.dev/blog/zapier-ai,https://www.braintrust.dev/blog/zapier-ai,9,1. Prototype & build v0 | 2. Ship v1 | 3. Collect user feedback | 4. Establish a set of evals | 5. Iterate to improve product quality | 6. Take a moment to be proud | 7. Optimize | Conclusion | Zapier's AI development process
-https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/model-measurement,1,The 5 pillars of AI model performance
-https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/best-practices,38,Best practices
-https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/collaborative-evals-loop,1,Evals are a team sport: How we built Loop
-https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/product,4,Product
-https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/three-pillars-ai-observability,1,The three pillars of AI observability
-https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/java-sdk,1,Braintrust Java SDK: AI observability and evals for the JVM
-https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/engineering,2,Engineering
-https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/measuring-what-matters,1,Measuring what matters: An intro to AI evals
-https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/claude-sonnet-4-5-aspirational-evals,1,Claude Sonnet 4.5 analysis
-https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/ab-testing-evals,1,A/B testing can't keep up with AI
-https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/async-programming,1,The rise of async programming
-https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/five-lessons-evals,1,Five hard-learned lessons about AI evals
-https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/webinar-best-practices,1,Webinar recap: Eval best practices
-https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/evaluating-agents,1,Evaluating agents
-https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/new-model,1,What to do when a new AI model comes out
-https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/rag-mongodb,1,Building a RAG app with MongoDB Atlas
-https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/after-evals,1,I ran an eval. Now what?
-https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/improve-evals,1,How to improve your evaluations
-https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/ai-development-loops,1,AI development loops
-https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/getting-started-evals,1,Getting started with automated evaluations
-https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/eval-feedback-loops,1,Eval feedback loops
-https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/journey,1,The AI product development journey
-https://www.braintrust.dev/blog/company,https://www.braintrust.dev/blog/announcing-series-b,1,Braintrust's series B: building the infrastructure for production AI
-https://www.braintrust.dev/blog/company,https://www.braintrust.dev/blog/company,14,Company
-https://www.braintrust.dev/blog/company,https://www.braintrust.dev/blog/announcing-series-a,1,Announcing our $36M Series A
-https://www.braintrust.dev/blog/company,https://www.braintrust.dev/blog/soc2,1,Braintrust achieves SOC 2 Type II compliance
-https://www.braintrust.dev/blog/company,https://www.braintrust.dev/blog/wing-30,1,Braintrust selected to be in the Enterprise Tech 30
-https://www.braintrust.dev/blog/company,https://www.braintrust.dev/blog/seed-round,1,Braintrust's seed round: $5m to build infrastructure for AI products
-https://www.braintrust.dev/blog/company,https://www.braintrust.dev/blog/state-of-ai,1,State of AI development 2023
-https://www.braintrust.dev/blog/company,https://www.braintrust.dev/blog/reliable-ai,1,It's time to build reliable AI
 https://www.braintrust.dev/blog/engineering,https://www.braintrust.dev/blog/bash-agent-evals,1,"Testing if ""bash is all you need"""
 https://www.braintrust.dev/blog/engineering,https://www.braintrust.dev/blog/engineering,18,Engineering
 https://www.braintrust.dev/blog/engineering,https://www.braintrust.dev/blog/temporal-braintrust-integration,1,Building observable AI agents with Temporal
@@ -331,3 +301,33 @@ https://www.braintrust.dev/blog/product,https://www.braintrust.dev/blog/function
 https://www.braintrust.dev/blog/product,https://www.braintrust.dev/blog/custom-scorers,1,Custom scoring functions in the Braintrust Playground
 https://www.braintrust.dev/blog/product,https://www.braintrust.dev/blog/2023-summary,1,"2023, a year in review"
 https://www.braintrust.dev/blog/product,https://www.braintrust.dev/blog/ai-proxy,1,AI proxy: fostering a more open ecosystem
+https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/model-measurement,1,The 5 pillars of AI model performance
+https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/best-practices,38,Best practices
+https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/collaborative-evals-loop,1,Evals are a team sport: How we built Loop
+https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/product,4,Product
+https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/three-pillars-ai-observability,1,The three pillars of AI observability
+https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/java-sdk,1,Braintrust Java SDK: AI observability and evals for the JVM
+https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/engineering,2,Engineering
+https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/measuring-what-matters,1,Measuring what matters: An intro to AI evals
+https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/claude-sonnet-4-5-aspirational-evals,1,Claude Sonnet 4.5 analysis
+https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/ab-testing-evals,1,A/B testing can't keep up with AI
+https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/async-programming,1,The rise of async programming
+https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/five-lessons-evals,1,Five hard-learned lessons about AI evals
+https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/webinar-best-practices,1,Webinar recap: Eval best practices
+https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/evaluating-agents,1,Evaluating agents
+https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/new-model,1,What to do when a new AI model comes out
+https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/rag-mongodb,1,Building a RAG app with MongoDB Atlas
+https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/after-evals,1,I ran an eval. Now what?
+https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/improve-evals,1,How to improve your evaluations
+https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/ai-development-loops,1,AI development loops
+https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/getting-started-evals,1,Getting started with automated evaluations
+https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/eval-feedback-loops,1,Eval feedback loops
+https://www.braintrust.dev/blog/best-practices,https://www.braintrust.dev/blog/journey,1,The AI product development journey
+https://www.braintrust.dev/blog/company,https://www.braintrust.dev/blog/announcing-series-b,1,Braintrust's series B: building the infrastructure for production AI
+https://www.braintrust.dev/blog/company,https://www.braintrust.dev/blog/company,14,Company
+https://www.braintrust.dev/blog/company,https://www.braintrust.dev/blog/announcing-series-a,1,Announcing our $36M Series A
+https://www.braintrust.dev/blog/company,https://www.braintrust.dev/blog/soc2,1,Braintrust achieves SOC 2 Type II compliance
+https://www.braintrust.dev/blog/company,https://www.braintrust.dev/blog/wing-30,1,Braintrust selected to be in the Enterprise Tech 30
+https://www.braintrust.dev/blog/company,https://www.braintrust.dev/blog/seed-round,1,Braintrust's seed round: $5m to build infrastructure for AI products
+https://www.braintrust.dev/blog/company,https://www.braintrust.dev/blog/state-of-ai,1,State of AI development 2023
+https://www.braintrust.dev/blog/company,https://www.braintrust.dev/blog/reliable-ai,1,It's time to build reliable AI

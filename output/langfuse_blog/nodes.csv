@@ -60,19 +60,19 @@ https://langfuse.com/blog/update-2023-07,Langfuse Update — July 2023 - Langfus
 https://langfuse.com/blog/update-2023-08,Langfuse Update — August 2023 - Langfuse Blog,True,0,6.0,"langfuse, langchain, langflow, sdk, llm, js, docs, chatbot, trace, typescript sdk, counts, feedback, usage, frontend, python","langfuse, langchain, langflow, sdk, llm, js, docs, chatbot, trace, typescript sdk, counts, feedback, usage, frontend, python",0.586382777904995
 https://langfuse.com/blog/update-2023-09,Langfuse Update — September 2023 - Langfuse Blog,True,0,6.0,"langfuse, langchain, langflow, sdk, llm, js, docs, chatbot, trace, typescript sdk, counts, feedback, usage, frontend, python","langfuse, langchain, langflow, sdk, llm, js, docs, chatbot, trace, typescript sdk, counts, feedback, usage, frontend, python",0.522662266054377
 https://langfuse.com/blog/update-2023-10,Langfuse Update — October 2023 - Langfuse Blog,True,0,6.0,"langfuse, langchain, langflow, sdk, llm, js, docs, chatbot, trace, typescript sdk, counts, feedback, usage, frontend, python","langfuse, langchain, langflow, sdk, llm, js, docs, chatbot, trace, typescript sdk, counts, feedback, usage, frontend, python",0.4835812725663444
-https://langfuse.com/blog?page=2,Blog - Langfuse,False,0,,,,
+https://langfuse.com/blog?page=5,Blog - Langfuse,False,0,,,,
+https://langfuse.com/blog?p=1,Blog - Langfuse,False,0,,,,
+https://langfuse.com/blog?offset=1,Blog - Langfuse,False,0,,,,
+https://langfuse.com/blog?p=5,Blog - Langfuse,False,0,,,,
 https://langfuse.com/blog?page=1,Blog - Langfuse,False,0,,,,
+https://langfuse.com/blog?offset=3,Blog - Langfuse,False,0,,,,
+https://langfuse.com/blog?page=2,Blog - Langfuse,False,0,,,,
+https://langfuse.com/blog?p=2,Blog - Langfuse,False,0,,,,
+https://langfuse.com/blog?offset=5,Blog - Langfuse,False,0,,,,
 https://langfuse.com/blog?p=4,Blog - Langfuse,False,0,,,,
 https://langfuse.com/blog?offset=2,Blog - Langfuse,False,0,,,,
-https://langfuse.com/blog?offset=1,Blog - Langfuse,False,0,,,,
+https://langfuse.com/blog?offset=4,Blog - Langfuse,False,0,,,,
 https://langfuse.com/blog?p=3,Blog - Langfuse,False,0,,,,
 https://langfuse.com/blog?page=3,Blog - Langfuse,False,0,,,,
-https://langfuse.com/blog?offset=5,Blog - Langfuse,False,0,,,,
-https://langfuse.com/blog?page=5,Blog - Langfuse,False,0,,,,
 https://langfuse.com/blog?page=4,Blog - Langfuse,False,0,,,,
-https://langfuse.com/blog?p=1,Blog - Langfuse,False,0,,,,
-https://langfuse.com/blog?p=2,Blog - Langfuse,False,0,,,,
-https://langfuse.com/blog?p=5,Blog - Langfuse,False,0,,,,
-https://langfuse.com/blog?offset=4,Blog - Langfuse,False,0,,,,
-https://langfuse.com/blog?offset=3,Blog - Langfuse,False,0,,,,
 https://langfuse.com/blog/2025-08-29-error-analysis-to-evaluate-llm-applications.md,,True,1,0.0,"failure, llm, error analysis, evaluation, testing, analysis, error, modes, failure modes, dataset, test, bot, annotation, conversations, evaluators","failure, llm, error analysis, evaluation, testing, analysis, error, modes, failure modes, dataset, test, bot, annotation, conversations, evaluators",0.6176192122806177

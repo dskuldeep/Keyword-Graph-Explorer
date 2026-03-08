@@ -32,14 +32,25 @@ class Page:
     depth: int
 
 
+def normalize_domain_for_comparison(domain_or_url: str) -> str:
+    """Extract a lowercase host from either a bare domain or full URL."""
+    parsed = urlparse(domain_or_url if "://" in domain_or_url else f"//{domain_or_url}")
+    host = parsed.netloc or parsed.path
+    return host.rstrip("/").lower()
+
+
+def strip_www(host: str) -> str:
+    return host[4:] if host.startswith("www.") else host
+
+
 def is_internal_url(url: str, allowed_domain: str) -> bool:
     try:
-        netloc = urlparse(url).netloc
+        netloc = urlparse(url).netloc.lower()
         if not netloc:
             return True
         
-        # Remove trailing slash from allowed_domain if present
-        allowed_domain = allowed_domain.rstrip('/')
+        # Normalize allowed_domain so mixed-case values and full URLs still match.
+        allowed_domain = normalize_domain_for_comparison(allowed_domain)
         
         # Extract domain components for both the URL and allowed_domain
         url_extracted = tldextract.extract(netloc)
@@ -48,13 +59,15 @@ def is_internal_url(url: str, allowed_domain: str) -> bool:
         # Get base domains (domain.suffix)
         url_base = f"{url_extracted.domain}.{url_extracted.suffix}" if url_extracted.suffix else url_extracted.domain
         allowed_base = f"{allowed_extracted.domain}.{allowed_extracted.suffix}" if allowed_extracted.suffix else allowed_extracted.domain
+        url_base = url_base.lower()
+        allowed_base = allowed_base.lower()
         
         # If allowed_domain has a subdomain, match exactly (including subdomain)
         if allowed_extracted.subdomain:
             # For subdomains, check if netloc matches allowed_domain exactly
             # Normalize by removing www. prefix for comparison
-            normalized_netloc = netloc.replace('www.', '')
-            normalized_allowed = allowed_domain.replace('www.', '')
+            normalized_netloc = strip_www(netloc)
+            normalized_allowed = strip_www(allowed_domain)
             if normalized_netloc == normalized_allowed:
                 return True
             # Also allow if it's the exact same netloc
@@ -439,7 +452,7 @@ def extract_all_links_from_page(session: requests.Session, url: str, allowed_dom
                 continue
             
             # Check if matches focus prefix
-            if focus_prefix and not full_url.startswith(focus_prefix):
+            if not url_matches_prefix(full_url, focus_prefix):
                 continue
             
             # Avoid non-article pages
@@ -460,7 +473,7 @@ def extract_all_links_from_page(session: requests.Session, url: str, allowed_dom
                 if href:
                     full_url = urljoin(url, href)
                     if is_internal_url(full_url, allowed_domain):
-                        if not focus_prefix or full_url.startswith(focus_prefix):
+                        if url_matches_prefix(full_url, focus_prefix):
                             discovered_urls.append(full_url)
         
     except Exception as e:
@@ -470,10 +483,24 @@ def extract_all_links_from_page(session: requests.Session, url: str, allowed_dom
 
 
 def normalize_url_for_comparison(url: str) -> str:
-    """Normalize URL for comparison by removing www. and trailing slashes."""
-    url = url.replace('://www.', '://')
-    url = url.rstrip('/')
-    return url
+    """Normalize URL for comparison by lowercasing host and trimming trailing slashes."""
+    parsed = urlparse(url)
+    if not parsed.scheme and not parsed.netloc:
+        return url.rstrip("/").lower()
+
+    normalized_host = strip_www(parsed.netloc.lower())
+    normalized_path = parsed.path.rstrip("/")
+    return urlunparse((parsed.scheme.lower(), normalized_host, normalized_path, "", "", ""))
+
+
+def url_matches_prefix(url: str, prefix: Optional[str]) -> bool:
+    """Match an exact section root or a descendant path, but not sibling prefixes."""
+    if not prefix:
+        return True
+
+    normalized_url = normalize_url_for_comparison(url)
+    normalized_prefix = normalize_url_for_comparison(prefix)
+    return normalized_url == normalized_prefix or normalized_url.startswith(f"{normalized_prefix}/")
 
 
 def parse_sitemap_urls(
@@ -517,9 +544,6 @@ def parse_sitemap_urls(
                         break
         elif tag == "urlset":
             children = root.findall(".//{*}url") or root.findall(".//url")
-            # Normalize prefix for comparison if provided
-            normalized_prefix = normalize_url_for_comparison(include_prefix) if include_prefix else None
-            
             for u in children:
                 loc = u.findtext("{*}loc") or u.findtext("loc")
                 if not loc:
@@ -527,11 +551,8 @@ def parse_sitemap_urls(
                 if allowed_domain and not is_internal_url(loc, allowed_domain):
                     continue
                 
-                # Flexible prefix matching - normalize both URLs for comparison
-                if normalized_prefix:
-                    normalized_loc = normalize_url_for_comparison(loc)
-                    if not normalized_loc.startswith(normalized_prefix):
-                        continue
+                if not url_matches_prefix(loc, include_prefix):
+                    continue
                 
                 urls.append(loc)
                 if len(urls) >= max_urls:
@@ -627,16 +648,12 @@ def crawl_site(
     # Deduplicate initial URLs and filter by focus_prefix
     seen_init: Set[str] = set()
     filtered_count = 0
-    normalized_focus = normalize_url_for_comparison(focus_prefix) if focus_prefix else None
     
     for u in initial_urls:
         if u not in seen_init:
-            # Strictly filter by focus_prefix using normalized comparison
-            if normalized_focus:
-                normalized_u = normalize_url_for_comparison(u)
-                if not normalized_u.startswith(normalized_focus):
-                    filtered_count += 1
-                    continue
+            if not url_matches_prefix(u, focus_prefix):
+                filtered_count += 1
+                continue
             queue.append((u, 0))
             seen_init.add(u)
     
@@ -651,10 +668,8 @@ def crawl_site(
             continue
         
         # Strict focus_prefix check - skip URLs that don't match
-        if focus_prefix:
-            normalized_url = normalize_url_for_comparison(url)
-            if not normalized_url.startswith(normalized_focus):
-                continue
+        if not url_matches_prefix(url, focus_prefix):
+            continue
         
         visited.add(url)
 
@@ -677,11 +692,8 @@ def crawl_site(
 
         for l in abs_links:
             if l.href not in visited and len(pages) + len(queue) < max_pages:
-                # Strictly enforce focus_prefix - never crawl outside the focused section
-                if focus_prefix:
-                    normalized_link = normalize_url_for_comparison(l.href)
-                    if not normalized_link.startswith(normalized_focus):
-                        continue
+                if not url_matches_prefix(l.href, focus_prefix):
+                    continue
                 queue.append((l.href, depth + 1))
 
         time.sleep(delay_seconds)

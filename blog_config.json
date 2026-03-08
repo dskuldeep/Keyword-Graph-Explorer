@@ -92,15 +92,16 @@
     {
       "name": "https://www.truefoundry.com/blog",
       "url": "https://www.truefoundry.com/blog",
-      "domain": "Truefoundry.com",
+      "domain": "truefoundry.com",
       "output_dir": "truefoundry_blog",
       "description": "AI evaluation and testing platform blog",
-      "sitemap": "https://www.helicone.ai/sitemap-0.xml"
+      "sitemap": "https://www.truefoundry.com/sitemap.xml"
     }
   ],
   "article_detection": {
     "url_patterns": [
       "/blog/",
+      "/blogs/",
       "/articles/",
       "/posts/",
       "/news/",

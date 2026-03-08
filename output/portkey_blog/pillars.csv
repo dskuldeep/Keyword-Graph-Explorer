@@ -1,29 +1,26 @@
 cluster,url,title,pagerank,semantic_sim,tfidf_sim,total_sim,cluster_keywords,excerpt
-0,https://portkey.ai/blog/eight-things-to-know-about-large-language-models-summary/,Eight Things to Know about Large Language Models - Summary,0.0010168802115111991,0.7927,0.4281,0.6469,"reasoning, models, language, gpt, language models, transformer, prompting, cache, llms, o1, sot, method, thought, tasks, walmart","Eight Things to Know about Large Language Models - Summary
-The paper discusses eight potentially surprising claims about large language models (LLMs), including their predictable increase in capability with increasing investment, the unpredictability of specific behaviors, and the lack of reliable techniques for steering their behavior.
-Arxiv URL: https://arxiv.org/abs/2304.00612v1
-Authors: Samuel R. Bowman
-Summary:
-The paper discusses eight potentially surprising claims about large language mod"
-1,https://portkey.ai/blog/how-does-an-ai-gateway-improve-building-ai-apps/,How does an AI gateway improve building AI apps,0.048354171198349845,0.8091,0.584,0.719,"ai, teams, agents, usage, governance, ai agents, gateway, guardrails, costs, access, genai, portkey, provider, llm, finops","How an AI gateway improves AI app building
-See how how an AI gateway improve building AI apps acting as a control layer between AI apps and model providers for routing, governance, and observability.
-Building an AI app has become deceptively easy. A few lines of code, an API key, and a model endpoint are often enough to get a working prototype.
-The difficulty shows up once that prototype starts behaving like a real product.
-As soon as an AI app is exposed to real users, teams begin dealing with "
-2,https://portkey.ai/blog/?page=5,AI in Production ● Portkey,0.0007075926839204924,1.0,1.0,1.0,"mcp, enterprise, ai, event driven, driven architecture, mcp registry, agents, announcement, registry, protocol, mcp gateway, event, multi, agentic, inference","LLM Deployment Pipeline Explained Step by Step Everything you need to deploy LLMs in production – inference frameworks, serving layers, scaling strategies, monitoring, and cost management.
-Securing the MCP Gateway: Lasso Partners with Portkey to Deliver Enterprise-Grade Agentic AI Protection
-Architecting for Trust: A Strategic Perspective on the MCP Registry for the Enterprise The recent announcement of the official MCP Registry is a significant milestone, signaling a new phase of maturity for t"
-3,https://portkey.ai/blog/model-context-protocol/,Deep Dive into Model Context Protocol (MCP),0.001851429277212846,0.8731,0.7968,0.8426,"mcp, tools, servers, tool, server, agent, agents, authorization, client, protocol, mcp servers, access, connectors, mcp server, ai","Model Context Protocol (MCP): Everything You Need to Know to Get Started
-Learn how Model Context Protocol (MCP) revolutionizes AI integration, eliminating custom code and enabling standardized communication between LLMs and external systems. [Complete Guide with Examples]
-The AI landscape is facing a critical inflection point. While models like GPT-4.5 and Claude 3.7 Sonnet demonstrate remarkable cognitive abilities, they remain isolated islands of intelligence—powerful but disconnected.
-A criti"
-4,https://portkey.ai/blog/public/member-attribution.min.js?v=73bcb8429b,,0.0006711409395973155,1.0,0.0,0.6,,
-5,https://portkey.ai/blog/the-complete-guide-to-prompt-engineering,Prompt Engineering Guide: Techniques & Management Tips for LLMs,0.0037900161257353898,0.8692,0.7973,0.8404,"prompt, prompts, prompt engineering, engineering, prompting, ai, tasks, prompt chaining, prompt security, chaining, model, dspy, claude, security, outputs","The Complete Guide to Prompt Engineering
+0,https://portkey.ai/blog/the-complete-guide-to-llm-observability/,The complete guide to LLM observability for 2026,0.025755309630779617,0.8397,0.702,0.7846,"observability, llm, teams, llm observability, hallucinations, model, ai, agent, opentelemetry, tool, otel, cost, metrics, token, data","The complete guide to LLM observability for 2026
+Learn how to build complete LLM observability, from tracing and guardrails to cost and governance with frameworks and examples from Portkey.
+Large language models are now critical to how organizations build products, automate workflows, and power intelligent assistants. But as these systems move into production, leaders face a familiar question with new complexity:
+How do we know what’s really happening inside our AI applications?
+LLM observabilit"
+1,https://portkey.ai/blog/a-survey-of-large-language-models-summary/,A Survey of Large Language Models - Summary,0.0010260619741433547,0.7758,0.5376,0.6805,"language, models, reasoning, language models, transformer, prompting, llms, method, sot, walmart, tasks, semantic, thought, generative, llama","A Survey of Large Language Models - Summary
+This paper surveys the recent advances in Large Language Models (LLMs), which are pre-trained Transformer models over large-scale corpora. The paper discusses the background, key findings, and mainstream techniques of LLMs, focusing on pre-training, adaptation tuning, utilization, and capacity eval
+Arxiv URL: https://arxiv.org/abs/2303.18223v1
+Authors: Wayne Xin Zhao, Kun Zhou, Junyi Li, Tianyi Tang, Xiaolei Wang, Yupeng Hou, Yingqian Min, Beichen Zhan"
+2,https://portkey.ai/blog/the-right-ai-gateway-for-you/,Why Portkey is the AI gateway your team needs,0.0008599376545200476,0.7714,0.5979,0.702,"ai, portkey, agents, teams, llm, provider, guardrails, gateway, models, governance, ai agents, openai, usage, costs, access","Why Portkey is the right AI Gateway for you
+Discover why Portkey's purpose-built AI Gateway fulfills the unique demands of AI infrastructure. From intelligent guardrails to cost optimization, explore how Portkey empowers teams to scale AI with confidence.
+As AI becomes essential to modern applications, teams need infrastructure built specifically for AI workloads. AI gateways play a crucial role here - they're the layer that manages how your apps interact with AI models.
+You'll find two types of"
+3,https://portkey.ai/blog/the-complete-guide-to-prompt-engineering,Prompt Engineering Guide: Techniques & Management Tips for LLMs,0.003813943940385944,0.8593,0.7837,0.8291,"prompt, prompts, prompt engineering, engineering, prompting, ai, prompt security, model, security, prompt chaining, chaining, dspy, tasks, claude, meta","The Complete Guide to Prompt Engineering
 What is Prompt Engineering?
 At its core, prompt engineering is about designing, refining, and optimizing the prompts that guide generative AI models. When working with large language models (LLMs), the way a prompt is written can significantly affect the output. Prompt engineering ensures that you create prompts that consistently generate accurate and useful responses across different scenarios and projects.
 For developers, this means having a clear proce"
-6,https://portkey.ai/blog/bringing-guardrails-on-the-gateway/,Open Sourcing Guardrails on the Gateway Framework,0.004430888374075611,0.8209,0.4589,0.6761,"portkey, llm, ai, provider, model, routing, observability, guardrails, openai, open source, agent, source, open, vertex, llm observability","Open Sourcing Guardrails on the Gateway Framework
-We are solving the *biggest missing component* in taking AI apps to prod → Now, enforce LLM behavior and route requests with precision, in one go.
-About a year ago, we started Portkey to solve a problem we had faced ourselves - lack of adequate tooling to confidently put LLM apps in production. This showed up in many ways when we experimented with GPT-2, GPT-3, and built million-user scale apps then:
-- There was no way to debug LLM requests
-- You"
+4,https://portkey.ai/blog/public/member-attribution.min.js?v=73bcb8429b,,0.0006772009029345374,1.0,0.0,0.6,,
+5,https://portkey.ai/blog/model-context-protocol/,Deep Dive into Model Context Protocol (MCP),0.0018681464753816234,0.8529,0.7834,0.8251,"mcp, servers, server, tools, mcp servers, tool, authorization, agents, client, agent, access, mcp server, connectors, protocol, control","Model Context Protocol (MCP): Everything You Need to Know to Get Started
+Learn how Model Context Protocol (MCP) revolutionizes AI integration, eliminating custom code and enabling standardized communication between LLMs and external systems. [Complete Guide with Examples]
+The AI landscape is facing a critical inflection point. While models like GPT-4.5 and Claude 3.7 Sonnet demonstrate remarkable cognitive abilities, they remain isolated islands of intelligence—powerful but disconnected.
+A criti"
+6,https://portkey.ai/blog/?page=5,AI in Production ● Portkey,0.0007139817826466369,0.9991,0.9986,0.9989,"mcp, ai, enterprise, event driven, driven architecture, event, mcp registry, protocol, announcement, agents, registry, mcp gateway, multi, driven, agentic","LLM Deployment Pipeline Explained Step by Step Everything you need to deploy LLMs in production – inference frameworks, serving layers, scaling strategies, monitoring, and cost management.
+Securing the MCP Gateway: Lasso Partners with Portkey to Deliver Enterprise-Grade Agentic AI Protection
+Architecting for Trust: A Strategic Perspective on the MCP Registry for the Enterprise The recent announcement of the official MCP Registry is a significant milestone, signaling a new phase of maturity for t"
