@@ -115,21 +115,21 @@ https://www.helicone.ai/blog/weights-and-biases,Helicone vs. Weights and Biases:
 https://www.helicone.ai/blog/what-is-ai-gateway,What is an AI Gateway?,True,0,5.0,"ai gateway, gateway, ai, provider, openrouter, helicone, providers, routing, helicone ai, gateways, model, llm, const, models, litellm","ai gateway, gateway, ai, provider, openrouter, helicone, providers, routing, helicone ai, gateways, model, llm, const, models, litellm",0.7469224415012058
 https://www.helicone.ai/blog/when-to-finetune,The Case Against Fine-Tuning,True,0,4.0,"prompting, chunking, reasoning, thought, chain, cot, cod, chunks, fine, fine tuning, tuning, lollipops, tot, chain thought, tree","prompting, chunking, reasoning, thought, chain, cot, cod, chunks, fine, fine tuning, tuning, lollipops, tot, chain thought, tree",0.4314642381038075
 https://www.helicone.ai/blog,Helicone Blog | AI Development Insights & Best Practices,False,0,,,,
-https://www.helicone.ai/blog?p=2,Helicone Blog | AI Development Insights & Best Practices,False,0,,,,
+https://www.helicone.ai/blog?offset=3,Helicone Blog | AI Development Insights & Best Practices,False,0,,,,
 https://www.helicone.ai/blog?page=2,Helicone Blog | AI Development Insights & Best Practices,False,0,,,,
+https://www.helicone.ai/blog?page=3,Helicone Blog | AI Development Insights & Best Practices,False,0,,,,
+https://www.helicone.ai/blog?offset=2,Helicone Blog | AI Development Insights & Best Practices,False,0,,,,
+https://www.helicone.ai/blog?offset=5,Helicone Blog | AI Development Insights & Best Practices,False,0,,,,
+https://www.helicone.ai/blog?p=5,Helicone Blog | AI Development Insights & Best Practices,False,0,,,,
 https://www.helicone.ai/blog?p=1,Helicone Blog | AI Development Insights & Best Practices,False,0,,,,
 https://www.helicone.ai/blog?page=1,Helicone Blog | AI Development Insights & Best Practices,False,0,,,,
-https://www.helicone.ai/blog?offset=4,Helicone Blog | AI Development Insights & Best Practices,False,0,,,,
-https://www.helicone.ai/blog?offset=5,Helicone Blog | AI Development Insights & Best Practices,False,0,,,,
+https://www.helicone.ai/blog?p=2,Helicone Blog | AI Development Insights & Best Practices,False,0,,,,
 https://www.helicone.ai/blog?p=4,Helicone Blog | AI Development Insights & Best Practices,False,0,,,,
-https://www.helicone.ai/blog?p=3,Helicone Blog | AI Development Insights & Best Practices,False,0,,,,
-https://www.helicone.ai/blog?page=5,Helicone Blog | AI Development Insights & Best Practices,False,0,,,,
 https://www.helicone.ai/blog?offset=1,Helicone Blog | AI Development Insights & Best Practices,False,0,,,,
-https://www.helicone.ai/blog?offset=2,Helicone Blog | AI Development Insights & Best Practices,False,0,,,,
-https://www.helicone.ai/blog?offset=3,Helicone Blog | AI Development Insights & Best Practices,False,0,,,,
-https://www.helicone.ai/blog?page=3,Helicone Blog | AI Development Insights & Best Practices,False,0,,,,
+https://www.helicone.ai/blog?offset=4,Helicone Blog | AI Development Insights & Best Practices,False,0,,,,
+https://www.helicone.ai/blog?page=5,Helicone Blog | AI Development Insights & Best Practices,False,0,,,,
+https://www.helicone.ai/blog?p=3,Helicone Blog | AI Development Insights & Best Practices,False,0,,,,
 https://www.helicone.ai/blog?page=4,Helicone Blog | AI Development Insights & Best Practices,False,0,,,,
-https://www.helicone.ai/blog?p=5,Helicone Blog | AI Development Insights & Best Practices,False,0,,,,
 https://helicone.ai/blog/openai-o3,OpenAI o3 Released: Benchmarks and Comparison to o1,True,1,2.0,"gpt, o1, gemini, mini, o3, reasoning, pro, o1 pro, openai, claude, 4o, gpt 4o, claude sonnet, llama, sonnet","gpt, o1, gemini, mini, o3, reasoning, pro, o1 pro, openai, claude, 4o, gpt 4o, claude sonnet, llama, sonnet",0.5324257670607224
 https://helicone.ai/blog/prompt-engineering-tools,Prompt Engineering Tools & Techniques [Updated June 2025],True,1,6.0,"llm, prompt, prompts, helicone, user, evaluation, injection, hallucinations, prompt injection, fine, ai, classification, security, stack, cost","llm, prompt, prompts, helicone, user, evaluation, injection, hallucinations, prompt injection, fine, ai, classification, security, stack, cost",0.5641898064721673
 https://helicone.ai/blog/joining-mintlify,Helicone is joining Mintlify,True,2,0.0,"helicone, llm, honeyhive, langsmith, observability, galileo, evaluation, langfuse, caching, prompt, posthog, self hosting, hosting, autogpt, traceloop","helicone, llm, honeyhive, langsmith, observability, galileo, evaluation, langfuse, caching, prompt, posthog, self hosting, hosting, autogpt, traceloop",0.29677077209408925

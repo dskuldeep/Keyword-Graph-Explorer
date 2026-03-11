@@ -96,13 +96,40 @@
       "output_dir": "truefoundry_blog",
       "description": "AI evaluation and testing platform blog",
       "sitemap": "https://www.truefoundry.com/sitemap.xml"
+    },
+    {
+      "name": "https://www.vercel.com/blog",
+      "url": "https://www.vercel.com/blog",
+      "domain": "vercel.com",
+      "output_dir": "vercel_blog",
+      "description": "AI evaluation and testing platform blog",
+      "sitemap": "https://vercel.com/crawled-sitemap.xml"
+    },
+    {
+      "name": "https://www.tensorzero.com/docs",
+      "url": "https://www.tensorzero.com/docs",
+      "domain": "tensorzero.com",
+      "output_dir": "tensorzero_docs",
+      "description": "AI evaluation and testing platform blog",
+      "sitemap": "https://www.tensorzero.com/docs/sitemap.xml"
+    },
+    {
+      "name": "https://blog.cloudflare.com",
+      "url": "https://blog.cloudflare.com",
+      "domain": "cloudflare.com",
+      "output_dir": "cloudflare_blog",
+      "description": "AI evaluation and testing platform blog",
+      "sitemap": "https://blog.cloudflare.com/sitemap.xml"
     }
+    
   ],
   "article_detection": {
     "url_patterns": [
       "/blog/",
       "/blogs/",
       "/articles/",
+      
+      "/ai-gateway/",
       "/posts/",
       "/news/",
       "/insights/",

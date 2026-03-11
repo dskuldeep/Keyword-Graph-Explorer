@@ -1,8 +1,8 @@
 cluster,keywords
-2,"ai, portkey, agents, teams, llm, provider, guardrails, gateway, models, governance, ai agents, openai, usage, costs, access"
-5,"mcp, servers, server, tools, mcp servers, tool, authorization, agents, client, agent, access, mcp server, connectors, protocol, control"
-1,"language, models, reasoning, language models, transformer, prompting, llms, method, sot, walmart, tasks, semantic, thought, generative, llama"
-0,"observability, llm, teams, llm observability, hallucinations, model, ai, agent, opentelemetry, tool, otel, cost, metrics, token, data"
-3,"prompt, prompts, prompt engineering, engineering, prompting, ai, prompt security, model, security, prompt chaining, chaining, dspy, tasks, claude, meta"
-6,"mcp, ai, enterprise, event driven, driven architecture, event, mcp registry, protocol, announcement, agents, registry, mcp gateway, multi, driven, agentic"
-4,
+3,"ai, teams, agents, portkey, agent, ai agents, usage, governance, llm, access, gateway, provider, cost, model, observability"
+0,"mcp, server, servers, tools, mcp servers, tool, authorization, agents, client, agent, access, protocol, mcp server, connectors, ai"
+4,"language, models, reasoning, language models, llms, prompting, transformer, sot, method, thought, text, paper, skeleton, large language, self consistency"
+1,"portkey, llm, model, cache, ai, caching, routing, openai, provider, walmart, guardrails, semantic, open source, open, source"
+5,"prompt, prompts, prompt engineering, engineering, prompting, ai, tasks, model, prompt chaining, prompt security, chaining, dspy, step, security, claude"
+6,"claude code, claude, code, code best, practices enterprise, today adoption, moves handful, handful developers, developers operational, operational gaps, gaps fast, fast api, keys scattered, scattered costs, spiral noticing"
+2,

@@ -1,7 +1,9 @@
 source_url,target_url,similarity,reason
 https://langfuse.com/blog/2024-11-17-launch-week-2,https://langfuse.com/blog/2025-05-19-launch-week-3,0.5325,High semantic similarity; add contextual link
+https://langfuse.com/blog/2024-12-langfuse-v3-infrastructure-evolution,https://langfuse.com/blog/joining-clickhouse,0.5767,High semantic similarity; add contextual link
 https://langfuse.com/blog/2025-03-19-ai-agent-comparison,https://langfuse.com/blog/2024-07-ai-agent-observability-with-langfuse,0.7253,High semantic similarity; add contextual link
 https://langfuse.com/blog/2025-05-19-launch-week-3,https://langfuse.com/blog/2025-05-31-langfuse-may-update,0.6075,High semantic similarity; add contextual link
+https://langfuse.com/blog/2025-06-04-open-sourcing-langfuse-product,https://langfuse.com/blog/joining-clickhouse,0.5069,High semantic similarity; add contextual link
 https://langfuse.com/blog/2025-08-29-error-analysis-to-evaluate-llm-applications,https://langfuse.com/blog/2025-08-29-error-analysis-to-evaluate-llm-applications.md,0.9031,High semantic similarity; add contextual link
 https://langfuse.com/blog/2025-08-29-error-analysis-to-evaluate-llm-applications,https://langfuse.com/blog/2025-11-12-evals,0.5035,High semantic similarity; add contextual link
 https://langfuse.com/blog/2025-09-05-automated-evaluations,https://langfuse.com/blog/2025-11-12-evals,0.5015,High semantic similarity; add contextual link

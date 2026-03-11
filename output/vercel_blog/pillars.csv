@@ -1,0 +1,36 @@
+cluster,url,title,pagerank,semantic_sim,tfidf_sim,total_sim,cluster_keywords,excerpt
+0,https://vercel.com/blog/building-the-most-ambitious-sites-on-the-web-with-vercel-and-next-js-14,Building the most ambitious sites on the Web with Vercel and Next.js 14 - Vercel,0.0081070639283276,0.8319,0.4817,0.6918,"js, scene, 3d, react, auth, sveltekit, server, decade, conf, light, community, classname, card, curve, button","5 min read
+At this year's Next.js Conf, thousands of community members tuned in to learn about updates to the framework thousands of developers deploy with everyday. Among the announcements were:
+Server Actions in Next.js are now stable.
+Experimental Partial Prerendering will be introduced into Next.js 14.
+Next.js is 22% faster to start up your local server and 29% faster to see code updates after making changes.
+Turbopack is 53.3% faster to start up your local server and 94.7% faster to see cod"
+1,https://vercel.com/blog/ai-integrations,Introducing AI Integrations on Vercel - Vercel,0.0081070639283276,0.8305,0.5797,0.7302,"ai, agent, gateway, vercel, ai gateway, agents, v0, vercel ai, model, ai sdk, models, llms, coding, sdk, product","2 min read
+Incorporate AI models and services from industry-leading providers into your Vercel projects with just a few clicks.
+Today, we’re launching nine new AI integrations for Vercel from leading AI companies.
+We’ve also created a new model playground where you can try dozens of models instantly to generate text, images, audio, and more right in your dashboard.
+Link to headingBuilding the future with AI
+Vercel is the product infrastructure for AI applications.
+From chatbots that augment cust"
+2,https://vercel.com/blog/dashboard-redesign,Dashboard redesign - Vercel,0.0081070639283276,0.8233,0.4929,0.6912,"git, domain, project, deployment, vercel, domains, repository, git repository, settings, deployments, branch, render, merge, jobs, environment variables","3 min read
+With the launch of Zero Config Deployments, Vercel made it easier than ever to deploy websites and applications. Now, we're bringing the simplicity of our developer experience to our web dashboard.
+Creating new projects, importing existing code, managing domains, setting up redirects, inspecting deployments and functions, and managing teams has never been easier.
+We are unveiling the next evolution of the Vercel Dashboard.
+Link to headingDashboard Overview
+This dashboard redesign is g"
+3,https://vercel.com/blog/ai-sdk-6,AI SDK 6 - Vercel,0.0081070639283276,0.8308,0.7518,0.7992,"ai, model, ai sdk, sdk, agent, mcp, openai, data, tool, const, skills, python, skill, markdown, attacker","12 min read
+Introducing agents, tool execution approval, DevTools, full MCP support, reranking, image editing, and more.
+With over 20 million monthly downloads and adoption by teams ranging from startups to Fortune 500 companies, the AI SDK is the leading TypeScript toolkit for building AI applications. It provides a unified API, allowing you to integrate with any AI provider, and seamlessly integrates with Next.js, React, Svelte, Vue, and Node.js. The AI SDK enables you to build everything from"
+4,https://vercel.com/blog/a-better-developer-experience-makes-building-cruise-critic-more-efficient,Optimizing performance for over 6M monthly visitors at CruiseCritic  - Vercel,0.001216289449504277,0.7807,0.4453,0.6465,"vercel, team, traffic, bfcm, js, bot, design, joyn, stripe, tour, times, digital, curve, tooltip, seo","1 min read
+From Monolithic PHP to Next.js and Vercel, CruiseCritic can move faster, and serve their customers with a better site experience
+The web is any traveler’s first stop when it comes to planning vacations. Cruise Critic (a subsidiary of Tripadvisor) knows just how essential review sites are to today’s traveler; the company serves six million visitors every month. Growing traffic meant that Cruise Critic needed to evaluate their application stack as well as their development workflow in o"
+5,https://vercel.com/blog/edge-config-ultra-low-latency-data-at-the-edge,Edge Config: Ultra-low latency data at the edge - Vercel,0.010074526770799494,0.863,0.7107,0.8021,"edge, edge config, config, vercel, edge functions, flags, output, functions, build, templates, region, compute, lock, request, feature","2 min read
+Sub-millisecond reads for experiment and feature flag configurations.
+Today, we're introducing Edge Config: an ultra-low latency data store for configuration data.
+Globally distributed on Vercel's Edge Network, this new storage system gives you near-instant reads of your configuration data from Edge Middleware, Edge Functions, and Serverless Functions. Edge Config is already being used by customers to manage things like A/B testing and feature flag configuration data.
+Edge Config is n"
+6,https://vercel.com/blog/aws-reinvent-2023-iteration-velocity,"Vercel at AWS re:Invent 2023: The Frontend Cloud, Generative UI, iteration velocity - Vercel",0.004982265301129376,0.8168,0.528,0.7013,"v0, aws, vercel, frontend, cloud, commerce, frontend cloud, snowflake, notion, oidc, authentication, notifications, notification, database, platform api","4 min read
+The Frontend Cloud, Generative UI, and keys to a high iteration team
+Recently the Vercel Team had the pleasure of sponsoring AWS re:Invent 2023. This year we attended as an official part of the AWS Marketplace, which makes it possible to onboard and build on Vercel in just a few clicks.
+While at re:Invent, I was able to share my thoughts on The Frontend Cloud, Generative UI, and the keys to a highly iterative team. Here’s a look at my talk.
+Link to headingThe shift to the frontend—the"

@@ -1,8 +1,8 @@
 cluster,keywords
-2,"string, api, api key, key, delete, header, id string, request delete, delete url, 123, string string, curl request, type, ai v1, api getmaxim"
-1,"agent, test, prompt, evaluation, evaluators, dataset, run, context, endpoint, logs, prompts, simulation, human, quality, code"
-0,"maxim, trace, agent, openai, const, logger, import, llm, api, python, span, calls, trace id, integrate, streaming"
-4,"prompt, click, partial, dashboard, settings, logs, cloud, version, session, changes, pricing, add, prompts, audit logs, roles"
-6,"input, boolean, output, string, closer, validate, string number, boolean true, number, scores, scores closer, true, text, score, str"
-5,"def, str, returns, dict, class, dict str, optional, utilities, __init__, dataclass, dataclass class, integration, page helpful, list, optional dict"
-3,"src, lib, defined src, src lib, ts, defined, lib logger, logger components, void, components, logger, string, lib models, components generation, generation ts"
+1,"string, api, api key, key, delete, id string, request delete, delete url, 123, header, string string, type, curl request, ai v1, api getmaxim"
+3,"maxim, agent, trace, api, const, sdk, import, openai, context, python, settings, logger, llm, span, trace id"
+0,"def, str, returns, dict, class, utilities, dict str, __init__, optional, logger, dataclass, dataclass class, integration, page helpful, helpful"
+6,"prompt, logs, test, evaluators, evaluation, agent, prompts, dataset, run, quality, human, session, dashboard, version, partial"
+4,"input, boolean, output, string, closer, validate, string number, boolean true, number, scores, scores closer, true, text, score, str"
+5,"src, lib, defined src, src lib, ts, defined, lib logger, logger components, void, components, logger, string, lib models, components generation, generation ts"
+2,

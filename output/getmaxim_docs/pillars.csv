@@ -1,20 +1,24 @@
 cluster,url,title,pagerank,semantic_sim,tfidf_sim,total_sim,cluster_keywords,excerpt
-0,https://www.getmaxim.ai/docs/sdk/python/integrations/openai/one-line-integration,OpenAI SDK - Maxim Docs,0.0021332250553578003,0.8165,0.4257,0.6602,"maxim, trace, agent, openai, const, logger, import, llm, api, python, span, calls, trace id, integrate, streaming","Requirements
-Env variables
-Initialize logger
-Initialize MaximOpenAIClient
-Make LLM calls using MaximOpenAIClient
-Maxim-specific Headers
-The OpenAI instrumentation supports additional headers via theextra_headers
-parameter to enhance trace metadata and organization. You can use the following headers:
-x-maxim-trace-id
-: Associate LLM calls with a specific trace ID (UUID string). All calls with the same trace ID will be grouped together in a single trace.x-maxim-trace-tags
-: Add custom tags to trac"
-1,https://www.getmaxim.ai/docs/cookbooks/product-cookbooks/pm-cookbook-foundations-of-a-repeatable-evals-process,PM Cookbook: Foundations of a Repeatable Evals Process - Maxim Docs,0.02498726675399645,0.7901,0.5031,0.6753,"agent, test, prompt, evaluation, evaluators, dataset, run, context, endpoint, logs, prompts, simulation, human, quality, code","- Prompt Engineering: Iterate on prompts and model choices, compare multiple versions, and identify the best combination for your use case.
-- Offline Evals: Test your agent’s performance across hundreds of user queries and scenarios, and define the quality metrics that matter most, using Maxim’s built-in or your own custom evals.
-- Observability: Log and trace complex agentic trajectories and get real-time insight into quality, performance, and failure modes.
-- Online Evals: Run continuous quali"
-2,https://www.getmaxim.ai/docs/prompts/prompt/update-prompt,Update Prompt - Maxim Docs,0.0011274061646626829,0.919,0.7856,0.8656,"string, api, api key, key, delete, header, id string, request delete, delete url, 123, string string, curl request, type, ai v1, api getmaxim","curl --request PUT \
+0,https://www.getmaxim.ai/docs/sdk/python/references/logger/components/base,Base - Maxim Docs,0.0010981944658181475,0.6401,0.5864,0.6187,"def, str, returns, dict, class, utilities, dict str, __init__, optional, logger, dataclass, dataclass class, integration, page helpful, helpful","EvaluateContainerWithVariables
+__init__
+with_variables
+EvaluateContainer
+Methods:
+with_variables
+- Allows adding variables to be used by the evaluators.
+__init__
+with_variables
+with_evaluators
+Returns:
+Base functionality for Components integration.
+class EvaluateContainerWithVariables()
+def __init__(id: str, entity: Entity, log_writer: LogWriter,
+for_evaluators: List[str]) -> None
+def with_variables(variables: Dict[str, str])
+class EvaluateContainer()
+with_variables
+- Allows adding variables to "
+1,https://www.getmaxim.ai/docs/prompts/prompt/update-prompt,Update Prompt - Maxim Docs,0.001114492562163624,0.9197,0.7867,0.8665,"string, api, api key, key, delete, id string, request delete, delete url, 123, header, string string, type, curl request, ai v1, api getmaxim","curl --request PUT \
 --url https://api.getmaxim.ai/v1/prompts \
 --header 'Content-Type: application/json' \
 --header 'x-maxim-api-key: <api-key>' \
@@ -38,72 +42,13 @@ x-maxim-trace-id
 ""createdById"": ""<string>"",
 ""createdAt"": ""<string>"",
 ""updatedAt"": ""<st"
-3,https://www.getmaxim.ai/docs/sdk/typescript/reference/core/classes/Generation,Generation - Maxim Docs,0.0011387442141689314,0.8426,0.7825,0.8185,"src, lib, defined src, src lib, ts, defined, lib logger, logger components, void, components, logger, string, lib models, components generation, generation ts","Class: Generation
-Defined in: src/lib/logger/components/generation.ts:124 Represents an LLM generation or completion. The Generation class tracks the complete lifecycle of LLM requests, including input messages, model parameters, results, and any errors. It supports both chat and text completion formats. GenerationExample
-Extends
-Constructors
-Constructor
-new Generation(Defined in: src/lib/logger/components/generation.ts:148 Creates a new generation log entry.config
-,writer
-):Generation
-Parameter"
-4,https://www.getmaxim.ai/docs/settings/maxim-api-keys,Maxim API keys - Maxim Docs,0.004999781107194363,0.7094,0.435,0.5996,"prompt, click, partial, dashboard, settings, logs, cloud, version, session, changes, pricing, add, prompts, audit logs, roles","Skip to main content
-Maxim Docs home page
-Search...
-⌘K
-Ask AI
-Home
-Blog
-Pricing
-Get started
-Book a demo
-Book a demo
-Search...
-Navigation
-Settings
-Maxim API keys
-Documentation
-SDK
-API Reference
-Self Hosting
-Cookbooks
-Changelog
-Blog
-Cookbooks
-Tutorials
-Introduction
-Platform Overview
-Running Your First Eval
-Prompt Engineering
-Prompt Playground
-Using Prompt Partials
-Prompt Versions
-Prompt Sessions
-Prompt Tool Calls
-MCP (Model Context Protocol)
-Prompt Retrieval Testing
-Prompt Deployment
-Prompt Optimi"
-5,https://www.getmaxim.ai/docs/sdk/python/references/logger/components/base,Base - Maxim Docs,0.0010981998193122981,0.6479,0.6031,0.63,"def, str, returns, dict, class, dict str, optional, utilities, __init__, dataclass, dataclass class, integration, page helpful, list, optional dict","EvaluateContainerWithVariables
-__init__
-with_variables
-EvaluateContainer
-Methods:
-with_variables
-- Allows adding variables to be used by the evaluators.
-__init__
-with_variables
-with_evaluators
-Returns:
-Base functionality for Components integration.
-class EvaluateContainerWithVariables()
-def __init__(id: str, entity: Entity, log_writer: LogWriter,
-for_evaluators: List[str]) -> None
-def with_variables(variables: Dict[str, str])
-class EvaluateContainer()
-with_variables
-- Allows adding variables to "
-6,https://www.getmaxim.ai/docs/library/evaluators/pre-built-evaluators/ai-evaluators/context-precision,Context Precision - Maxim Docs,0.0004020500039509941,0.6148,0.3719,0.5176,"input, boolean, output, string, closer, validate, string number, boolean true, number, scores, scores closer, true, text, score, str","This evaluator uses weighted cumulative precision (WCP) which prioritizes the relevance of top-ranked context nodes and rewards correct ordering. This approach is critical because LLMs tend to focus more on earlier context nodes, and incorrect ranking can lead to hallucinations.
+2,https://getmaxim.ai/docs/_next/static/media/e4af272ccee01ff0-s.p.woff2,,0.00029055690072639226,1.0,0.0,0.6,,
+3,https://www.getmaxim.ai/docs/offline-evals/via-sdk/agent-http/quickstart,SDK HTTP Agent Quickstart - Maxim Docs,0.00036942564592024816,0.7953,0.4454,0.6553,"maxim, agent, trace, api, const, sdk, import, openai, context, python, settings, logger, llm, span, trace id","How to get started with the Maxim SDK?
+Get started with evaluating AI agents accessible via HTTP endpoints using the Maxim SDK. This guide will walk you through setting up the SDK and running your first agent evaluation test run.Installation
+First, install the Maxim SDK for your preferred language:Getting Your API Key
+Before you can use the Maxim SDK, you need to obtain an API key from the Maxim platform:- Log in to Maxim: Go to app.getmaxim.ai/login and sign in to your account
+- Navigate to Set"
+4,https://www.getmaxim.ai/docs/library/evaluators/pre-built-evaluators/ai-evaluators/context-precision,Context Precision - Maxim Docs,0.000402055627030484,0.6148,0.3698,0.5168,"input, boolean, output, string, closer, validate, string number, boolean true, number, scores, scores closer, true, text, score, str","This evaluator uses weighted cumulative precision (WCP) which prioritizes the relevance of top-ranked context nodes and rewards correct ordering. This approach is critical because LLMs tend to focus more on earlier context nodes, and incorrect ranking can lead to hallucinations.
 Input
 - Required Inputs:
 input
@@ -113,3 +58,16 @@ input
 Output
 Result
 : Value in the continuous "
+5,https://www.getmaxim.ai/docs/sdk/typescript/reference/core/classes/Generation,Generation - Maxim Docs,0.0011397044020065757,0.8426,0.7826,0.8186,"src, lib, defined src, src lib, ts, defined, lib logger, logger components, void, components, logger, string, lib models, components generation, generation ts","Class: Generation
+Defined in: src/lib/logger/components/generation.ts:124 Represents an LLM generation or completion. The Generation class tracks the complete lifecycle of LLM requests, including input messages, model parameters, results, and any errors. It supports both chat and text completion formats. GenerationExample
+Extends
+Constructors
+Constructor
+new Generation(Defined in: src/lib/logger/components/generation.ts:148 Creates a new generation log entry.config
+,writer
+):Generation
+Parameter"
+6,https://www.getmaxim.ai/docs/cookbooks/product-cookbooks/pm-cookbook-foundations-of-a-repeatable-evals-process,PM Cookbook: Foundations of a Repeatable Evals Process - Maxim Docs,0.024239380609162284,0.8017,0.522,0.6898,"prompt, logs, test, evaluators, evaluation, agent, prompts, dataset, run, quality, human, session, dashboard, version, partial","- Prompt Engineering: Iterate on prompts and model choices, compare multiple versions, and identify the best combination for your use case.
+- Offline Evals: Test your agent’s performance across hundreds of user queries and scenarios, and define the quality metrics that matter most, using Maxim’s built-in or your own custom evals.
+- Observability: Log and trace complex agentic trajectories and get real-time insight into quality, performance, and failure modes.
+- Online Evals: Run continuous quali"
